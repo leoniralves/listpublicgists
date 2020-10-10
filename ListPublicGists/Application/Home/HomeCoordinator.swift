@@ -9,15 +9,14 @@ import UIKit
 
 class HomeCoordinator: Coordinator {
     
-    private var presenter: UINavigationController
+    private var presenter: NavigationControllerProtocol
     
-    init(presenter: UINavigationController) {
+    init(presenter: NavigationControllerProtocol) {
         self.presenter = presenter
     }
     
     func start() {
         let homeViewController = HomeViewController()
         presenter.show(homeViewController, sender: nil)
-        
     }
 }
