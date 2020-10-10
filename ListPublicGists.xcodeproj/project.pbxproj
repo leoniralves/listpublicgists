@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		F01136B62531DFFB00875A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01136B52531DFFB00875A9E /* AppDelegate.swift */; };
 		F01136B82531DFFB00875A9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01136B72531DFFB00875A9E /* SceneDelegate.swift */; };
-		F01136BA2531DFFB00875A9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01136B92531DFFB00875A9E /* ViewController.swift */; };
-		F01136BD2531DFFB00875A9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01136BB2531DFFB00875A9E /* Main.storyboard */; };
+		F01136BA2531DFFB00875A9E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01136B92531DFFB00875A9E /* HomeViewController.swift */; };
 		F01136BF2531DFFD00875A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F01136BE2531DFFD00875A9E /* Assets.xcassets */; };
 		F01136C22531DFFD00875A9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01136C02531DFFD00875A9E /* LaunchScreen.storyboard */; };
 		F01136CD2531DFFE00875A9E /* ListPublicGistsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01136CC2531DFFE00875A9E /* ListPublicGistsTests.swift */; };
 		F01136D82531DFFE00875A9E /* ListPublicGistsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01136D72531DFFE00875A9E /* ListPublicGistsUITests.swift */; };
+		F064D2442531E9D6005329EA /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064D2432531E9D6005329EA /* HomeCoordinator.swift */; };
+		F064D24B2531EA01005329EA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064D24A2531EA01005329EA /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +39,7 @@
 		F01136B22531DFFB00875A9E /* ListPublicGists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListPublicGists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01136B52531DFFB00875A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F01136B72531DFFB00875A9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F01136B92531DFFB00875A9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F01136BC2531DFFB00875A9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F01136B92531DFFB00875A9E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F01136BE2531DFFD00875A9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F01136C12531DFFD00875A9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F01136C32531DFFD00875A9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		F01136D32531DFFE00875A9E /* ListPublicGistsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListPublicGistsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01136D72531DFFE00875A9E /* ListPublicGistsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPublicGistsUITests.swift; sourceTree = "<group>"; };
 		F01136D92531DFFE00875A9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F064D2432531E9D6005329EA /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		F064D24A2531EA01005329EA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +101,9 @@
 		F01136B42531DFFB00875A9E /* ListPublicGists */ = {
 			isa = PBXGroup;
 			children = (
-				F01136B52531DFFB00875A9E /* AppDelegate.swift */,
-				F01136B72531DFFB00875A9E /* SceneDelegate.swift */,
-				F01136B92531DFFB00875A9E /* ViewController.swift */,
-				F01136BB2531DFFB00875A9E /* Main.storyboard */,
+				F01136EC2531E49200875A9E /* Application */,
+				F01136EB2531E48000875A9E /* Suport Files */,
 				F01136BE2531DFFD00875A9E /* Assets.xcassets */,
-				F01136C02531DFFD00875A9E /* LaunchScreen.storyboard */,
-				F01136C32531DFFD00875A9E /* Info.plist */,
 			);
 			path = ListPublicGists;
 			sourceTree = "<group>";
@@ -126,6 +124,43 @@
 				F01136D92531DFFE00875A9E /* Info.plist */,
 			);
 			path = ListPublicGistsUITests;
+			sourceTree = "<group>";
+		};
+		F01136EB2531E48000875A9E /* Suport Files */ = {
+			isa = PBXGroup;
+			children = (
+				F01136B52531DFFB00875A9E /* AppDelegate.swift */,
+				F01136B72531DFFB00875A9E /* SceneDelegate.swift */,
+				F01136C02531DFFD00875A9E /* LaunchScreen.storyboard */,
+				F01136C32531DFFD00875A9E /* Info.plist */,
+			);
+			path = "Suport Files";
+			sourceTree = "<group>";
+		};
+		F01136EC2531E49200875A9E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F064D2482531E9EE005329EA /* Protocols */,
+				F064D2412531E9A3005329EA /* Home */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F064D2412531E9A3005329EA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F01136B92531DFFB00875A9E /* HomeViewController.swift */,
+				F064D2432531E9D6005329EA /* HomeCoordinator.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F064D2482531E9EE005329EA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F064D24A2531EA01005329EA /* Coordinator.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +268,6 @@
 			files = (
 				F01136C22531DFFD00875A9E /* LaunchScreen.storyboard in Resources */,
 				F01136BF2531DFFD00875A9E /* Assets.xcassets in Resources */,
-				F01136BD2531DFFB00875A9E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +292,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F01136BA2531DFFB00875A9E /* ViewController.swift in Sources */,
+				F01136BA2531DFFB00875A9E /* HomeViewController.swift in Sources */,
+				F064D2442531E9D6005329EA /* HomeCoordinator.swift in Sources */,
+				F064D24B2531EA01005329EA /* Coordinator.swift in Sources */,
 				F01136B62531DFFB00875A9E /* AppDelegate.swift in Sources */,
 				F01136B82531DFFB00875A9E /* SceneDelegate.swift in Sources */,
 			);
@@ -296,14 +332,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F01136BB2531DFFB00875A9E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F01136BC2531DFFB00875A9E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F01136C02531DFFD00875A9E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -437,7 +465,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ListPublicGists/Info.plist;
+				INFOPLIST_FILE = "ListPublicGists/Suport Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,7 +483,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ListPublicGists/Info.plist;
+				INFOPLIST_FILE = "ListPublicGists/Suport Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
