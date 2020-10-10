@@ -16,7 +16,8 @@ class HomeCoordinator: Coordinator {
     }
     
     func start() {
-        let homeViewController = HomeViewController()
+        let viewModel = HomeViewModel()
+        let homeViewController = HomeViewController(viewModel: viewModel)
         presenter.show(homeViewController, sender: nil)
     }
 }
