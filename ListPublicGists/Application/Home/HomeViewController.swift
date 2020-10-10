@@ -7,19 +7,14 @@
 
 import UIKit
 
-class HomeViewModel {
-    let title: String = "Home"
-    
-    init() {
-        
-    }
-}
-
 class HomeViewController: UIViewController {
     
-    private let viewModel: HomeViewModel
+    // MARK: Private Properties
+    let viewModel: HomeViewModelProtocol
+    let homeView: HomeView = HomeView()
     
-    init(viewModel: HomeViewModel) {
+    // MARK: Initializer
+    init(viewModel: HomeViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -28,14 +23,23 @@ class HomeViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = viewModel.title
-        view.backgroundColor = .white
+    // MARK: Lifecycle View
+    override func loadView() {
+        super.loadView()
+        view = homeView
     }
     
-    private func setupView() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = HomeStrings.Controller.title
         
+        homeView.delegate = self
     }
 }
 
+// MARK: HomeViewDelegate
+extension HomeViewController: HomeViewDelegate {
+    func homeViewDidShowPublicGistisList(_ view: HomeView) {
+        viewModel.showPublicGists()
+    }
+}
