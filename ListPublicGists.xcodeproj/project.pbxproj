@@ -309,11 +309,8 @@
 		F08DE3EA25334FE8009A5915 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				F08DE3EF253350DB009A5915 /* URLSessionDataTaskProtocol.swift */,
-				F08DE3F0253350DB009A5915 /* URLSessionProtocol.swift */,
-				F08DE4352533A54A009A5915 /* APIProtocol.swift */,
+				F08DE4392533B071009A5915 /* Protocols */,
 				F08DE3EB253350B1009A5915 /* ServiceProvider.swift */,
-				F08DE3F525335191009A5915 /* ServiceTargetProtocol.swift */,
 				F08DE3FB253351BC009A5915 /* HTTPMethod.swift */,
 				F08DE3FF253351D1009A5915 /* NetworkError.swift */,
 				F08DE41125335C33009A5915 /* API.swift */,
@@ -351,6 +348,17 @@
 				F08DE43125339E8F009A5915 /* URLSessionMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		F08DE4392533B071009A5915 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F08DE3EF253350DB009A5915 /* URLSessionDataTaskProtocol.swift */,
+				F08DE3F0253350DB009A5915 /* URLSessionProtocol.swift */,
+				F08DE4352533A54A009A5915 /* APIProtocol.swift */,
+				F08DE3F525335191009A5915 /* ServiceTargetProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
