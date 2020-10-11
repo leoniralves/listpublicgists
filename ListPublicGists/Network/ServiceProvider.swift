@@ -23,6 +23,8 @@ class ServiceProvider {
             let urlRequest = try URLRequest(baseURL: api.baseURL, target: target)
             
             let session = self.session.dataTask(request: urlRequest) { (data, response, error) in
+                self.debugResponse(request: urlRequest, data: data)
+                
                 if let error = error as? URLError {
                     completion(.failure(NetworkError(error)))
                 }

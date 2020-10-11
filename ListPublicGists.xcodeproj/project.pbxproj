@@ -48,6 +48,15 @@
 		F08DE42C25339E70009A5915 /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08DE42B25339E70009A5915 /* URLSessionDataTaskMock.swift */; };
 		F08DE43225339E8F009A5915 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08DE43125339E8F009A5915 /* URLSessionMock.swift */; };
 		F08DE4362533A54A009A5915 /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08DE4352533A54A009A5915 /* APIProtocol.swift */; };
+		F0B7819C2533B32600179BF9 /* GistsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B7819B2533B32600179BF9 /* GistsListCoordinator.swift */; };
+		F0B781A22533B3B500179BF9 /* GistsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B781A12533B3B500179BF9 /* GistsListViewController.swift */; };
+		F0B781AB2533B47200179BF9 /* GistsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B781AA2533B47200179BF9 /* GistsListView.swift */; };
+		F0B781AF2533B4AA00179BF9 /* GistsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0B781AE2533B4AA00179BF9 /* GistsListView.xib */; };
+		F0B781B42533B5AF00179BF9 /* GistsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B781B32533B5AF00179BF9 /* GistsListViewModel.swift */; };
+		F0B781BA2533B64A00179BF9 /* GistsListStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B781B92533B64A00179BF9 /* GistsListStrings.swift */; };
+		F0B781C52533BDF300179BF9 /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B781C42533BDF300179BF9 /* Gist.swift */; };
+		F0B781CA2533C3DC00179BF9 /* ListGistsServiceTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B781C92533C3DC00179BF9 /* ListGistsServiceTarget.swift */; };
+		F0B781D22533CA5300179BF9 /* GistsListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B781D12533CA5300179BF9 /* GistsListRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +115,15 @@
 		F08DE42B25339E70009A5915 /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
 		F08DE43125339E8F009A5915 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		F08DE4352533A54A009A5915 /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
+		F0B7819B2533B32600179BF9 /* GistsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListCoordinator.swift; sourceTree = "<group>"; };
+		F0B781A12533B3B500179BF9 /* GistsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListViewController.swift; sourceTree = "<group>"; };
+		F0B781AA2533B47200179BF9 /* GistsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListView.swift; sourceTree = "<group>"; };
+		F0B781AE2533B4AA00179BF9 /* GistsListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GistsListView.xib; sourceTree = "<group>"; };
+		F0B781B32533B5AF00179BF9 /* GistsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListViewModel.swift; sourceTree = "<group>"; };
+		F0B781B92533B64A00179BF9 /* GistsListStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListStrings.swift; sourceTree = "<group>"; };
+		F0B781C42533BDF300179BF9 /* Gist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gist.swift; sourceTree = "<group>"; };
+		F0B781C92533C3DC00179BF9 /* ListGistsServiceTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGistsServiceTarget.swift; sourceTree = "<group>"; };
+		F0B781D12533CA5300179BF9 /* GistsListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +201,7 @@
 				F064D27F253212B4005329EA /* Utils */,
 				F064D2482531E9EE005329EA /* Protocols */,
 				F064D2412531E9A3005329EA /* Home */,
+				F0B7819A2533B30500179BF9 /* GistsList */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -234,8 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				F064D28B25321716005329EA /* HomeStrings.swift */,
-				F01136B92531DFFB00875A9E /* HomeViewController.swift */,
 				F064D2432531E9D6005329EA /* HomeCoordinator.swift */,
+				F01136B92531DFFB00875A9E /* HomeViewController.swift */,
 				F04FB501253229B600B961B3 /* ViewModel */,
 				F064D27825320EA2005329EA /* View */,
 			);
@@ -361,6 +380,54 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		F0B7819A2533B30500179BF9 /* GistsList */ = {
+			isa = PBXGroup;
+			children = (
+				F0B781B92533B64A00179BF9 /* GistsListStrings.swift */,
+				F0B7819B2533B32600179BF9 /* GistsListCoordinator.swift */,
+				F0B781A12533B3B500179BF9 /* GistsListViewController.swift */,
+				F0B781C82533C3C200179BF9 /* Network */,
+				F0B781C32533BDE500179BF9 /* Model */,
+				F0B781B22533B59D00179BF9 /* ViewModel */,
+				F0B781A52533B46100179BF9 /* View */,
+			);
+			path = GistsList;
+			sourceTree = "<group>";
+		};
+		F0B781A52533B46100179BF9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F0B781AA2533B47200179BF9 /* GistsListView.swift */,
+				F0B781AE2533B4AA00179BF9 /* GistsListView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0B781B22533B59D00179BF9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F0B781B32533B5AF00179BF9 /* GistsListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F0B781C32533BDE500179BF9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F0B781C42533BDF300179BF9 /* Gist.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F0B781C82533C3C200179BF9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F0B781C92533C3DC00179BF9 /* ListGistsServiceTarget.swift */,
+				F0B781D12533CA5300179BF9 /* GistsListRepository.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -445,6 +512,7 @@
 				F01136C22531DFFD00875A9E /* LaunchScreen.storyboard in Resources */,
 				F01136BF2531DFFD00875A9E /* Assets.xcassets in Resources */,
 				F064D27C25320EB0005329EA /* HomeView.xib in Resources */,
+				F0B781AF2533B4AA00179BF9 /* GistsListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,17 +536,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0B781A22533B3B500179BF9 /* GistsListViewController.swift in Sources */,
 				F01136BA2531DFFB00875A9E /* HomeViewController.swift in Sources */,
+				F0B781C52533BDF300179BF9 /* Gist.swift in Sources */,
 				F08DE4362533A54A009A5915 /* APIProtocol.swift in Sources */,
 				F08DE3F625335191009A5915 /* ServiceTargetProtocol.swift in Sources */,
 				F064D2442531E9D6005329EA /* HomeCoordinator.swift in Sources */,
 				F08DE3EC253350B1009A5915 /* ServiceProvider.swift in Sources */,
 				F04FB504253229E000B961B3 /* HomeViewModelDelegate.swift in Sources */,
+				F0B781CA2533C3DC00179BF9 /* ListGistsServiceTarget.swift in Sources */,
 				F064D2862532151D005329EA /* HomeViewDelegate.swift in Sources */,
 				F064D2712531F620005329EA /* HomeViewModel.swift in Sources */,
 				F064D24B2531EA01005329EA /* Coordinator.swift in Sources */,
 				F04FB50F25322A1B00B961B3 /* HomeViewModelProtocol.swift in Sources */,
 				F01136B62531DFFB00875A9E /* AppDelegate.swift in Sources */,
+				F0B7819C2533B32600179BF9 /* GistsListCoordinator.swift in Sources */,
 				F064D27525320E64005329EA /* HomeView.swift in Sources */,
 				F01136B82531DFFB00875A9E /* SceneDelegate.swift in Sources */,
 				F064D281253212E6005329EA /* UIView+Utils.swift in Sources */,
@@ -486,9 +558,13 @@
 				F08DE41225335C33009A5915 /* API.swift in Sources */,
 				F08DE3FC253351BC009A5915 /* HTTPMethod.swift in Sources */,
 				F064D28C25321716005329EA /* HomeStrings.swift in Sources */,
+				F0B781BA2533B64A00179BF9 /* GistsListStrings.swift in Sources */,
 				F064D2642531F2EA005329EA /* NavigationControllerProtocol.swift in Sources */,
 				F08DE3F1253350DB009A5915 /* URLSessionDataTaskProtocol.swift in Sources */,
 				F08DE400253351D1009A5915 /* NetworkError.swift in Sources */,
+				F0B781AB2533B47200179BF9 /* GistsListView.swift in Sources */,
+				F0B781B42533B5AF00179BF9 /* GistsListViewModel.swift in Sources */,
+				F0B781D22533CA5300179BF9 /* GistsListRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

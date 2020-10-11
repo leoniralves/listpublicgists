@@ -10,7 +10,7 @@ import Foundation
 struct API: APIProtocol {
     var baseURL: String {
         #if DEBUG
-        return "http://127.0.0.1:4000"
+        return "https://api.github.com"
         #endif
     }
 }
