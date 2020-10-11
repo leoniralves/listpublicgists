@@ -10,56 +10,54 @@ import Foundation
 class ServiceProvider {
     
     private var session: URLSessionProtocol
+    private var api: APIProtocol
     
-    init(session: URLSessionProtocol = URLSession.shared) {
+    init(session: URLSessionProtocol = URLSession.shared,
+         api: APIProtocol = API()) {
         self.session = session
+        self.api = api
     }
     
     func request<T: Decodable>(target: ServiceTargetProtocol, completion: @escaping (Result<T, NetworkError>) -> Void) {
-        guard let url = URL(string: API.baseURL)?.appendingPathComponent(target.path) else {
-            completion(.failure(.network(.badURL)))
-            return
-        }
-        
-        guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
-            completion(.failure(.network(.badURL)))
-            return
-        }
-        
-        urlComponents.queryItems = target.parameters?.map({ URLQueryItem(name: $0.key, value: $0.value) })
-        
-        guard let componentURL = urlComponents.url else {
-            completion(.failure(.network(.badURL)))
-            return
-        }
-        
-        let urlRequest = URLRequest(url: componentURL)
-        
-        let session = self.session.dataTask(request: urlRequest) { (data, response, error) in
-            if let error = error as? URLError {
-                completion(.failure(NetworkError(error)))
-            }
-            else if let response = response as? HTTPURLResponse,
-               response.statusCode != 200 {
-                completion(.failure(NetworkError(response)))
-            } else {
-                guard let data = data else {
-                    completion(.failure(.service(.noData)))
-                    return
+        do {
+            let urlRequest = try URLRequest(baseURL: api.baseURL, target: target)
+            
+            let session = self.session.dataTask(request: urlRequest) { (data, response, error) in
+                if let error = error as? URLError {
+                    completion(.failure(NetworkError(error)))
                 }
-                
-                do {
-                    let decoded = try JSONDecoder().decode(T.self, from: data)
-                    completion(.success(decoded))
-                } catch(let error) {
-                    if let error = error as? DecodingError {
-                        completion(.failure(NetworkError(error)))
+                else if let response = response as? HTTPURLResponse,
+                        !(200...300).contains(response.statusCode) {
+                    completion(.failure(NetworkError(response)))
+                } else {
+                    guard let data = data else {
+                        completion(.failure(.service(.noData)))
+                        return
+                    }
+                    
+                    do {
+                        let decoded = try JSONDecoder().decode(T.self, from: data)
+                        completion(.success(decoded))
+                    } catch(let error) {
+                        if let error = error as? DecodingError {
+                            completion(.failure(NetworkError(error)))
+                        }
                     }
                 }
             }
+            
+            session.resume()
+        } catch (let error) {
+            guard let error = error as? NetworkError else {
+                completion(.failure(.unknown))
+                return
+            }
+            completion(.failure(error))
         }
+    }
+    
+    private func errorNetwork(_ error: URLError) throws {
         
-        session.resume()
     }
     
     private func debugResponse(request: URLRequest, data: Data?) {
@@ -83,5 +81,25 @@ class ServiceProvider {
             }
         }
         print("\n================\n")
+    }
+}
+
+extension URLRequest {
+    init(baseURL: String, target: ServiceTargetProtocol) throws {
+        guard let url = URL(string: baseURL)?.appendingPathComponent(target.path) else {
+            throw NetworkError.Network.badURL
+        }
+        
+        guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
+            throw NetworkError.Network.badURL
+        }
+        
+        urlComponents.queryItems = target.parameters?.map({ URLQueryItem(name: $0.key, value: $0.value) })
+        
+        guard let componentURL = urlComponents.url else {
+            throw NetworkError.Network.badURL
+        }
+        
+        self.init(url: componentURL)
     }
 }

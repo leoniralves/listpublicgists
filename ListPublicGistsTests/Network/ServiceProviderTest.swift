@@ -239,7 +239,7 @@ class ServiceProviderTest: XCTestCase {
         wait(for: [expectation], timeout: 1.0)
     }
     
-    func test_request_withValidJsonAndNetworkCancelled_shouldReturnAPIRequestErrorCancelled() {
+    func test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorCancelled() {
         let expectation = XCTestExpectation(description: "Network connection cancelled")
         
         let sut = makeServiveProvider(stub: nil,
@@ -259,7 +259,7 @@ class ServiceProviderTest: XCTestCase {
         wait(for: [expectation], timeout: 1.0)
     }
     
-    func test_request_withValidJsonAndNetworkCancelled_shouldReturnAPIRequestErrorConnectionLost() {
+    func test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorConnectionLost() {
         let expectation = XCTestExpectation(description: "Network connection connection lost")
         
         let sut = makeServiveProvider(stub: nil,
@@ -279,7 +279,7 @@ class ServiceProviderTest: XCTestCase {
         wait(for: [expectation], timeout: 1.0)
     }
     
-    func test_request_withValidJsonAndNetworkCancelled_shouldReturnAPIRequestErrorBadURL() {
+    func test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorBadURL() {
         let expectation = XCTestExpectation(description: "Network connection bad URL")
         
         let sut = makeServiveProvider(stub: nil,
@@ -299,7 +299,7 @@ class ServiceProviderTest: XCTestCase {
         wait(for: [expectation], timeout: 1.0)
     }
     
-    func test_request_withValidJsonAndNetworkCancelled_shouldReturnAPIRequestErrorTimeout() {
+    func test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorTimeout() {
         let expectation = XCTestExpectation(description: "Network connection timeout")
         
         let sut = makeServiveProvider(stub: nil,
@@ -319,7 +319,7 @@ class ServiceProviderTest: XCTestCase {
         wait(for: [expectation], timeout: 1.0)
     }
     
-    func test_request_withValidJsonAndNetworkCancelled_shouldReturnAPIRequestErrorUnknown() {
+    func test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorUnknown() {
         let expectation = XCTestExpectation(description: "Network connection connection lost")
         
         let sut = makeServiveProvider(stub: nil,
@@ -425,7 +425,8 @@ class ServiceProviderTest: XCTestCase {
 }
 
 extension ServiceProviderTest {
-    private func makeServiveProvider(stub: (file: String?, statusCode: Int)?,
+    private func makeServiveProvider(stub: (file: String?,
+                                            statusCode: Int)?,
                                      urlError: URLError?) -> ServiceProvider {
         let sessionMock = URLSessionMock(stub: stub,
                                          urlError: urlError)
