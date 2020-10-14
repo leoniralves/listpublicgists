@@ -9,7 +9,11 @@ import Foundation
 
 struct Gist: Decodable {
     let owner: GistOwner
-    let files: [String: GistFiles]
+    let files: [String: GistFile]
+    
+    subscript(file index: Int) -> (key: String, value: GistFile) {
+        files.sorted{ $0.key > $1.key }[index]
+    }
 }
 
 struct GistOwner: Decodable {
@@ -17,6 +21,6 @@ struct GistOwner: Decodable {
     let avatar_url: String
 }
 
-struct GistFiles: Decodable {
+struct GistFile: Decodable {
     let filename: String
 }

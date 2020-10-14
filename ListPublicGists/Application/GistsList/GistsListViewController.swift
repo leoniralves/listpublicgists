@@ -32,6 +32,19 @@ class GistsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = GistsListStrings.Controller.title
+        viewModel.gistsStatus.didChange = { [weak self] state in
+            DispatchQueue.main.async {
+                switch state {
+                case .loading:
+                    print("loading")
+                case .load(let gists):
+                    self?.gistsListView.configure(gists: gists)
+                case .error(let error):
+                    print(error)
+                default: break
+                }
+            }
+        }
         viewModel.getGistsList()
     }
 }

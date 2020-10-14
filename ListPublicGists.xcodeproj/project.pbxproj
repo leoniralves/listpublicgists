@@ -12,6 +12,8 @@
 		F01136BA2531DFFB00875A9E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01136B92531DFFB00875A9E /* HomeViewController.swift */; };
 		F01136BF2531DFFD00875A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F01136BE2531DFFD00875A9E /* Assets.xcassets */; };
 		F01136C22531DFFD00875A9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01136C02531DFFD00875A9E /* LaunchScreen.storyboard */; };
+		F049AA242535C95B0031BC2B /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F049AA232535C95B0031BC2B /* Observable.swift */; };
+		F049AA282535C9790031BC2B /* RequestStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F049AA272535C9790031BC2B /* RequestStates.swift */; };
 		F04FB4F8253220C900B961B3 /* HomeViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04FB4F7253220C900B961B3 /* HomeViewTest.swift */; };
 		F04FB4FE2532267300B961B3 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04FB4FD2532267300B961B3 /* HomeViewControllerTests.swift */; };
 		F04FB504253229E000B961B3 /* HomeViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04FB503253229E000B961B3 /* HomeViewModelDelegate.swift */; };
@@ -79,6 +81,8 @@
 		F01136C32531DFFD00875A9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F01136C82531DFFE00875A9E /* ListPublicGistsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListPublicGistsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01136CE2531DFFE00875A9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F049AA232535C95B0031BC2B /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		F049AA272535C9790031BC2B /* RequestStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestStates.swift; sourceTree = "<group>"; };
 		F04FB4F7253220C900B961B3 /* HomeViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTest.swift; sourceTree = "<group>"; };
 		F04FB4FD2532267300B961B3 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		F04FB503253229E000B961B3 /* HomeViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelDelegate.swift; sourceTree = "<group>"; };
@@ -313,6 +317,8 @@
 			isa = PBXGroup;
 			children = (
 				F064D280253212E6005329EA /* UIView+Utils.swift */,
+				F049AA232535C95B0031BC2B /* Observable.swift */,
+				F049AA272535C9790031BC2B /* RequestStates.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -543,6 +549,7 @@
 				F08DE3F625335191009A5915 /* ServiceTargetProtocol.swift in Sources */,
 				F064D2442531E9D6005329EA /* HomeCoordinator.swift in Sources */,
 				F08DE3EC253350B1009A5915 /* ServiceProvider.swift in Sources */,
+				F049AA282535C9790031BC2B /* RequestStates.swift in Sources */,
 				F04FB504253229E000B961B3 /* HomeViewModelDelegate.swift in Sources */,
 				F0B781CA2533C3DC00179BF9 /* ListGistsServiceTarget.swift in Sources */,
 				F064D2862532151D005329EA /* HomeViewDelegate.swift in Sources */,
@@ -552,6 +559,7 @@
 				F01136B62531DFFB00875A9E /* AppDelegate.swift in Sources */,
 				F0B7819C2533B32600179BF9 /* GistsListCoordinator.swift in Sources */,
 				F064D27525320E64005329EA /* HomeView.swift in Sources */,
+				F049AA242535C95B0031BC2B /* Observable.swift in Sources */,
 				F01136B82531DFFB00875A9E /* SceneDelegate.swift in Sources */,
 				F064D281253212E6005329EA /* UIView+Utils.swift in Sources */,
 				F08DE3F2253350DB009A5915 /* URLSessionProtocol.swift in Sources */,

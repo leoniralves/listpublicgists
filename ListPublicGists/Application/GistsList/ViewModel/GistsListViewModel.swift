@@ -10,6 +10,7 @@ import Foundation
 protocol GistsListViewModelProtocol {
     
     var gists: [Gist] { get }
+    var gistsStatus: Observable<RequestStates<[Gist]>> { set get }
     
     func getGistsList()
 }
@@ -19,26 +20,22 @@ class GistsListViewModel: GistsListViewModelProtocol {
     private(set) var gists: [Gist] = []
     private let repository: GistsListRepositoryProtocol
     
-    enum Status {
-        case loading
-        case finished
-        case error(NetworkError)
-    }
-    
-    
+    var gistsStatus: Observable<RequestStates<[Gist]>> = Observable(.initializer)
     
     init(repository: GistsListRepositoryProtocol = GistsListRepository()) {
         self.repository = repository
     }
     
     func getGistsList() {
+        gistsStatus.value = .loading
         repository.getGistsList { (result) in
             switch result {
             case .success(let gists):
-                self.gists = gists
-            case .failure(_):
-                break
+                self.gistsStatus.value = .load(gists)
+            case .failure(let error):
+                self.gistsStatus.value = .error(error)
             }
         }
     }
 }
+
