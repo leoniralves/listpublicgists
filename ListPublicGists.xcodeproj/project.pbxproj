@@ -25,7 +25,6 @@
 		F064D2442531E9D6005329EA /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064D2432531E9D6005329EA /* HomeCoordinator.swift */; };
 		F064D24B2531EA01005329EA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064D24A2531EA01005329EA /* Coordinator.swift */; };
 		F064D2582531EE4F005329EA /* HomeCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064D2572531EE4F005329EA /* HomeCoordinatorTest.swift */; };
-		F064D2642531F2EA005329EA /* NavigationControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064D2632531F2EA005329EA /* NavigationControllerProtocol.swift */; };
 		F064D2692531F341005329EA /* NavigationControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064D2682531F341005329EA /* NavigationControllerSpy.swift */; };
 		F064D2712531F620005329EA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064D2702531F620005329EA /* HomeViewModel.swift */; };
 		F064D27525320E64005329EA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064D27425320E64005329EA /* HomeView.swift */; };
@@ -59,6 +58,10 @@
 		F0B781C52533BDF300179BF9 /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B781C42533BDF300179BF9 /* Gist.swift */; };
 		F0B781CA2533C3DC00179BF9 /* ListGistsServiceTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B781C92533C3DC00179BF9 /* ListGistsServiceTarget.swift */; };
 		F0B781D22533CA5300179BF9 /* GistsListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B781D12533CA5300179BF9 /* GistsListRepository.swift */; };
+		F0CCBF9F2537176A0099A7DF /* OwnerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CCBF9E2537176A0099A7DF /* OwnerViewCell.swift */; };
+		F0CCBFA3253717830099A7DF /* OwnerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0CCBFA2253717830099A7DF /* OwnerViewCell.xib */; };
+		F0CCBFA725371F390099A7DF /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CCBFA625371F390099A7DF /* UITableView+Utils.swift */; };
+		F0CCBFAB253720050099A7DF /* NavigationController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CCBFAA253720050099A7DF /* NavigationController+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +97,6 @@
 		F064D2432531E9D6005329EA /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		F064D24A2531EA01005329EA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F064D2572531EE4F005329EA /* HomeCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorTest.swift; sourceTree = "<group>"; };
-		F064D2632531F2EA005329EA /* NavigationControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerProtocol.swift; sourceTree = "<group>"; };
 		F064D2682531F341005329EA /* NavigationControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerSpy.swift; sourceTree = "<group>"; };
 		F064D2702531F620005329EA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F064D27425320E64005329EA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -128,6 +130,10 @@
 		F0B781C42533BDF300179BF9 /* Gist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gist.swift; sourceTree = "<group>"; };
 		F0B781C92533C3DC00179BF9 /* ListGistsServiceTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGistsServiceTarget.swift; sourceTree = "<group>"; };
 		F0B781D12533CA5300179BF9 /* GistsListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListRepository.swift; sourceTree = "<group>"; };
+		F0CCBF9E2537176A0099A7DF /* OwnerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerViewCell.swift; sourceTree = "<group>"; };
+		F0CCBFA2253717830099A7DF /* OwnerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwnerViewCell.xib; sourceTree = "<group>"; };
+		F0CCBFA625371F390099A7DF /* UITableView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utils.swift"; sourceTree = "<group>"; };
+		F0CCBFAA253720050099A7DF /* NavigationController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationController+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,7 +275,6 @@
 			isa = PBXGroup;
 			children = (
 				F064D24A2531EA01005329EA /* Coordinator.swift */,
-				F064D2632531F2EA005329EA /* NavigationControllerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -317,6 +322,8 @@
 			isa = PBXGroup;
 			children = (
 				F064D280253212E6005329EA /* UIView+Utils.swift */,
+				F0CCBFA625371F390099A7DF /* UITableView+Utils.swift */,
+				F0CCBFAA253720050099A7DF /* NavigationController+Utils.swift */,
 				F049AA232535C95B0031BC2B /* Observable.swift */,
 				F049AA272535C9790031BC2B /* RequestStates.swift */,
 			);
@@ -405,6 +412,8 @@
 			children = (
 				F0B781AA2533B47200179BF9 /* GistsListView.swift */,
 				F0B781AE2533B4AA00179BF9 /* GistsListView.xib */,
+				F0CCBF9E2537176A0099A7DF /* OwnerViewCell.swift */,
+				F0CCBFA2253717830099A7DF /* OwnerViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -519,6 +528,7 @@
 				F01136BF2531DFFD00875A9E /* Assets.xcassets in Resources */,
 				F064D27C25320EB0005329EA /* HomeView.xib in Resources */,
 				F0B781AF2533B4AA00179BF9 /* GistsListView.xib in Resources */,
+				F0CCBFA3253717830099A7DF /* OwnerViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,18 +566,20 @@
 				F064D2712531F620005329EA /* HomeViewModel.swift in Sources */,
 				F064D24B2531EA01005329EA /* Coordinator.swift in Sources */,
 				F04FB50F25322A1B00B961B3 /* HomeViewModelProtocol.swift in Sources */,
+				F0CCBFA725371F390099A7DF /* UITableView+Utils.swift in Sources */,
 				F01136B62531DFFB00875A9E /* AppDelegate.swift in Sources */,
 				F0B7819C2533B32600179BF9 /* GistsListCoordinator.swift in Sources */,
 				F064D27525320E64005329EA /* HomeView.swift in Sources */,
 				F049AA242535C95B0031BC2B /* Observable.swift in Sources */,
 				F01136B82531DFFB00875A9E /* SceneDelegate.swift in Sources */,
+				F0CCBFAB253720050099A7DF /* NavigationController+Utils.swift in Sources */,
 				F064D281253212E6005329EA /* UIView+Utils.swift in Sources */,
+				F0CCBF9F2537176A0099A7DF /* OwnerViewCell.swift in Sources */,
 				F08DE3F2253350DB009A5915 /* URLSessionProtocol.swift in Sources */,
 				F08DE41225335C33009A5915 /* API.swift in Sources */,
 				F08DE3FC253351BC009A5915 /* HTTPMethod.swift in Sources */,
 				F064D28C25321716005329EA /* HomeStrings.swift in Sources */,
 				F0B781BA2533B64A00179BF9 /* GistsListStrings.swift in Sources */,
-				F064D2642531F2EA005329EA /* NavigationControllerProtocol.swift in Sources */,
 				F08DE3F1253350DB009A5915 /* URLSessionDataTaskProtocol.swift in Sources */,
 				F08DE400253351D1009A5915 /* NetworkError.swift in Sources */,
 				F0B781AB2533B47200179BF9 /* GistsListView.swift in Sources */,

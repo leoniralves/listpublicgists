@@ -1,14 +1,18 @@
 //
-//  NavigationControllerProtocol.swift
+//  NavigationController+Utils.swift
 //  ListPublicGists
 //
-//  Created by Leonir Alves Deolindo on 10/10/20.
+//  Created by Leonir Alves Deolindo on 14/10/20.
 //
 
 import UIKit
 
+// MARK: Protocols
+
 protocol NavigationControllerProtocol {
     func show(_ vc: UIViewController, sender: Any?)
 }
+
+// MARK: Extensions
 
 extension UINavigationController: NavigationControllerProtocol {}

@@ -35,34 +35,24 @@ class GistsListView: UIView {
     // MARK: Private Methods
     private func setupLayout() {
         tableView.dataSource = self
-        tableView.delegate = self
+        tableView.register(OwnerViewCell.self)
         tableView.tableFooterView = UIView()
     }
 }
 
 extension GistsListView: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        gists.count
+        gists.count > 0 ? 1 : 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        gists[section].files.count
+        gists.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        let file = gists[indexPath.section][file: indexPath.row]
-        cell.textLabel?.text = file.key
+        let cell: OwnerViewCell = tableView.dequeueReusableCell()
+        let owner = gists[indexPath.row].owner
+        cell.configure(owner)
         return cell
-    }
-}
-
-extension GistsListView: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIStackView()
-        let label = UILabel()
-        label.text = gists[section].owner.login
-        view.addArrangedSubview(label)
-        return view
     }
 }
