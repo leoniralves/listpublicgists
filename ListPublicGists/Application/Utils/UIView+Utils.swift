@@ -34,4 +34,11 @@ extension UIView {
         self.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         self.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
+    
+    func addSubview(_ view: UIView?) {
+        guard let view = view else {
+            return
+        }
+        addSubview(view)
+    }
 }

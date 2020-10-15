@@ -25,7 +25,8 @@ class OwnerViewCell: UITableViewCell {
         activityIndicator.startAnimating()
         
         thumbImageView.load(url: url,
-                            view: activityIndicator, cache: Cache.shared)
+                            view: activityIndicator,
+                            cache: Cache.shared)
     }
     
     override func prepareForReuse() {
