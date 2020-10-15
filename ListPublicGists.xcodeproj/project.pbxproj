@@ -58,6 +58,9 @@
 		F0B781C52533BDF300179BF9 /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B781C42533BDF300179BF9 /* Gist.swift */; };
 		F0B781CA2533C3DC00179BF9 /* ListGistsServiceTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B781C92533C3DC00179BF9 /* ListGistsServiceTarget.swift */; };
 		F0B781D22533CA5300179BF9 /* GistsListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B781D12533CA5300179BF9 /* GistsListRepository.swift */; };
+		F0B9A9C0253795300013EA8E /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B9A9BF253795300013EA8E /* UIImageView+Utils.swift */; };
+		F0B9A9C62537C0840013EA8E /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B9A9C52537C0840013EA8E /* Cache.swift */; };
+		F0B9A9CA2537C80F0013EA8E /* CacheProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B9A9C92537C80F0013EA8E /* CacheProtocol.swift */; };
 		F0CCBF9F2537176A0099A7DF /* OwnerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CCBF9E2537176A0099A7DF /* OwnerViewCell.swift */; };
 		F0CCBFA3253717830099A7DF /* OwnerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0CCBFA2253717830099A7DF /* OwnerViewCell.xib */; };
 		F0CCBFA725371F390099A7DF /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CCBFA625371F390099A7DF /* UITableView+Utils.swift */; };
@@ -130,6 +133,9 @@
 		F0B781C42533BDF300179BF9 /* Gist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gist.swift; sourceTree = "<group>"; };
 		F0B781C92533C3DC00179BF9 /* ListGistsServiceTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGistsServiceTarget.swift; sourceTree = "<group>"; };
 		F0B781D12533CA5300179BF9 /* GistsListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListRepository.swift; sourceTree = "<group>"; };
+		F0B9A9BF253795300013EA8E /* UIImageView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
+		F0B9A9C52537C0840013EA8E /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		F0B9A9C92537C80F0013EA8E /* CacheProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheProtocol.swift; sourceTree = "<group>"; };
 		F0CCBF9E2537176A0099A7DF /* OwnerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerViewCell.swift; sourceTree = "<group>"; };
 		F0CCBFA2253717830099A7DF /* OwnerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwnerViewCell.xib; sourceTree = "<group>"; };
 		F0CCBFA625371F390099A7DF /* UITableView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utils.swift"; sourceTree = "<group>"; };
@@ -275,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				F064D24A2531EA01005329EA /* Coordinator.swift */,
+				F0B9A9C92537C80F0013EA8E /* CacheProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -323,9 +330,11 @@
 			children = (
 				F064D280253212E6005329EA /* UIView+Utils.swift */,
 				F0CCBFA625371F390099A7DF /* UITableView+Utils.swift */,
+				F0B9A9BF253795300013EA8E /* UIImageView+Utils.swift */,
 				F0CCBFAA253720050099A7DF /* NavigationController+Utils.swift */,
 				F049AA232535C95B0031BC2B /* Observable.swift */,
 				F049AA272535C9790031BC2B /* RequestStates.swift */,
+				F0B9A9C52537C0840013EA8E /* Cache.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -573,14 +582,17 @@
 				F049AA242535C95B0031BC2B /* Observable.swift in Sources */,
 				F01136B82531DFFB00875A9E /* SceneDelegate.swift in Sources */,
 				F0CCBFAB253720050099A7DF /* NavigationController+Utils.swift in Sources */,
+				F0B9A9C62537C0840013EA8E /* Cache.swift in Sources */,
 				F064D281253212E6005329EA /* UIView+Utils.swift in Sources */,
 				F0CCBF9F2537176A0099A7DF /* OwnerViewCell.swift in Sources */,
+				F0B9A9CA2537C80F0013EA8E /* CacheProtocol.swift in Sources */,
 				F08DE3F2253350DB009A5915 /* URLSessionProtocol.swift in Sources */,
 				F08DE41225335C33009A5915 /* API.swift in Sources */,
 				F08DE3FC253351BC009A5915 /* HTTPMethod.swift in Sources */,
 				F064D28C25321716005329EA /* HomeStrings.swift in Sources */,
 				F0B781BA2533B64A00179BF9 /* GistsListStrings.swift in Sources */,
 				F08DE3F1253350DB009A5915 /* URLSessionDataTaskProtocol.swift in Sources */,
+				F0B9A9C0253795300013EA8E /* UIImageView+Utils.swift in Sources */,
 				F08DE400253351D1009A5915 /* NetworkError.swift in Sources */,
 				F0B781AB2533B47200179BF9 /* GistsListView.swift in Sources */,
 				F0B781B42533B5AF00179BF9 /* GistsListViewModel.swift in Sources */,

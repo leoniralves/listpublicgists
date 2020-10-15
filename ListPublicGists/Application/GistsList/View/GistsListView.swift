@@ -29,14 +29,18 @@ class GistsListView: UIView {
     // MARK: Public Methods
     func configure(gists: [Gist]) {
         self.gists = gists
+//                tableView.rowHeight = UITableView.automaticDimension
+//                tableView.estimatedRowHeight = 44
         tableView.reloadData()
     }
     
     // MARK: Private Methods
     private func setupLayout() {
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(OwnerViewCell.self)
         tableView.tableFooterView = UIView()
+
     }
 }
 
@@ -50,9 +54,15 @@ extension GistsListView: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: OwnerViewCell = tableView.dequeueReusableCell()
+        let cell: OwnerViewCell = tableView.dequeueReusableCell(for: indexPath)
         let owner = gists[indexPath.row].owner
         cell.configure(owner)
         return cell
+    }
+}
+
+extension GistsListView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        60
     }
 }
