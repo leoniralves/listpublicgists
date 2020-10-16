@@ -65,6 +65,10 @@
 		F0CCBFA3253717830099A7DF /* OwnerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0CCBFA2253717830099A7DF /* OwnerViewCell.xib */; };
 		F0CCBFA725371F390099A7DF /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CCBFA625371F390099A7DF /* UITableView+Utils.swift */; };
 		F0CCBFAB253720050099A7DF /* NavigationController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CCBFAA253720050099A7DF /* NavigationController+Utils.swift */; };
+		F0E8D2DF253A25A1001E9CD5 /* GistsListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8D2DE253A25A1001E9CD5 /* GistsListViewModelProtocol.swift */; };
+		F0E8D2E4253A5A2F001E9CD5 /* GistsListRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8D2E3253A5A2F001E9CD5 /* GistsListRepositoryProtocol.swift */; };
+		F0E8D2E8253A5B0F001E9CD5 /* GistOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8D2E7253A5B0F001E9CD5 /* GistOwner.swift */; };
+		F0E8D2EC253A5B22001E9CD5 /* GistFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8D2EB253A5B22001E9CD5 /* GistFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +144,10 @@
 		F0CCBFA2253717830099A7DF /* OwnerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwnerViewCell.xib; sourceTree = "<group>"; };
 		F0CCBFA625371F390099A7DF /* UITableView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utils.swift"; sourceTree = "<group>"; };
 		F0CCBFAA253720050099A7DF /* NavigationController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationController+Utils.swift"; sourceTree = "<group>"; };
+		F0E8D2DE253A25A1001E9CD5 /* GistsListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListViewModelProtocol.swift; sourceTree = "<group>"; };
+		F0E8D2E3253A5A2F001E9CD5 /* GistsListRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListRepositoryProtocol.swift; sourceTree = "<group>"; };
+		F0E8D2E7253A5B0F001E9CD5 /* GistOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistOwner.swift; sourceTree = "<group>"; };
+		F0E8D2EB253A5B22001E9CD5 /* GistFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -430,6 +438,7 @@
 		F0B781B22533B59D00179BF9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F0E8D2DD253A2592001E9CD5 /* Protocols */,
 				F0B781B32533B5AF00179BF9 /* GistsListViewModel.swift */,
 			);
 			path = ViewModel;
@@ -439,6 +448,8 @@
 			isa = PBXGroup;
 			children = (
 				F0B781C42533BDF300179BF9 /* Gist.swift */,
+				F0E8D2E7253A5B0F001E9CD5 /* GistOwner.swift */,
+				F0E8D2EB253A5B22001E9CD5 /* GistFile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -446,10 +457,27 @@
 		F0B781C82533C3C200179BF9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F0E8D2E2253A5A24001E9CD5 /* Protocols */,
 				F0B781C92533C3DC00179BF9 /* ListGistsServiceTarget.swift */,
 				F0B781D12533CA5300179BF9 /* GistsListRepository.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		F0E8D2DD253A2592001E9CD5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F0E8D2DE253A25A1001E9CD5 /* GistsListViewModelProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F0E8D2E2253A5A24001E9CD5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F0E8D2E3253A5A2F001E9CD5 /* GistsListRepositoryProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -561,6 +589,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0E8D2EC253A5B22001E9CD5 /* GistFile.swift in Sources */,
 				F0B781A22533B3B500179BF9 /* GistsListViewController.swift in Sources */,
 				F01136BA2531DFFB00875A9E /* HomeViewController.swift in Sources */,
 				F0B781C52533BDF300179BF9 /* Gist.swift in Sources */,
@@ -571,6 +600,7 @@
 				F049AA282535C9790031BC2B /* RequestStates.swift in Sources */,
 				F04FB504253229E000B961B3 /* HomeViewModelDelegate.swift in Sources */,
 				F0B781CA2533C3DC00179BF9 /* ListGistsServiceTarget.swift in Sources */,
+				F0E8D2DF253A25A1001E9CD5 /* GistsListViewModelProtocol.swift in Sources */,
 				F064D2862532151D005329EA /* HomeViewDelegate.swift in Sources */,
 				F064D2712531F620005329EA /* HomeViewModel.swift in Sources */,
 				F064D24B2531EA01005329EA /* Coordinator.swift in Sources */,
@@ -588,6 +618,7 @@
 				F0B9A9CA2537C80F0013EA8E /* CacheProtocol.swift in Sources */,
 				F08DE3F2253350DB009A5915 /* URLSessionProtocol.swift in Sources */,
 				F08DE41225335C33009A5915 /* API.swift in Sources */,
+				F0E8D2E4253A5A2F001E9CD5 /* GistsListRepositoryProtocol.swift in Sources */,
 				F08DE3FC253351BC009A5915 /* HTTPMethod.swift in Sources */,
 				F064D28C25321716005329EA /* HomeStrings.swift in Sources */,
 				F0B781BA2533B64A00179BF9 /* GistsListStrings.swift in Sources */,
@@ -595,6 +626,7 @@
 				F0B9A9C0253795300013EA8E /* UIImageView+Utils.swift in Sources */,
 				F08DE400253351D1009A5915 /* NetworkError.swift in Sources */,
 				F0B781AB2533B47200179BF9 /* GistsListView.swift in Sources */,
+				F0E8D2E8253A5B0F001E9CD5 /* GistOwner.swift in Sources */,
 				F0B781B42533B5AF00179BF9 /* GistsListViewModel.swift in Sources */,
 				F0B781D22533CA5300179BF9 /* GistsListRepository.swift in Sources */,
 			);
@@ -762,6 +794,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F2VH4D4A4M;
 				INFOPLIST_FILE = "ListPublicGists/Suport Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -780,6 +813,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F2VH4D4A4M;
 				INFOPLIST_FILE = "ListPublicGists/Suport Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -13,6 +13,8 @@ protocol GistsListViewDelegate: AnyObject {
 
 class GistsListView: UIView {
     
+    typealias State = RequestStates<[Gist]>
+    
     // MARK: Private Outlets
     @IBOutlet private var tableView: UITableView!
     
@@ -21,6 +23,7 @@ class GistsListView: UIView {
     
     // MARK: Private properties
     private var gists: [Gist] = []
+    private var state: State?
     
     // MARK: Initializer
     override init(frame: CGRect) {
@@ -33,10 +36,25 @@ class GistsListView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: Public Methods
-    func configure(gists: [Gist]) {
-        self.gists.append(contentsOf: gists)
-        tableView.reloadData()
+    func configure(state: State) {
+        self.state = state
+        DispatchQueue.main.async {
+            self.tableView.loadingInFooterView(show: false)
+            
+            switch state {
+            case .loading:
+                self.tableView.loadingInFooterView(show: true)
+            case .load(let gists):
+                self.gists.append(contentsOf: gists)
+                self.tableView.reloadData()
+            case .error(_):
+                break
+            case .empty:
+                break
+            default:
+                break
+            }
+        }
     }
     
     // MARK: Private Methods
@@ -47,10 +65,6 @@ class GistsListView: UIView {
         
         tableView.register(OwnerViewCell.self)
         tableView.tableFooterView = UIView()
-        
-//        tableView.rowHeight = UITableView.automaticDimension
-//        tableView.estimatedRowHeight = 61
-
     }
 }
 
@@ -79,15 +93,13 @@ extension GistsListView: UITableViewDelegate {
 
 extension GistsListView: UITableViewDataSourcePrefetching {
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        guard (indexPaths.contains { $0.row >= self.gists.count - 1 }) else {
+        
+        guard let state = self.state,
+              case State.load(_) = state,
+              (indexPaths.contains { $0.row >= self.gists.count - 1 }) else {
             return
         }
         
         delegate?.gistListViewPrefetchGists(self)
-    }
-    
-    func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
-        print("cancelPrefetchingForRowsAt: \(indexPaths)")
-        // cancelar request items
     }
 }

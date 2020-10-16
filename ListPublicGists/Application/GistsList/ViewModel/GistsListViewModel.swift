@@ -7,26 +7,13 @@
 
 import Foundation
 
-protocol GistsListViewModelProtocol {
-    
-    var gists: [Gist] { get }
-    var gistsStatus: Observable<RequestStates<[Gist]>> { get }
-    var currentPage: Int { set get }
-    var numberOfItems: Int { set get }
-    
-    func getGistsList()
-}
-
 class GistsListViewModel: GistsListViewModelProtocol {
     
     // MARK: Private Properties
-    private(set) var gists: [Gist] = []
     private let repository: GistsListRepositoryProtocol
     private(set) var gistsStatus: Observable<RequestStates<[Gist]>> = Observable(.initializer)
-    
-    // MARK: Public Properties
-    var currentPage = 1
-    var numberOfItems = 30
+    private var currentPage = 0
+    private var numberOfItems = 30
     
     // MARK: Initializer
     init(repository: GistsListRepositoryProtocol = GistsListRepository()) {
@@ -35,12 +22,13 @@ class GistsListViewModel: GistsListViewModelProtocol {
     
     // MARK: Public Methods
     func getGistsList() {
+        currentPage += 1
         gistsStatus.value = .loading
         repository.getGistsList(page: currentPage,
                                 items: numberOfItems) { (result) in
             switch result {
             case .success(let gists):
-                self.gistsStatus.value = .load(gists)
+                self.gistsStatus.value = gists.count > 0 ? .load(gists) : .empty
             case .failure(let error):
                 self.gistsStatus.value = .error(error)
             }

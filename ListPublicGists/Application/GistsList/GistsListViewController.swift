@@ -36,17 +36,7 @@ class GistsListViewController: UIViewController {
         gistsListView.delegate = self
         
         viewModel.gistsStatus.didChange = { [weak self] state in
-            DispatchQueue.main.async {
-                switch state {
-                case .loading:
-                    print("loading")
-                case .load(let gists):
-                    self?.gistsListView.configure(gists: gists)
-                case .error(let error):
-                    print(error)
-                default: break
-                }
-            }
+            self?.gistsListView.configure(state: state)
         }
         viewModel.getGistsList()
     }
@@ -54,8 +44,6 @@ class GistsListViewController: UIViewController {
 
 extension GistsListViewController: GistsListViewDelegate {
     func gistListViewPrefetchGists(_ gistListView: GistsListView) {
-        print(">> load more gists from controller")
-        viewModel.currentPage += 1
         viewModel.getGistsList()
     }
 }

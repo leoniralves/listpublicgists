@@ -11,6 +11,7 @@ class ServiceProvider {
     
     private var session: URLSessionProtocol
     private var api: APIProtocol
+    private var sessionDataTask: URLSessionDataTaskProtocol?
     
     init(session: URLSessionProtocol = URLSession.shared,
          api: APIProtocol = API()) {
@@ -23,7 +24,7 @@ class ServiceProvider {
             var urlRequest = try URLRequest(baseURL: api.baseURL, target: target)
             urlRequest.allHTTPHeaderFields = target.header
             
-            let session = self.session.dataTask(request: urlRequest) { (data, response, error) in
+            sessionDataTask = self.session.dataTask(request: urlRequest) { (data, response, error) in
                 self.debugResponse(request: urlRequest, data: data)
                 
                 if let error = error as? URLError {
@@ -49,7 +50,7 @@ class ServiceProvider {
                 }
             }
             
-            session.resume()
+            sessionDataTask?.resume()
         } catch (let error) {
             guard let error = error as? NetworkError else {
                 completion(.failure(.unknown))
@@ -59,9 +60,16 @@ class ServiceProvider {
         }
     }
     
-    private func errorNetwork(_ error: URLError) throws {
-        
+    func cancelRequest() {
+        guard let sessionDataTask = sessionDataTask as? URLSessionTask,
+              sessionDataTask.state == URLSessionTask.State.running else {
+            return
+        }
+        sessionDataTask.cancel()
     }
+}
+    
+extension ServiceProvider {
     
     private func debugResponse(request: URLRequest, data: Data?) {
         print("==== REQUEST ====")

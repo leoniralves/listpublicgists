@@ -7,14 +7,8 @@
 
 import Foundation
 
-protocol GistsListRepositoryProtocol {
-    func getGistsList(page: Int,
-                      items: Int,
-                      completion: @escaping (Result<[Gist], NetworkError>) -> Void)
-}
-
 struct GistsListRepository: GistsListRepositoryProtocol {
-    private let service: ServiceProvider
+    private(set) var service: ServiceProvider
     
     init(service: ServiceProvider = ServiceProvider()) {
         self.service = service

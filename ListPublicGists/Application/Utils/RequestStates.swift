@@ -7,9 +7,10 @@
 
 import Foundation
 
-enum RequestStates<T> {
+enum RequestStates<T>: Equatable where T: Equatable {
     case initializer
     case loading
     case load(T)
     case error(NetworkError)
+    case empty
 }

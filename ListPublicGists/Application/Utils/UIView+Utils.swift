@@ -27,7 +27,7 @@ extension UIView {
     }
     
     /// Seta o anchor automaticamente para top, left, right e bottom
-    /// - Parameter view: view de referência
+    /// - Parameter view: UIView
     func allAnchor(equalTo view: UIView) {
         self.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         self.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
@@ -35,6 +35,9 @@ extension UIView {
         self.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
     
+    /// Helper para cuidar da inserção de views sem precisar preocupar se as mesmas
+    /// estão `unwrapped`
+    /// - Parameter view: UIView
     func addSubview(_ view: UIView?) {
         guard let view = view else {
             return
