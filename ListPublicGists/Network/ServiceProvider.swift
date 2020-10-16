@@ -20,7 +20,8 @@ class ServiceProvider {
     
     func request<T: Decodable>(target: ServiceTargetProtocol, completion: @escaping (Result<T, NetworkError>) -> Void) {
         do {
-            let urlRequest = try URLRequest(baseURL: api.baseURL, target: target)
+            var urlRequest = try URLRequest(baseURL: api.baseURL, target: target)
+            urlRequest.allHTTPHeaderFields = target.header
             
             let session = self.session.dataTask(request: urlRequest) { (data, response, error) in
                 self.debugResponse(request: urlRequest, data: data)
@@ -29,7 +30,7 @@ class ServiceProvider {
                     completion(.failure(NetworkError(error)))
                 }
                 else if let response = response as? HTTPURLResponse,
-                        !(200...300).contains(response.statusCode) {
+                        !(200...299).contains(response.statusCode) {
                     completion(.failure(NetworkError(response)))
                 } else {
                     guard let data = data else {

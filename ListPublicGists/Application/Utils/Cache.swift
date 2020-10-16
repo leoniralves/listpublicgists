@@ -16,8 +16,8 @@ final class Cache: CacheProtocol {
         self.cache = NSCache()
     }
     
-    func set(key: String, image: UIImage) {
-        cache.setObject(image, forKey: NSString(string: key))
+    func set(key: String, object: UIImage) {
+        cache.setObject(object, forKey: NSString(string: key))
     }
     
     func get(key: String) -> UIImage? {

@@ -12,6 +12,6 @@ protocol CacheProtocol {
     associatedtype Key
     associatedtype Object
     
-    func set(key: Key, image: Object)
+    func set(key: Key, object: Object)
     func get(key: Key) -> Object?
 }

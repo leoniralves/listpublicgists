@@ -8,7 +8,9 @@
 import Foundation
 
 protocol GistsListRepositoryProtocol {
-    func getGistsList(completion: @escaping (Result<[Gist], NetworkError>) -> Void)
+    func getGistsList(page: Int,
+                      items: Int,
+                      completion: @escaping (Result<[Gist], NetworkError>) -> Void)
 }
 
 struct GistsListRepository: GistsListRepositoryProtocol {
@@ -20,8 +22,11 @@ struct GistsListRepository: GistsListRepositoryProtocol {
 }
 
 extension GistsListRepository {
-    func getGistsList(completion: @escaping (Result<[Gist], NetworkError>) -> Void) {
-        service.request(target: ListGistsServiceTarget.gists,
+    func getGistsList(page: Int,
+                      items: Int,
+                      completion: @escaping (Result<[Gist], NetworkError>) -> Void) {
+        service.request(target: ListGistsServiceTarget.gists(page: page,
+                                                             items: items),
                         completion: completion)
     }
 }

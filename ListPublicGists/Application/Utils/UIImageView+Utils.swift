@@ -29,20 +29,23 @@ extension UIImageView {
     }
     
     func load<T: CacheProtocol>(url: URL,
-                                view: UIView?,
+                                placeholder: UIView?,
                                 cache: T?) where T.Key == String, T.Object == UIImage {
         if let imageCache = cache?.get(key: url.absoluteString) {
             self.image = imageCache
         } else {
-            view?.translatesAutoresizingMaskIntoConstraints = false
-            self.addSubview(view)
-            view?.allAnchor(equalTo: self)
-            
             task?.cancel()
+            task = nil
+            
+            placeholder?.translatesAutoresizingMaskIntoConstraints = false
+            self.addSubview(placeholder)
+            placeholder?.allAnchor(equalTo: self)
+            
             task = URLSession.shared.dataTask(with: url) { (data, _, _) in
                 DispatchQueue.main.async {
-                    view?.removeFromSuperview()
-                    guard let data = data else {
+                    placeholder?.removeFromSuperview()
+                    guard self.task != nil,
+                          let data = data else {
                         return
                     }
                     guard let image = UIImage(data: data) else {
@@ -50,7 +53,7 @@ extension UIImageView {
                     }
                     self.image = image
                     cache?.set(key: url.absoluteString,
-                              image: image)
+                              object: image)
                 }
             }
             task?.resume()

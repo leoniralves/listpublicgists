@@ -7,10 +7,17 @@
 
 import UIKit
 
+protocol GistsListViewDelegate: AnyObject {
+    func gistListViewPrefetchGists(_ gistListView: GistsListView)
+}
+
 class GistsListView: UIView {
     
     // MARK: Private Outlets
     @IBOutlet private var tableView: UITableView!
+    
+    // MARK: Public properties
+    weak var delegate: GistsListViewDelegate?
     
     // MARK: Private properties
     private var gists: [Gist] = []
@@ -28,9 +35,7 @@ class GistsListView: UIView {
     
     // MARK: Public Methods
     func configure(gists: [Gist]) {
-        self.gists = gists
-//                tableView.rowHeight = UITableView.automaticDimension
-//                tableView.estimatedRowHeight = 44
+        self.gists.append(contentsOf: gists)
         tableView.reloadData()
     }
     
@@ -38,8 +43,13 @@ class GistsListView: UIView {
     private func setupLayout() {
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.prefetchDataSource = self
+        
         tableView.register(OwnerViewCell.self)
         tableView.tableFooterView = UIView()
+        
+//        tableView.rowHeight = UITableView.automaticDimension
+//        tableView.estimatedRowHeight = 61
 
     }
 }
@@ -64,5 +74,20 @@ extension GistsListView: UITableViewDataSource {
 extension GistsListView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         60
+    }
+}
+
+extension GistsListView: UITableViewDataSourcePrefetching {
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        guard (indexPaths.contains { $0.row >= self.gists.count - 1 }) else {
+            return
+        }
+        
+        delegate?.gistListViewPrefetchGists(self)
+    }
+    
+    func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
+        print("cancelPrefetchingForRowsAt: \(indexPaths)")
+        // cancelar request items
     }
 }

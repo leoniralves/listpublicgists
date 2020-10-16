@@ -32,6 +32,9 @@ class GistsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = GistsListStrings.Controller.title
+        
+        gistsListView.delegate = self
+        
         viewModel.gistsStatus.didChange = { [weak self] state in
             DispatchQueue.main.async {
                 switch state {
@@ -45,6 +48,14 @@ class GistsListViewController: UIViewController {
                 }
             }
         }
+        viewModel.getGistsList()
+    }
+}
+
+extension GistsListViewController: GistsListViewDelegate {
+    func gistListViewPrefetchGists(_ gistListView: GistsListView) {
+        print(">> load more gists from controller")
+        viewModel.currentPage += 1
         viewModel.getGistsList()
     }
 }
