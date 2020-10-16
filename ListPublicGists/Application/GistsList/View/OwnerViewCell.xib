@@ -41,6 +41,7 @@
                     <constraint firstItem="HKv-XA-MWJ" firstAttribute="leading" secondItem="3hj-Ry-Dht" secondAttribute="leading" constant="16" id="s8a-Q0-wJI"/>
                 </constraints>
             </tableViewCellContentView>
+            <inset key="separatorInset" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
                 <outlet property="nameLabel" destination="h6s-7D-vmf" id="6SI-uF-G2d"/>
                 <outlet property="thumbImageView" destination="ol0-uX-qjL" id="kFH-Os-xSF"/>

@@ -24,6 +24,7 @@ class OwnerViewCell: UITableViewCell {
         let activityIndicator = UIActivityIndicatorView()
         activityIndicator.startAnimating()
         
+        thumbImageView.layer.cornerRadius = CGFloat(thumbImageView.frame.width/2)
         thumbImageView.load(url: url,
                             placeholder: activityIndicator,
                             cache: Cache.shared)
