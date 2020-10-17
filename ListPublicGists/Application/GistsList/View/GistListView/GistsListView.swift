@@ -47,9 +47,9 @@ class GistsListView: UIView {
             self.gists.append(contentsOf: gists)
             self.tableView.reloadData()
             self.tableView.loading(show: false)
-        case .error(_):
+        case .error(let error):
             self.tableView.showError(title: "Error Title",
-                                     description: "Description",
+                                     description: String(describing: error),
                                      image: UIImage(),
                                      action: { [weak self] in
                                         guard let self = self else { return }
@@ -71,6 +71,7 @@ class GistsListView: UIView {
     }
 }
 
+// MARK: UITableViewDataSource
 extension GistsListView: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         gists.count > 0 ? 1 : 0
@@ -88,12 +89,19 @@ extension GistsListView: UITableViewDataSource {
     }
 }
 
+// MARK: UITableViewDelegate
 extension GistsListView: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.gistListView(self, didSelectGist: gists[indexPath.row])
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         60
     }
 }
 
+// MARK: UITableViewDataSourcePrefetching
 extension GistsListView: UITableViewDataSourcePrefetching {
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         

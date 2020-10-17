@@ -9,9 +9,18 @@ import UIKit
 
 class HomeCoordinator: Coordinator {
     
-    // MARK: Private properties
+    // MARK: Private Properties
     private let presenter: NavigationControllerProtocol
     private var homeViewModel: HomeViewModelProtocol
+    
+    // MARK: Private Lazy Properties
+    private lazy var homeViewController: HomeViewController = {
+        HomeViewController(viewModel: homeViewModel)
+    }()
+    
+    private lazy var gistsListCoordinator: GistsListCoordinator = {
+        GistsListCoordinator(presenter: presenter)
+    }()
     
     // MARK: Initializer
     init(presenter: NavigationControllerProtocol,
@@ -24,12 +33,11 @@ class HomeCoordinator: Coordinator {
     
     // MARK: Public Methods
     func start() {
-        let homeViewController = HomeViewController(viewModel: homeViewModel)
         presenter.show(homeViewController, sender: nil)
     }
     
+    // MARK: Private Methods
     private func showGistsList() {
-        let gistsListCoordinator = GistsListCoordinator(presenter: presenter)
         gistsListCoordinator.start()
     }
 }
@@ -39,4 +47,5 @@ extension HomeCoordinator: HomeViewModelDelegate {
     func homeViewModelDidShowPublicGists(_ viewModel: HomeViewModel) {
         showGistsList()
     }
+    
 }

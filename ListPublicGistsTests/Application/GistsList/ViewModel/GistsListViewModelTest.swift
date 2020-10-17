@@ -56,6 +56,7 @@ class GistsListViewModelTest: XCTestCase {
                 XCTAssertEqual(gists[0].files.first!.key, "Dummy.ext")
                 XCTAssertEqual(gists[0].files.first!.value.filename, "Dummy File")
                 XCTAssertEqual(gists[0].files.first!.value.type, "application/dummy")
+                XCTAssertEqual(gists[0].files.first!.value.language, "Dummy")
             case .empty:
                 XCTFail("Empty - Wrong state")
             case .error(let error):

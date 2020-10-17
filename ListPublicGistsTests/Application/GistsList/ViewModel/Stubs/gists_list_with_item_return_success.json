@@ -3,7 +3,8 @@
     "files": {
       "Dummy.ext": {
         "filename": "Dummy File",
-        "type": "application/dummy"
+        "type": "application/dummy",
+        "language": "Dummy"
       }
     },
     "owner": {

@@ -15,6 +15,9 @@ class GistsListViewModel: GistsListViewModelProtocol {
     private var currentPage = 1
     private var numberOfItems = 30
     
+    // MARK: Public Properties
+    weak var delegate: GistsListViewModelDelegate?
+    
     // MARK: Initializer
     init(repository: GistsListRepositoryProtocol = GistsListRepository()) {
         self.repository = repository
@@ -33,6 +36,10 @@ class GistsListViewModel: GistsListViewModelProtocol {
                 self.gistsStatus.value = .error(error)
             }
         }
+    }
+    
+    func didSelectGist(_ gist: Gist) {
+        delegate?.gistsListViewModel(self, didSelectGist: gist)
     }
 }
 
