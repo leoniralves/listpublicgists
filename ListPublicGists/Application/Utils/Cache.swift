@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class Cache: CacheProtocol {
+final class Cache: Cacheable {
     static var shared: Cache = Cache()
     
     private var cache: NSCache<NSString, UIImage>

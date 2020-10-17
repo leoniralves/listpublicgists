@@ -33,7 +33,7 @@ extension UIImageView {
     ///   - url: Url da imagem
     ///   - placeholder: View de apresentação enquanto a imagem não foi obtida
     ///   - cache: Objeto para manter a image de forma local e temporária
-    func load<T: CacheProtocol>(url: URL,
+    func load<T: Cacheable>(url: URL,
                                 placeholder: UIView?,
                                 cache: T?) where T.Key == String, T.Object == UIImage {
         if let imageCache = cache?.get(key: url.absoluteString) {

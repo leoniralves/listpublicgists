@@ -1,5 +1,5 @@
 //
-//  CacheProtocol.swift
+//  Cacheable.swift
 //  ListPublicGists
 //
 //  Created by Leonir Alves Deolindo on 14/10/20.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CacheProtocol {
+protocol Cacheable {
     
     associatedtype Key
     associatedtype Object

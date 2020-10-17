@@ -8,6 +8,7 @@
 import UIKit
 
 protocol GistsListViewDelegate: AnyObject {
+    func gistListRetry(_ gistListView: GistsListView)
     func gistListViewPrefetchGists(_ gistListView: GistsListView)
 }
 
@@ -43,12 +44,23 @@ class GistsListView: UIView {
             
             switch state {
             case .loading:
-                self.tableView.loadingInFooterView(show: true)
+                if self.gists.count > 0 {
+                    self.tableView.loadingInFooterView(show: true)
+                } else {
+                    self.tableView.loading(show: true)
+                }
             case .load(let gists):
                 self.gists.append(contentsOf: gists)
                 self.tableView.reloadData()
-            case .error(_):
-                break
+                self.tableView.loading(show: false)
+            case .error(let error):
+                self.tableView.showError(title: "Error Title",
+                                         description: "Description",
+                                         image: UIImage(),
+                                         action: { [weak self] in
+                                            guard let self = self else { return }
+                                            self.delegate?.gistListRetry(self)
+                                         })
             case .empty:
                 break
             default:

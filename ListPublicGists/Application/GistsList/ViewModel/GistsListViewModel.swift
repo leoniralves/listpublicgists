@@ -12,7 +12,7 @@ class GistsListViewModel: GistsListViewModelProtocol {
     // MARK: Private Properties
     private let repository: GistsListRepositoryProtocol
     private(set) var gistsStatus: Observable<RequestStates<[Gist]>> = Observable(.initializer)
-    private var currentPage = 0
+    private var currentPage = 1
     private var numberOfItems = 30
     
     // MARK: Initializer
@@ -22,17 +22,21 @@ class GistsListViewModel: GistsListViewModelProtocol {
     
     // MARK: Public Methods
     func getGistsList() {
-        currentPage += 1
         gistsStatus.value = .loading
         repository.getGistsList(page: currentPage,
                                 items: numberOfItems) { (result) in
             switch result {
             case .success(let gists):
                 self.gistsStatus.value = gists.count > 0 ? .load(gists) : .empty
+                self.currentPage += 1
             case .failure(let error):
                 self.gistsStatus.value = .error(error)
             }
         }
+    }
+    
+    deinit {
+        print(">>> \(String(describing: Self.self)) deinit")
     }
 }
 

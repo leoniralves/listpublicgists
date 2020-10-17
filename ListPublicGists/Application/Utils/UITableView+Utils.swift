@@ -24,6 +24,8 @@ extension ReusableView where Self: UITableViewCell {
 
 extension UITableViewCell: ReusableView {}
 
+extension UITableView: Loadable {}
+
 extension UITableView {
     
     /// Registra um `célula` na `UITableView`
@@ -76,7 +78,7 @@ extension UITableView {
                                             y: 0,
                                             width: self.frame.width,
                                             height: 44))
-            view.backgroundColor = .red
+            view.backgroundColor = .clear
             tableFooterView = view
             
             let spinning = UIActivityIndicatorView()

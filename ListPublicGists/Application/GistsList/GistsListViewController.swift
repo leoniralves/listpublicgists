@@ -40,9 +40,17 @@ class GistsListViewController: UIViewController {
         }
         viewModel.getGistsList()
     }
+    
+    deinit {
+        print(">>> \(String(describing: Self.self)) deinit")
+    }
 }
 
 extension GistsListViewController: GistsListViewDelegate {
+    func gistListRetry(_ gistListView: GistsListView) {
+        viewModel.getGistsList()
+    }
+    
     func gistListViewPrefetchGists(_ gistListView: GistsListView) {
         viewModel.getGistsList()
     }
