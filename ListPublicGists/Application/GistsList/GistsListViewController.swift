@@ -11,7 +11,7 @@ class GistsListViewController: UIViewController {
     
     // MARK: Private Properties
     private var viewModel: GistsListViewModelProtocol
-    private let gistsListView: GistsListView = GistsListView()
+    private(set) var gistsListView: GistsListView = GistsListView()
     
     // MARK: Initializer
     init(viewModel: GistsListViewModelProtocol) {
@@ -36,16 +36,15 @@ class GistsListViewController: UIViewController {
         gistsListView.delegate = self
         
         viewModel.gistsStatus.didChange = { [weak self] state in
-            self?.gistsListView.configure(state: state)
+            DispatchQueue.main.async {
+                self?.gistsListView.configure(state: state)
+            }
         }
         viewModel.getGistsList()
     }
-    
-    deinit {
-        print(">>> \(String(describing: Self.self)) deinit")
-    }
 }
 
+// MARK: GistsListViewDelegate
 extension GistsListViewController: GistsListViewDelegate {
     func gistListRetry(_ gistListView: GistsListView) {
         viewModel.getGistsList()

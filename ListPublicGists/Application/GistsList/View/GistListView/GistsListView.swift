@@ -7,17 +7,12 @@
 
 import UIKit
 
-protocol GistsListViewDelegate: AnyObject {
-    func gistListRetry(_ gistListView: GistsListView)
-    func gistListViewPrefetchGists(_ gistListView: GistsListView)
-}
-
 class GistsListView: UIView {
     
     typealias State = RequestStates<[Gist]>
     
     // MARK: Private Outlets
-    @IBOutlet private var tableView: UITableView!
+    @IBOutlet private(set) var tableView: UITableView!
     
     // MARK: Public properties
     weak var delegate: GistsListViewDelegate?
@@ -39,33 +34,29 @@ class GistsListView: UIView {
     
     func configure(state: State) {
         self.state = state
-        DispatchQueue.main.async {
-            self.tableView.loadingInFooterView(show: false)
-            
-            switch state {
-            case .loading:
-                if self.gists.count > 0 {
-                    self.tableView.loadingInFooterView(show: true)
-                } else {
-                    self.tableView.loading(show: true)
-                }
-            case .load(let gists):
-                self.gists.append(contentsOf: gists)
-                self.tableView.reloadData()
-                self.tableView.loading(show: false)
-            case .error(let error):
-                self.tableView.showError(title: "Error Title",
-                                         description: "Description",
-                                         image: UIImage(),
-                                         action: { [weak self] in
-                                            guard let self = self else { return }
-                                            self.delegate?.gistListRetry(self)
-                                         })
-            case .empty:
-                break
-            default:
-                break
+        self.tableView.loadingInFooterView(show: false)
+        
+        switch state {
+        case .loading:
+            if self.gists.count > 0 {
+                self.tableView.loadingInFooterView(show: true)
+            } else {
+                self.tableView.loading(show: true)
             }
+        case .load(let gists):
+            self.gists.append(contentsOf: gists)
+            self.tableView.reloadData()
+            self.tableView.loading(show: false)
+        case .error(_):
+            self.tableView.showError(title: "Error Title",
+                                     description: "Description",
+                                     image: UIImage(),
+                                     action: { [weak self] in
+                                        guard let self = self else { return }
+                                        self.delegate?.gistListRetry(self)
+                                     })
+        default:
+            break
         }
     }
     

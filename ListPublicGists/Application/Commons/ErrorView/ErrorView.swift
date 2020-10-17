@@ -7,41 +7,6 @@
 
 import UIKit
 
-protocol ErrorViewProtocol {
-    func showError(title: String,
-                   description: String,
-                   image: UIImage,
-                   action: @escaping ()->Void)
-}
-
-extension ErrorViewProtocol where Self: UIView {
-    func showError(title: String,
-                   description: String,
-                   image: UIImage,
-                   action: @escaping ()->Void) {
-        print(">>> UIView")
-    }
-}
-
-extension ErrorViewProtocol where Self: UITableView {
-    func showError(title: String,
-                   description: String,
-                   image: UIImage,
-                   action: @escaping ()->Void) {
-        let errorView = ErrorView(title: title,
-                                  descriptionText: description,
-                                  image: image,
-                                  action: action)
-        backgroundView = errorView
-        
-        errorView.close = {
-            self.backgroundView = nil
-        }
-    }
-}
-
-extension UIView: ErrorViewProtocol {}
-
 class ErrorView: UIView {
     
     // MARK: Private Outlets
@@ -50,7 +15,7 @@ class ErrorView: UIView {
     @IBOutlet weak private var descriptionLabel: UILabel!
     
     // MARK: Private Properties
-    private var action: (()->Void)?
+    private(set) var action: (()->Void)?
     
     // MARK: Public Properties
     var close: (()->Void)?
@@ -77,6 +42,7 @@ class ErrorView: UIView {
         self.action = action
     }
     
+    // MARK: Actions
     @IBAction func actionOk(_ sender: Any) {
         action?()
         close?()

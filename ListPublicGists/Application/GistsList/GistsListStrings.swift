@@ -11,8 +11,4 @@ struct GistsListStrings {
     struct Controller {
         static var title: String = "Gists Públicos"
     }
-    
-    struct View {
-        
-    }
 }

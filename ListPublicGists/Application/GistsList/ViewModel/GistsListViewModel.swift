@@ -34,9 +34,5 @@ class GistsListViewModel: GistsListViewModelProtocol {
             }
         }
     }
-    
-    deinit {
-        print(">>> \(String(describing: Self.self)) deinit")
-    }
 }
 

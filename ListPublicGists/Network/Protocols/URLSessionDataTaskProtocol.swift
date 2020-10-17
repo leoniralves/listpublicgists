@@ -9,7 +9,10 @@
 import Foundation
 
 protocol URLSessionDataTaskProtocol {
+    var state: URLSessionTask.State { get }
+    
     func resume()
+    func cancel()
 }
 
 extension URLSessionDataTask: URLSessionDataTaskProtocol {}

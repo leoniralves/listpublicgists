@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F0106528253A7276001BE364 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0106527253A7276001BE364 /* ErrorView.xib */; };
+		F010653E253B434D001BE364 /* ErrorViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F010653D253B434D001BE364 /* ErrorViewProtocol.swift */; };
+		F010654B253B47E2001BE364 /* gists_list_with_item_return_success.json in Resources */ = {isa = PBXBuildFile; fileRef = F010654A253B47E2001BE364 /* gists_list_with_item_return_success.json */; };
 		F01136B62531DFFB00875A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01136B52531DFFB00875A9E /* AppDelegate.swift */; };
 		F01136B82531DFFB00875A9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01136B72531DFFB00875A9E /* SceneDelegate.swift */; };
 		F01136BA2531DFFB00875A9E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01136B92531DFFB00875A9E /* HomeViewController.swift */; };
@@ -66,11 +68,19 @@
 		F0CCBFA3253717830099A7DF /* OwnerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0CCBFA2253717830099A7DF /* OwnerViewCell.xib */; };
 		F0CCBFA725371F390099A7DF /* UITableView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CCBFA625371F390099A7DF /* UITableView+Utils.swift */; };
 		F0CCBFAB253720050099A7DF /* NavigationController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CCBFAA253720050099A7DF /* NavigationController+Utils.swift */; };
+		F0E7858E253B55A7001A5648 /* empty_gists_list_return_success.json in Resources */ = {isa = PBXBuildFile; fileRef = F0E7858D253B55A7001A5648 /* empty_gists_list_return_success.json */; };
+		F0E78597253B6801001A5648 /* GistsListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E78596253B6801001A5648 /* GistsListViewDelegate.swift */; };
+		F0E785A6253B690E001A5648 /* GistsListCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E785A5253B690E001A5648 /* GistsListCoordinatorTest.swift */; };
+		F0E785AA253B6D64001A5648 /* GistsListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E785A9253B6D64001A5648 /* GistsListViewControllerTest.swift */; };
+		F0E785B3253B7307001A5648 /* HomeViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E785B2253B7307001A5648 /* HomeViewModelMock.swift */; };
+		F0E785BA253B7970001A5648 /* GistsListViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E785B9253B7970001A5648 /* GistsListViewModelMock.swift */; };
+		F0E785C2253B7B6B001A5648 /* GistListViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E785C1253B7B6B001A5648 /* GistListViewTest.swift */; };
+		F0E785C9253B7FEB001A5648 /* GistsListViewDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E785C8253B7FEB001A5648 /* GistsListViewDelegateMock.swift */; };
 		F0E8D2DF253A25A1001E9CD5 /* GistsListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8D2DE253A25A1001E9CD5 /* GistsListViewModelProtocol.swift */; };
 		F0E8D2E4253A5A2F001E9CD5 /* GistsListRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8D2E3253A5A2F001E9CD5 /* GistsListRepositoryProtocol.swift */; };
 		F0E8D2E8253A5B0F001E9CD5 /* GistOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8D2E7253A5B0F001E9CD5 /* GistOwner.swift */; };
 		F0E8D2EC253A5B22001E9CD5 /* GistFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8D2EB253A5B22001E9CD5 /* GistFile.swift */; };
-		F0E8D2F3253A618D001E9CD5 /* GistsListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8D2F2253A618D001E9CD5 /* GistsListViewTests.swift */; };
+		F0E8D2F3253A618D001E9CD5 /* GistsListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8D2F2253A618D001E9CD5 /* GistsListViewModelTest.swift */; };
 		F0E8D2F7253A683E001E9CD5 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8D2F6253A683E001E9CD5 /* Loadable.swift */; };
 		F0E8D2FF253A6BC0001E9CD5 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E8D2FE253A6BC0001E9CD5 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
@@ -87,6 +97,8 @@
 
 /* Begin PBXFileReference section */
 		F0106527253A7276001BE364 /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		F010653D253B434D001BE364 /* ErrorViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewProtocol.swift; sourceTree = "<group>"; };
+		F010654A253B47E2001BE364 /* gists_list_with_item_return_success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = gists_list_with_item_return_success.json; sourceTree = "<group>"; };
 		F01136B22531DFFB00875A9E /* ListPublicGists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListPublicGists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01136B52531DFFB00875A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F01136B72531DFFB00875A9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,11 +161,19 @@
 		F0CCBFA2253717830099A7DF /* OwnerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwnerViewCell.xib; sourceTree = "<group>"; };
 		F0CCBFA625371F390099A7DF /* UITableView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utils.swift"; sourceTree = "<group>"; };
 		F0CCBFAA253720050099A7DF /* NavigationController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationController+Utils.swift"; sourceTree = "<group>"; };
+		F0E7858D253B55A7001A5648 /* empty_gists_list_return_success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = empty_gists_list_return_success.json; sourceTree = "<group>"; };
+		F0E78596253B6801001A5648 /* GistsListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListViewDelegate.swift; sourceTree = "<group>"; };
+		F0E785A5253B690E001A5648 /* GistsListCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListCoordinatorTest.swift; sourceTree = "<group>"; };
+		F0E785A9253B6D64001A5648 /* GistsListViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListViewControllerTest.swift; sourceTree = "<group>"; };
+		F0E785B2253B7307001A5648 /* HomeViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelMock.swift; sourceTree = "<group>"; };
+		F0E785B9253B7970001A5648 /* GistsListViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListViewModelMock.swift; sourceTree = "<group>"; };
+		F0E785C1253B7B6B001A5648 /* GistListViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistListViewTest.swift; sourceTree = "<group>"; };
+		F0E785C8253B7FEB001A5648 /* GistsListViewDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListViewDelegateMock.swift; sourceTree = "<group>"; };
 		F0E8D2DE253A25A1001E9CD5 /* GistsListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListViewModelProtocol.swift; sourceTree = "<group>"; };
 		F0E8D2E3253A5A2F001E9CD5 /* GistsListRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListRepositoryProtocol.swift; sourceTree = "<group>"; };
 		F0E8D2E7253A5B0F001E9CD5 /* GistOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistOwner.swift; sourceTree = "<group>"; };
 		F0E8D2EB253A5B22001E9CD5 /* GistFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistFile.swift; sourceTree = "<group>"; };
-		F0E8D2F2253A618D001E9CD5 /* GistsListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListViewTests.swift; sourceTree = "<group>"; };
+		F0E8D2F2253A618D001E9CD5 /* GistsListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListViewModelTest.swift; sourceTree = "<group>"; };
 		F0E8D2F6253A683E001E9CD5 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 		F0E8D2FE253A6BC0001E9CD5 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +196,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F0106549253B47A0001BE364 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				F010654A253B47E2001BE364 /* gists_list_with_item_return_success.json */,
+				F0E7858D253B55A7001A5648 /* empty_gists_list_return_success.json */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
 		F01136A92531DFFB00875A9E = {
 			isa = PBXGroup;
 			children = (
@@ -231,7 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				F0E8D2FD253A6BAC001E9CD5 /* Commons */,
-				F064D27F253212B4005329EA /* Utils */,
+				F064D27F253212B4005329EA /* Extensions */,
 				F064D2482531E9EE005329EA /* Protocols */,
 				F064D2412531E9A3005329EA /* Home */,
 				F0B7819A2533B30500179BF9 /* GistsList */,
@@ -278,6 +307,7 @@
 			children = (
 				F04FB51A25322DBC00B961B3 /* HomeViewDelegateMock.swift */,
 				F04FB52025322DD600B961B3 /* HomeViewModelDelegateMock.swift */,
+				F0E785B2253B7307001A5648 /* HomeViewModelMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -300,6 +330,7 @@
 				F064D24A2531EA01005329EA /* Coordinator.swift */,
 				F0B9A9C92537C80F0013EA8E /* Cacheable.swift */,
 				F0E8D2F6253A683E001E9CD5 /* Loadable.swift */,
+				F010653D253B434D001BE364 /* ErrorViewProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -344,18 +375,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		F064D27F253212B4005329EA /* Utils */ = {
+		F064D27F253212B4005329EA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				F064D280253212E6005329EA /* UIView+Utils.swift */,
 				F0CCBFA625371F390099A7DF /* UITableView+Utils.swift */,
 				F0B9A9BF253795300013EA8E /* UIImageView+Utils.swift */,
 				F0CCBFAA253720050099A7DF /* NavigationController+Utils.swift */,
-				F049AA232535C95B0031BC2B /* Observable.swift */,
-				F049AA272535C9790031BC2B /* RequestStates.swift */,
-				F0B9A9C52537C0840013EA8E /* Cache.swift */,
 			);
-			path = Utils;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F064D2842532150F005329EA /* Protocols */ = {
@@ -374,6 +402,7 @@
 				F08DE3FB253351BC009A5915 /* HTTPMethod.swift */,
 				F08DE3FF253351D1009A5915 /* NetworkError.swift */,
 				F08DE41125335C33009A5915 /* API.swift */,
+				F049AA272535C9790031BC2B /* RequestStates.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -438,10 +467,8 @@
 		F0B781A52533B46100179BF9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F0B781AA2533B47200179BF9 /* GistsListView.swift */,
-				F0B781AE2533B4AA00179BF9 /* GistsListView.xib */,
-				F0CCBF9E2537176A0099A7DF /* OwnerViewCell.swift */,
-				F0CCBFA2253717830099A7DF /* OwnerViewCell.xib */,
+				F0E7859D253B6826001A5648 /* GistListView */,
+				F0E785A2253B6863001A5648 /* OwnerViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -475,6 +502,75 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		F0E78595253B67EE001A5648 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F0E78596253B6801001A5648 /* GistsListViewDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F0E7859D253B6826001A5648 /* GistListView */ = {
+			isa = PBXGroup;
+			children = (
+				F0E78595253B67EE001A5648 /* Protocols */,
+				F0B781AA2533B47200179BF9 /* GistsListView.swift */,
+				F0B781AE2533B4AA00179BF9 /* GistsListView.xib */,
+			);
+			path = GistListView;
+			sourceTree = "<group>";
+		};
+		F0E785A2253B6863001A5648 /* OwnerViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F0CCBF9E2537176A0099A7DF /* OwnerViewCell.swift */,
+				F0CCBFA2253717830099A7DF /* OwnerViewCell.xib */,
+			);
+			path = OwnerViewCell;
+			sourceTree = "<group>";
+		};
+		F0E785AD253B6D78001A5648 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F0106549253B47A0001BE364 /* Stubs */,
+				F0E8D2F2253A618D001E9CD5 /* GistsListViewModelTest.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F0E785B8253B795F001A5648 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				F0E785B9253B7970001A5648 /* GistsListViewModelMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		F0E785BF253B7B4D001A5648 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F0E785C0253B7B5D001A5648 /* GistListView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0E785C0253B7B5D001A5648 /* GistListView */ = {
+			isa = PBXGroup;
+			children = (
+				F0E785C7253B7FE0001A5648 /* Mock */,
+				F0E785C1253B7B6B001A5648 /* GistListViewTest.swift */,
+			);
+			path = GistListView;
+			sourceTree = "<group>";
+		};
+		F0E785C7253B7FE0001A5648 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				F0E785C8253B7FEB001A5648 /* GistsListViewDelegateMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		F0E8D2DD253A2592001E9CD5 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -494,7 +590,11 @@
 		F0E8D2EF253A606C001E9CD5 /* GistsList */ = {
 			isa = PBXGroup;
 			children = (
-				F0E8D2F2253A618D001E9CD5 /* GistsListViewTests.swift */,
+				F0E785B8253B795F001A5648 /* Mocks */,
+				F0E785A5253B690E001A5648 /* GistsListCoordinatorTest.swift */,
+				F0E785A9253B6D64001A5648 /* GistsListViewControllerTest.swift */,
+				F0E785AD253B6D78001A5648 /* ViewModel */,
+				F0E785BF253B7B4D001A5648 /* View */,
 			);
 			path = GistsList;
 			sourceTree = "<group>";
@@ -511,6 +611,8 @@
 		F0E8D2FD253A6BAC001E9CD5 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				F049AA232535C95B0031BC2B /* Observable.swift */,
+				F0B9A9C52537C0840013EA8E /* Cache.swift */,
 				F0E8D2FC253A6B86001E9CD5 /* ErrorView */,
 			);
 			path = Commons;
@@ -611,8 +713,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F08DE41E25335CB4009A5915 /* network_invalid_json_key_not_found.json in Resources */,
+				F0E7858E253B55A7001A5648 /* empty_gists_list_return_success.json in Resources */,
 				F08DE41D25335CB4009A5915 /* network_valid_json.json in Resources */,
 				F08DE42725339A71009A5915 /* network_empty_data_json.json in Resources */,
+				F010654B253B47E2001BE364 /* gists_list_with_item_return_success.json in Resources */,
 				F08DE41C25335CB4009A5915 /* network_invalid_json_value_not_found.json in Resources */,
 				F08DE41F25335CB4009A5915 /* network_invalid_json_type_mismatch.json in Resources */,
 				F08DE41B25335CB4009A5915 /* network_invalid_json_data_corrupted.json in Resources */,
@@ -651,10 +755,12 @@
 				F01136B82531DFFB00875A9E /* SceneDelegate.swift in Sources */,
 				F0CCBFAB253720050099A7DF /* NavigationController+Utils.swift in Sources */,
 				F0B9A9C62537C0840013EA8E /* Cache.swift in Sources */,
+				F010653E253B434D001BE364 /* ErrorViewProtocol.swift in Sources */,
 				F0E8D2FF253A6BC0001E9CD5 /* ErrorView.swift in Sources */,
 				F064D281253212E6005329EA /* UIView+Utils.swift in Sources */,
 				F0CCBF9F2537176A0099A7DF /* OwnerViewCell.swift in Sources */,
 				F0B9A9CA2537C80F0013EA8E /* Cacheable.swift in Sources */,
+				F0E78597253B6801001A5648 /* GistsListViewDelegate.swift in Sources */,
 				F08DE3F2253350DB009A5915 /* URLSessionProtocol.swift in Sources */,
 				F08DE41225335C33009A5915 /* API.swift in Sources */,
 				F0E8D2E4253A5A2F001E9CD5 /* GistsListRepositoryProtocol.swift in Sources */,
@@ -675,17 +781,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0E785A6253B690E001A5648 /* GistsListCoordinatorTest.swift in Sources */,
 				F04FB51425322A4D00B961B3 /* HomeViewModelTests.swift in Sources */,
 				F064D2692531F341005329EA /* NavigationControllerSpy.swift in Sources */,
+				F0E785BA253B7970001A5648 /* GistsListViewModelMock.swift in Sources */,
 				F04FB52125322DD600B961B3 /* HomeViewModelDelegateMock.swift in Sources */,
+				F0E785C2253B7B6B001A5648 /* GistListViewTest.swift in Sources */,
 				F04FB52625322E0200B961B3 /* TestHelper.swift in Sources */,
+				F0E785AA253B6D64001A5648 /* GistsListViewControllerTest.swift in Sources */,
+				F0E785B3253B7307001A5648 /* HomeViewModelMock.swift in Sources */,
 				F08DE4082533553D009A5915 /* ServiceProviderTest.swift in Sources */,
 				F04FB51B25322DBC00B961B3 /* HomeViewDelegateMock.swift in Sources */,
 				F08DE43225339E8F009A5915 /* URLSessionMock.swift in Sources */,
-				F0E8D2F3253A618D001E9CD5 /* GistsListViewTests.swift in Sources */,
+				F0E8D2F3253A618D001E9CD5 /* GistsListViewModelTest.swift in Sources */,
 				F04FB4F8253220C900B961B3 /* HomeViewTest.swift in Sources */,
 				F064D2582531EE4F005329EA /* HomeCoordinatorTest.swift in Sources */,
 				F04FB4FE2532267300B961B3 /* HomeViewControllerTests.swift in Sources */,
+				F0E785C9253B7FEB001A5648 /* GistsListViewDelegateMock.swift in Sources */,
 				F08DE42C25339E70009A5915 /* URLSessionDataTaskMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

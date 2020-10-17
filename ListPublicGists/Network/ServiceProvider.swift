@@ -61,7 +61,7 @@ class ServiceProvider {
     }
     
     func cancelRequest() {
-        guard let sessionDataTask = sessionDataTask as? URLSessionTask,
+        guard let sessionDataTask = self.sessionDataTask,
               sessionDataTask.state == URLSessionTask.State.running else {
             return
         }

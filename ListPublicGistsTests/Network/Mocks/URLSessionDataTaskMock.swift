@@ -10,7 +10,8 @@ import Foundation
 @testable import ListPublicGists
 
 class URLSessionDataTaskMock: URLSessionDataTaskProtocol {
-    func resume() {
-        
-    }
+    var state: URLSessionTask.State = .suspended
+    
+    func resume() { state = .running }
+    func cancel() { state = .canceling }
 }

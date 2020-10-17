@@ -10,20 +10,16 @@ import Foundation
 class GistsListCoordinator: Coordinator {
     
     private let presenter: NavigationControllerProtocol
+    private let gistsListViewModel: GistsListViewModelProtocol
     
-    private lazy var gistsListViewModel: GistsListViewModelProtocol = {
-        GistsListViewModel()
-    }()
-    
-    private lazy var gistsListViewController: GistsListViewController = {
-        GistsListViewController(viewModel: gistsListViewModel)
-    }()
-    
-    init(presenter: NavigationControllerProtocol) {
+    init(presenter: NavigationControllerProtocol,
+         gistsListViewModel: GistsListViewModelProtocol = GistsListViewModel()) {
         self.presenter = presenter
+        self.gistsListViewModel = gistsListViewModel
     }
     
     func start() {
+        let gistsListViewController = GistsListViewController(viewModel: gistsListViewModel)
         presenter.show(gistsListViewController, sender: nil)
     }
 }
