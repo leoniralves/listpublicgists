@@ -27,11 +27,16 @@ class HomeCoordinator: Coordinator {
         let homeViewController = HomeViewController(viewModel: homeViewModel)
         presenter.show(homeViewController, sender: nil)
     }
+    
+    private func showGistsList() {
+        let gistsListCoordinator = GistsListCoordinator(presenter: presenter)
+        gistsListCoordinator.start()
+    }
 }
 
 // MARK: HomeViewModelDelegate
 extension HomeCoordinator: HomeViewModelDelegate {
     func homeViewModelDidShowPublicGists(_ viewModel: HomeViewModel) {
-        print(">> homeViewModelDidShowPublicGists")
+        showGistsList()
     }
 }

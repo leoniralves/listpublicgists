@@ -11,10 +11,30 @@ import XCTest
 
 class HomeCoordinatorTest: XCTestCase {
     
-    func testStart_shouldShowHomeViewController() {
-        let nav = NavigationControllerSpy()
-        let homeCoordinator = HomeCoordinator(presenter: nav)
-        homeCoordinator.start()
-        XCTAssertTrue(nav.viewControllerCalled.isKind(of: HomeViewController.self))
+    private var navigationControllerSpy: NavigationControllerSpy!
+    private var sut: HomeCoordinator!
+    
+    override func setUp() {
+        super.setUp()
+        navigationControllerSpy = NavigationControllerSpy()
+        sut = HomeCoordinator(presenter: navigationControllerSpy)
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+        navigationControllerSpy = nil
+        sut = nil
+    }
+    
+    func test_start_shouldShowHomeViewController() {
+        sut.start()
+        XCTAssertTrue(navigationControllerSpy.viewControllerCalled.isKind(of: HomeViewController.self))
+    }
+    
+    func test_showGistsList() {
+        let viewModel = HomeViewModel()
+        sut.homeViewModelDidShowPublicGists(viewModel)
+        
+        XCTAssertTrue(navigationControllerSpy.viewControllerCalled.isKind(of: GistsListViewController.self))
     }
 }

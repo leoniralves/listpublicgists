@@ -12,11 +12,6 @@ class HomeViewModel: HomeViewModelProtocol {
     // MARK: Public Properties
     weak var delegate: HomeViewModelDelegate?
     
-    // MARK: Initializer
-    init() {
-        
-    }
-    
     // MARK: Public Methods
     func showPublicGists() {
         delegate?.homeViewModelDidShowPublicGists(self)

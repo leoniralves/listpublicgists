@@ -47,6 +47,7 @@ class URLSessionMock: URLSessionProtocol {
     private func loadJsonWith(name: String?) -> Data? {
         let bundle = Bundle(for: Self.self)
         guard let name = name,
+              !name.isEmpty,
               let url = bundle.url(forResource: name, withExtension: "json"),
               let data = try? Data(contentsOf: url) else {
             return nil

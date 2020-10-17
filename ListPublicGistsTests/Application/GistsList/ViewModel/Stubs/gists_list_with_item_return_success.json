@@ -1,0 +1,14 @@
+[
+  {
+    "files": {
+      "Dummy.ext": {
+        "filename": "Dummy File",
+        "type": "application/dummy"
+      }
+    },
+    "owner": {
+      "login": "Dummy User",
+      "avatar_url": "https://dummy.com",
+    }
+  }
+]

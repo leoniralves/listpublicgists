@@ -11,20 +11,33 @@ import XCTest
 
 class HomeViewControllerTests: XCTestCase {
 
-    func test_initialize_whenTappingShowPublicGistListButtonIntoHomeView_shouldCalledShowPublicGists() {
-        let vm = HomeViewModelMock()
-        let sut = HomeViewController(viewModel: vm)
-        sut.loadViewIfNeeded()
-        tap(sut.homeView.showPublicGistListButton)
-        XCTAssertTrue(vm.showPublicGistsCalled)
-    }
-}
-
-class HomeViewModelMock: HomeViewModelProtocol {
-    var delegate: HomeViewModelDelegate?
+    private var viewModelMock: HomeViewModelMock!
+    private var sut: HomeViewController!
     
-    private(set) var showPublicGistsCalled = false
-    func showPublicGists() {
-        showPublicGistsCalled = true
+    override func setUp() {
+        super.setUp()
+        viewModelMock = HomeViewModelMock()
+        sut = HomeViewController(viewModel: viewModelMock)
+        sut.loadViewIfNeeded()
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+        viewModelMock = nil
+        sut = nil
+    }
+    
+    func test_loadView_ViewShouldTypeHomeView() {
+        XCTAssertTrue(sut.view.isKind(of: HomeView.self))
+    }
+    
+    func test_viewDidLoad_titleShouldEqualGistsListStrings() {
+        XCTAssertEqual(sut.title, HomeStrings.Controller.title)
+    }
+    
+    func test_homeViewDidShowPublicGistisList_shouldCallShowPublicGistsOnViewModel() {
+        sut.homeView.delegate?.homeViewDidShowPublicGistisList(HomeView())
+        
+        XCTAssertTrue(viewModelMock.showPublicGistsCalled)
     }
 }
