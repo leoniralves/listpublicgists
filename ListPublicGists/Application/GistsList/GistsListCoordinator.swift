@@ -32,14 +32,19 @@ class GistsListCoordinator: Coordinator {
     func start() {
         presenter.show(gistsListViewController, sender: nil)
     }
+    
+    // MARK: Private Methods
+    private func showGistDetails(gist: Gist) {
+        gistDetailsCoordinator = GistDetailsCoordinator(presenter: presenter,
+                                                        gist: gist)
+        gistDetailsCoordinator?.start()
+    }
 }
 
 // MARK: GistsListViewModelDelegate
 extension GistsListCoordinator: GistsListViewModelDelegate {
-    func gistsListViewModel(_ viewModel: GistsListViewModel,
+    func gistsListViewModel(_ viewModel: GistsListViewModelProtocol,
                             didSelectGist gist: Gist) {
-        gistDetailsCoordinator = GistDetailsCoordinator(presenter: presenter,
-                                                        gist: gist)
-        gistDetailsCoordinator?.start()
+        showGistDetails(gist: gist)
     }
 }

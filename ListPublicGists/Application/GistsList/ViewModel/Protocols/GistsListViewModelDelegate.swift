@@ -8,5 +8,6 @@
 import Foundation
 
 protocol GistsListViewModelDelegate: AnyObject {
-    func gistsListViewModel(_ viewModel: GistsListViewModel, didSelectGist gist: Gist)
+    func gistsListViewModel(_ viewModel: GistsListViewModelProtocol,
+                            didSelectGist gist: Gist)
 }

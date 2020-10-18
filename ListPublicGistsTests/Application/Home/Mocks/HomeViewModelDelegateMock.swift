@@ -12,7 +12,7 @@ import Foundation
 class HomeViewModelDelegateMock: HomeViewModelDelegate {
     private(set) var didShowPublicGistsCalled = false
     
-    func homeViewModelDidShowPublicGists(_ viewModel: HomeViewModel) {
+    func homeViewModelDidShowPublicGists(_ viewModel: HomeViewModelProtocol) {
         didShowPublicGistsCalled = true
     }
 }

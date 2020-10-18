@@ -44,8 +44,7 @@ class HomeCoordinator: Coordinator {
 
 // MARK: HomeViewModelDelegate
 extension HomeCoordinator: HomeViewModelDelegate {
-    func homeViewModelDidShowPublicGists(_ viewModel: HomeViewModel) {
+    func homeViewModelDidShowPublicGists(_ viewModel: HomeViewModelProtocol) {
         showGistsList()
     }
-    
 }

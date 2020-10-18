@@ -1,5 +1,5 @@
 //
-//  HomeViewTest.swift
+//  HomeViewTests.swift
 //  ListPublicGistsTests
 //
 //  Created by Leonir Alves Deolindo on 10/10/20.
@@ -9,7 +9,7 @@ import XCTest
 
 @testable import ListPublicGists
 
-class HomeViewTest: XCTestCase {
+class HomeViewTests: XCTestCase {
     
     private var sut: HomeView!
     

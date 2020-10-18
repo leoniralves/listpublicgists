@@ -1,5 +1,5 @@
 //
-//  HomeCoordinatorTest.swift
+//  HomeCoordinatorTests.swift
 //  ListPublicGistsTests
 //
 //  Created by Leonir Alves Deolindo on 10/10/20.
@@ -9,7 +9,7 @@ import XCTest
 
 @testable import ListPublicGists
 
-class HomeCoordinatorTest: XCTestCase {
+class HomeCoordinatorTests: XCTestCase {
     
     private var navigationControllerSpy: NavigationControllerSpy!
     private var sut: HomeCoordinator!
@@ -32,8 +32,8 @@ class HomeCoordinatorTest: XCTestCase {
     }
     
     func test_showGistsList() {
-        let viewModel = HomeViewModel()
-        sut.homeViewModelDidShowPublicGists(viewModel)
+        let viewModelMock = HomeViewModelMock()
+        sut.homeViewModelDidShowPublicGists(viewModelMock)
         
         XCTAssertTrue(navigationControllerSpy.viewControllerCalled.isKind(of: GistsListViewController.self))
     }

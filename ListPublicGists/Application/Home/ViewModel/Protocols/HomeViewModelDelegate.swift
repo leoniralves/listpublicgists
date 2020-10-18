@@ -8,5 +8,5 @@
 import Foundation
 
 protocol HomeViewModelDelegate: AnyObject {
-    func homeViewModelDidShowPublicGists(_ viewModel: HomeViewModel)
+    func homeViewModelDidShowPublicGists(_ viewModel: HomeViewModelProtocol)
 }
