@@ -30,11 +30,13 @@ class GistDetailsView: UIView {
     func configure(gist: Gist) {
         self.gist = gist
         tableView.reloadData()
+        gistDetailsHeaderView.configure(gist: gist)
     }
     
     // MARK: Private Methods
     private func setupLayout() {
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(GistFileViewCell.self)
         tableView.tableFooterView = UIView()
     }
@@ -50,5 +52,11 @@ extension GistDetailsView: UITableViewDataSource {
         let cell: GistFileViewCell = tableView.dequeueReusableCell(for: indexPath)
         cell.configure(file: gist[file: indexPath.row])
         return cell
+    }
+}
+
+extension GistDetailsView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

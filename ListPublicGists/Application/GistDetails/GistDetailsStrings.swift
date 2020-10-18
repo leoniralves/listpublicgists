@@ -13,4 +13,9 @@ struct GistDetailsStrings {
         static var typeLabel = "Tipo"
         static var languageLabel = "Linguagem"
     }
+    
+    struct GistDetailsHeaderView {
+        static var gistCreateAtLabel = "Criado"
+        static var gistUpdateAtLabel = "Atualizado"
+    }
 }

@@ -71,6 +71,7 @@
 		F0D95466253BA23F000668DB /* GistDetailsStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D95465253BA23F000668DB /* GistDetailsStrings.swift */; };
 		F0D9546D253BA4AE000668DB /* GistDetailsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D9546C253BA4AE000668DB /* GistDetailsHeaderView.swift */; };
 		F0D95473253BA4B7000668DB /* GistDetailsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0D95472253BA4B7000668DB /* GistDetailsHeaderView.xib */; };
+		F0D95477253C83EB000668DB /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D95476253C83EB000668DB /* Date+Ext.swift */; };
 		F0E7858E253B55A7001A5648 /* empty_gists_list_return_success.json in Resources */ = {isa = PBXBuildFile; fileRef = F0E7858D253B55A7001A5648 /* empty_gists_list_return_success.json */; };
 		F0E78597253B6801001A5648 /* GistsListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E78596253B6801001A5648 /* GistsListViewDelegate.swift */; };
 		F0E785A6253B690E001A5648 /* GistsListCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E785A5253B690E001A5648 /* GistsListCoordinatorTest.swift */; };
@@ -177,6 +178,7 @@
 		F0D95465253BA23F000668DB /* GistDetailsStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetailsStrings.swift; sourceTree = "<group>"; };
 		F0D9546C253BA4AE000668DB /* GistDetailsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetailsHeaderView.swift; sourceTree = "<group>"; };
 		F0D95472253BA4B7000668DB /* GistDetailsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GistDetailsHeaderView.xib; sourceTree = "<group>"; };
+		F0D95476253C83EB000668DB /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		F0E7858D253B55A7001A5648 /* empty_gists_list_return_success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = empty_gists_list_return_success.json; sourceTree = "<group>"; };
 		F0E78596253B6801001A5648 /* GistsListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListViewDelegate.swift; sourceTree = "<group>"; };
 		F0E785A5253B690E001A5648 /* GistsListCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListCoordinatorTest.swift; sourceTree = "<group>"; };
@@ -410,6 +412,7 @@
 				F0B9A9BF253795300013EA8E /* UIImageView+Ext.swift */,
 				F0CCBFAA253720050099A7DF /* NavigationController+Ext.swift */,
 				F0E785E8253B8BFF001A5648 /* UIViewController+Ext.swift */,
+				F0D95476253C83EB000668DB /* Date+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -867,6 +870,7 @@
 				F064D281253212E6005329EA /* UIView+Ext.swift in Sources */,
 				F0CCBF9F2537176A0099A7DF /* OwnerViewCell.swift in Sources */,
 				F0B9A9CA2537C80F0013EA8E /* Cacheable.swift in Sources */,
+				F0D95477253C83EB000668DB /* Date+Ext.swift in Sources */,
 				F0E78597253B6801001A5648 /* GistsListViewDelegate.swift in Sources */,
 				F08DE3F2253350DB009A5915 /* URLSessionProtocol.swift in Sources */,
 				F08DE41225335C33009A5915 /* API.swift in Sources */,
