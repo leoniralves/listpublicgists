@@ -8,29 +8,21 @@
 import UIKit
 
 protocol ErrorViewProtocol {
-    func showError(title: String,
-                   description: String,
-                   image: UIImage,
+    func showError(error: NetworkError,
                    action: @escaping ()->Void)
 }
 
 extension ErrorViewProtocol where Self: UIView {
-    func showError(title: String,
-                   description: String,
-                   image: UIImage,
+    func showError(error: NetworkError,
                    action: @escaping ()->Void) {
         print(">>> UIView")
     }
 }
 
 extension ErrorViewProtocol where Self: UITableView {
-    func showError(title: String,
-                   description: String,
-                   image: UIImage,
+    func showError(error: NetworkError,
                    action: @escaping ()->Void) {
-        let errorView = ErrorView(title: title,
-                                  descriptionText: description,
-                                  image: image,
+        let errorView = ErrorView(error: error,
                                   action: action)
         backgroundView = errorView
         

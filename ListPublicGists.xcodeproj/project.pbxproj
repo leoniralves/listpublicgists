@@ -75,6 +75,7 @@
 		F0D9547C253C9102000668DB /* GistDetailsCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D9547B253C9102000668DB /* GistDetailsCoordinatorTests.swift */; };
 		F0D95492253CABA4000668DB /* GistDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D95491253CABA4000668DB /* GistDetailsViewControllerTests.swift */; };
 		F0D95499253CACB9000668DB /* GistDetailsViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D95498253CACB9000668DB /* GistDetailsViewModelMock.swift */; };
+		F0D954A3253CB9A3000668DB /* ErrorViewStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D954A2253CB9A3000668DB /* ErrorViewStrings.swift */; };
 		F0E7858E253B55A7001A5648 /* empty_gists_list_return_success.json in Resources */ = {isa = PBXBuildFile; fileRef = F0E7858D253B55A7001A5648 /* empty_gists_list_return_success.json */; };
 		F0E78597253B6801001A5648 /* GistsListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E78596253B6801001A5648 /* GistsListViewDelegate.swift */; };
 		F0E785A6253B690E001A5648 /* GistsListCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E785A5253B690E001A5648 /* GistsListCoordinatorTests.swift */; };
@@ -185,6 +186,7 @@
 		F0D9547B253C9102000668DB /* GistDetailsCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetailsCoordinatorTests.swift; sourceTree = "<group>"; };
 		F0D95491253CABA4000668DB /* GistDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetailsViewControllerTests.swift; sourceTree = "<group>"; };
 		F0D95498253CACB9000668DB /* GistDetailsViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetailsViewModelMock.swift; sourceTree = "<group>"; };
+		F0D954A2253CB9A3000668DB /* ErrorViewStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewStrings.swift; sourceTree = "<group>"; };
 		F0E7858D253B55A7001A5648 /* empty_gists_list_return_success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = empty_gists_list_return_success.json; sourceTree = "<group>"; };
 		F0E78596253B6801001A5648 /* GistsListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListViewDelegate.swift; sourceTree = "<group>"; };
 		F0E785A5253B690E001A5648 /* GistsListCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListCoordinatorTests.swift; sourceTree = "<group>"; };
@@ -727,6 +729,7 @@
 			children = (
 				F0E8D2FE253A6BC0001E9CD5 /* ErrorView.swift */,
 				F0106527253A7276001BE364 /* ErrorView.xib */,
+				F0D954A2253CB9A3000668DB /* ErrorViewStrings.swift */,
 			);
 			path = ErrorView;
 			sourceTree = "<group>";
@@ -896,6 +899,7 @@
 				F0CCBF9F2537176A0099A7DF /* OwnerViewCell.swift in Sources */,
 				F0B9A9CA2537C80F0013EA8E /* Cacheable.swift in Sources */,
 				F0D95477253C83EB000668DB /* Date+Ext.swift in Sources */,
+				F0D954A3253CB9A3000668DB /* ErrorViewStrings.swift in Sources */,
 				F0E78597253B6801001A5648 /* GistsListViewDelegate.swift in Sources */,
 				F08DE3F2253350DB009A5915 /* URLSessionProtocol.swift in Sources */,
 				F08DE41225335C33009A5915 /* API.swift in Sources */,

@@ -48,9 +48,7 @@ class GistsListView: UIView {
             self.tableView.reloadData()
             self.tableView.loading(show: false)
         case .error(let error):
-            self.tableView.showError(title: "Error Title",
-                                     description: String(describing: error),
-                                     image: UIImage(),
+            self.tableView.showError(error: error,
                                      action: { [weak self] in
                                         guard let self = self else { return }
                                         self.delegate?.gistListRetry(self)
