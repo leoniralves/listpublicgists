@@ -10,4 +10,5 @@ import Foundation
 protocol GistsListViewDelegate: AnyObject {
     func gistListRetry(_ gistListView: GistsListView)
     func gistListViewPrefetchGists(_ gistListView: GistsListView)
+    func gistListView(_ gistListView: GistsListView, didSelectGist gist: Gist)
 }

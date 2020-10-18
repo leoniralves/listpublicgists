@@ -9,17 +9,42 @@ import Foundation
 
 class GistsListCoordinator: Coordinator {
     
+    // MARK: Private Properties
     private let presenter: NavigationControllerProtocol
-    private let gistsListViewModel: GistsListViewModelProtocol
+    private var gistsListViewModel: GistsListViewModelProtocol
+    private var gistDetailsCoordinator: GistDetailsCoordinator?
     
+    // MARK: Private Lazy Properties
+    private lazy var gistsListViewController: GistsListViewController = {
+        GistsListViewController(viewModel: gistsListViewModel)
+    }()
+    
+    // MARK: Initializer
     init(presenter: NavigationControllerProtocol,
          gistsListViewModel: GistsListViewModelProtocol = GistsListViewModel()) {
         self.presenter = presenter
+        
         self.gistsListViewModel = gistsListViewModel
+        self.gistsListViewModel.delegate = self
     }
     
+    // MARK: Public Methods
     func start() {
-        let gistsListViewController = GistsListViewController(viewModel: gistsListViewModel)
         presenter.show(gistsListViewController, sender: nil)
+    }
+    
+    // MARK: Private Methods
+    private func showGistDetails(gist: Gist) {
+        gistDetailsCoordinator = GistDetailsCoordinator(presenter: presenter,
+                                                        gist: gist)
+        gistDetailsCoordinator?.start()
+    }
+}
+
+// MARK: GistsListViewModelDelegate
+extension GistsListCoordinator: GistsListViewModelDelegate {
+    func gistsListViewModel(_ viewModel: GistsListViewModelProtocol,
+                            didSelectGist gist: Gist) {
+        showGistDetails(gist: gist)
     }
 }

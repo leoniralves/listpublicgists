@@ -10,4 +10,6 @@ import Foundation
 struct GistFile: Decodable, Equatable {
     let filename: String
     let type: String
+    let language: String?
+    let rawUrl: String
 }

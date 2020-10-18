@@ -17,7 +17,7 @@ class OwnerViewCell: UITableViewCell {
     func configure(_ owner: GistOwner) {
         nameLabel.text = owner.login
         
-        guard let url = URL(string: owner.avatar_url) else {
+        guard let url = URL(string: owner.avatarUrl) else {
             return
         }
         

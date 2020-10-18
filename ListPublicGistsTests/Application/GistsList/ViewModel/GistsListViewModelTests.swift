@@ -52,11 +52,14 @@ class GistsListViewModelTests: XCTestCase {
                 XCTAssertEqual(sut.gistsStatus.value, .loading)
             case .load(let gists):
                 XCTAssertEqual(gists[0].owner.login, "Dummy User")
-                XCTAssertEqual(gists[0].owner.avatar_url, "https://dummy.com")
+                XCTAssertEqual(gists[0].owner.avatarUrl, "https://dummy.com")
                 XCTAssertEqual(gists[0].files.first!.key, "Dummy.ext")
                 XCTAssertEqual(gists[0].files.first!.value.filename, "Dummy File")
                 XCTAssertEqual(gists[0].files.first!.value.type, "application/dummy")
                 XCTAssertEqual(gists[0].files.first!.value.language, "Dummy")
+                XCTAssertEqual(gists[0].createdAt.getFormattedDate(format: "dd/MM/yyyy"), "17/10/2020")
+                XCTAssertEqual(gists[0].updatedAt.getFormattedDate(format: "dd/MM/yyyy"), "17/10/2020")
+                XCTAssertEqual(gists[0].description, "Dummy description")
             case .empty:
                 XCTFail("Empty - Wrong state")
             case .error(let error):

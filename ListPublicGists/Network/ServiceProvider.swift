@@ -40,7 +40,11 @@ class ServiceProvider {
                     }
                     
                     do {
-                        let decoded = try JSONDecoder().decode(T.self, from: data)
+                        let decoder = JSONDecoder()
+                        decoder.keyDecodingStrategy = .convertFromSnakeCase
+                        decoder.dateDecodingStrategy = .iso8601
+                        let decoded = try decoder.decode(T.self, from: data)
+                        
                         completion(.success(decoded))
                     } catch(let error) {
                         if let error = error as? DecodingError {

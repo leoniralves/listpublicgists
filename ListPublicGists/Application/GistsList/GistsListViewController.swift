@@ -53,4 +53,8 @@ extension GistsListViewController: GistsListViewDelegate {
     func gistListViewPrefetchGists(_ gistListView: GistsListView) {
         viewModel.getGistsList()
     }
+    
+    func gistListView(_ gistListView: GistsListView, didSelectGist gist: Gist) {
+        viewModel.didSelectGist(gist)
+    }
 }

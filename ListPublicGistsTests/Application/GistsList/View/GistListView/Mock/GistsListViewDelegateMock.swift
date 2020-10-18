@@ -12,6 +12,7 @@ import Foundation
 class GistsListViewDelegateMock: GistsListViewDelegate {
     private(set) var gistListRetryCalled = false
     private(set) var gistListViewPrefetchGistsCalled = false
+    private(set) var gistListViewDidSelectGistCalled: (called: Bool, gist: Gist?) = (false, nil)
     
     func gistListRetry(_ gistListView: GistsListView) {
         gistListRetryCalled = true
@@ -19,5 +20,9 @@ class GistsListViewDelegateMock: GistsListViewDelegate {
     
     func gistListViewPrefetchGists(_ gistListView: GistsListView) {
         gistListViewPrefetchGistsCalled = true
+    }
+    
+    func gistListView(_ gistListView: GistsListView, didSelectGist gist: Gist) {
+        gistListViewDidSelectGistCalled = (true, gist)
     }
 }

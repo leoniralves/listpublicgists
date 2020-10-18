@@ -1,14 +1,19 @@
 [
-  {
-    "files": {
-      "Dummy.ext": {
-        "filename": "Dummy File",
-        "type": "application/dummy"
-      }
-    },
-    "owner": {
-      "login": "Dummy User",
-      "avatar_url": "https://dummy.com",
+    {
+        "created_at": "2020-10-17T13:40:39Z",
+        "updated_at": "2020-10-17T13:40:40Z",
+        "description": "Dummy description",
+        "files": {
+            "Dummy.ext": {
+                "filename": "Dummy File",
+                "type": "application/dummy",
+                "language": "Dummy",
+                "raw_url": "http://dummy.com"
+            }
+        },
+        "owner": {
+            "login": "Dummy User",
+            "avatar_url": "https://dummy.com",
+        }
     }
-  }
 ]

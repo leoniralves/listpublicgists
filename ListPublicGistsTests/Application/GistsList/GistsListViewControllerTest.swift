@@ -46,4 +46,11 @@ class GistsListViewControllerTest: XCTestCase {
         
         XCTAssertTrue(viewModelMock.getGistsListCalled)
     }
+    
+    func test_didSelectGistsOnTableView_shouldCallDidSelectGistOnViewModel() {
+        sut.gistsListView.delegate?.gistListView(GistsListView(),
+                                                 didSelectGist: initGistMock())
+        
+        XCTAssertTrue(viewModelMock.didSelectGistCalled)
+    }
 }
