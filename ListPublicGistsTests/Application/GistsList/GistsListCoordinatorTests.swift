@@ -17,7 +17,10 @@ class GistsListCoordinatorTests: XCTestCase {
     override func setUp() {
         super.setUp()
         navigationControllerSpy = NavigationControllerSpy()
-        sut = GistsListCoordinator(presenter: navigationControllerSpy)
+        
+        let router = Router(navigationController: navigationControllerSpy)
+        
+        sut = GistsListCoordinator(router: router)
     }
     
     override func tearDown() {
@@ -27,7 +30,8 @@ class GistsListCoordinatorTests: XCTestCase {
     }
     
     func test_start_shouldShowHomeViewController() {
-        sut.start()
+        sut.start(completion: nil)
+        
         XCTAssertTrue(navigationControllerSpy.viewControllerCalled.isKind(of: GistsListViewController.self))
     }
     

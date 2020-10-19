@@ -17,8 +17,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navController = UINavigationController()
         navController.navigationBar.isTranslucent = false
         
-        homeCoordinator = HomeCoordinator(presenter: navController)
-        homeCoordinator?.start()
+        let router = Router(navigationController: navController)
+        
+        homeCoordinator = HomeCoordinator(router: router)
+        homeCoordinator?.start(completion: nil)
         
         return navController
     }
