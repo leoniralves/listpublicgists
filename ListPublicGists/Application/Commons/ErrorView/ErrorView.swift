@@ -13,6 +13,7 @@ class ErrorView: UIView {
     @IBOutlet weak private var iconImage: UIImageView!
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var descriptionLabel: UILabel!
+    @IBOutlet weak private var confirmButton: UIButton!
     
     // MARK: Private Properties
     private(set) var action: (()->Void)?
@@ -33,13 +34,46 @@ class ErrorView: UIView {
     convenience init(title: String,
                      descriptionText: String,
                      image: UIImage,
-                     action: @escaping ()->Void) {
+                     action: (()->Void)?) {
         self.init(frame: .zero)
-        
+        self.action = action
+        configureView(title: title,
+                      descriptionText: description,
+                      image: image)
+    }
+    
+    convenience init(error: NetworkError,
+                     action: (()->Void)?) {
+        self.init(frame: .zero)
+        self.action = action
+        configureDefaultView(with: error)
+    }
+    
+    // MARK: Private Methods
+    private func configureDefaultView(with error: NetworkError) {
+        switch error {
+        case .network:
+            configureView(title: ErrorViewStrings.Network.title,
+                          descriptionText: ErrorViewStrings.Network.description,
+                          image: #imageLiteral(resourceName: "networkError"))
+        case .service:
+            configureView(title: ErrorViewStrings.Service.title,
+                          descriptionText: ErrorViewStrings.Service.description,
+                          image: #imageLiteral(resourceName: "serviceError"))
+        default:
+            configureView(title: ErrorViewStrings.Generic.title,
+                          descriptionText: ErrorViewStrings.Generic.description,
+                          image: #imageLiteral(resourceName: "genericError"))
+        }
+    }
+    
+    private func configureView(title: String,
+                               descriptionText: String,
+                               image: UIImage) {
         titleLabel.text = title
         descriptionLabel.text = descriptionText
         iconImage.image = image
-        self.action = action
+        confirmButton.layer.cornerRadius = 10.0
     }
     
     // MARK: Actions

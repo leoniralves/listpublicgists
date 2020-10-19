@@ -9,8 +9,6 @@ import UIKit
 
 // MARK: Extensions
 
-extension UIView: ErrorViewProtocol {}
-
 extension UIView {
     /// Carrega a view de um XIB para uma classe UIView
     func loadView() {

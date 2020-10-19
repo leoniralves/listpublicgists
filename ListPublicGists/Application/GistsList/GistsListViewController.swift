@@ -42,6 +42,10 @@ class GistsListViewController: UIViewController {
         }
         viewModel.getGistsList()
     }
+    
+    deinit {
+        print(">>> \(String(describing: Self.self)) deinit")
+    }
 }
 
 // MARK: GistsListViewDelegate
