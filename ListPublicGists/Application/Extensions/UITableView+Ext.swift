@@ -92,3 +92,41 @@ extension UITableView {
         }
     }
 }
+
+extension UITableView {
+    
+    
+    /// Exibe uma view de Error customizada
+    /// - Parameters:
+    ///   - title: Título
+    ///   - descriptionText: Breve descrição
+    ///   - image: Ícone
+    ///   - action: Callback do clique do botão `Ok` na view de Error
+    func showError(title: String,
+                   descriptionText: String,
+                   image: UIImage,
+                   action: (()->Void)?) {
+        let errorView = ErrorView(title: title,
+                                  descriptionText: description,
+                                  image: image,
+                                  action: action)
+        errorView.close = {
+            self.backgroundView = nil
+        }
+        backgroundView = errorView
+    }
+    
+    
+    /// Exibe uma view de Error default, baseada em erros já conhecidos pelo App
+    /// - Parameters:
+    ///   - error: NetworkError
+    ///   - action: Callback do clique do botão `Ok` na view de Error
+    func showError(error: NetworkError,
+                   action: (()->Void)?) {
+        let errorView = ErrorView(error: error, action: action)
+        errorView.close = {
+            self.backgroundView = nil
+        }
+        backgroundView = errorView
+    }
+}

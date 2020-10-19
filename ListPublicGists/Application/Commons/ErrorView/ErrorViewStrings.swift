@@ -19,7 +19,8 @@ struct ErrorViewStrings {
         static var description: String = "Estamos tendo problemas para comunicar com o GitHub."
     }
     
-    struct Parse {
-        
+    struct Generic {
+        static var title: String = "Poxa... Deu ruim!"
+        static var description: String = "Mas não se preocupe, estamos trabalhando para resolver.\nEm breve tudo estará normal novamente"
     }
 }

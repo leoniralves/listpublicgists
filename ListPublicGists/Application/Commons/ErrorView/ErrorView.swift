@@ -31,38 +31,49 @@ class ErrorView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(error: NetworkError,
-                     action: @escaping ()->Void) {
+    convenience init(title: String,
+                     descriptionText: String,
+                     image: UIImage,
+                     action: (()->Void)?) {
         self.init(frame: .zero)
         self.action = action
-        setupLayout(error: error)
+        configureView(title: title,
+                      descriptionText: description,
+                      image: image)
     }
     
-    private func setupLayout(error: NetworkError) {
-        confirmButton.layer.cornerRadius = 10.0
-        
+    convenience init(error: NetworkError,
+                     action: (()->Void)?) {
+        self.init(frame: .zero)
+        self.action = action
+        configureDefaultView(with: error)
+    }
+    
+    // MARK: Private Methods
+    private func configureDefaultView(with error: NetworkError) {
         switch error {
         case .network:
-            break
-        case .parse:
-            break
+            configureView(title: ErrorViewStrings.Network.title,
+                          descriptionText: ErrorViewStrings.Network.description,
+                          image: #imageLiteral(resourceName: "networkError"))
         case .service:
-            setupServiceError()
-        case .unknown:
-            break
+            configureView(title: ErrorViewStrings.Service.title,
+                          descriptionText: ErrorViewStrings.Service.description,
+                          image: #imageLiteral(resourceName: "serviceError"))
+        default:
+            configureView(title: ErrorViewStrings.Generic.title,
+                          descriptionText: ErrorViewStrings.Generic.description,
+                          image: #imageLiteral(resourceName: "genericError"))
         }
     }
     
-    private func setupNetworkError() {
-        iconImage.image = #imageLiteral(resourceName: "networkError")
-        titleLabel.text = ErrorViewStrings.Network.title
-        descriptionLabel.text = ErrorViewStrings.Network.description
-    }
-    
-    private func setupServiceError() {
-        iconImage.image = #imageLiteral(resourceName: "networkError")
-        titleLabel.text = ErrorViewStrings.Service.title
-        descriptionLabel.text = ErrorViewStrings.Service.description
+    private func configureView(title: String,
+                               descriptionText: String,
+                               image: UIImage) {
+        titleLabel.text = title
+        descriptionLabel.text = descriptionText
+        iconImage.image = image
+        confirmButton.layer.cornerRadius = 10.0
     }
     
     // MARK: Actions

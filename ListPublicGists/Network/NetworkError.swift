@@ -30,6 +30,7 @@ enum NetworkError: Error, Equatable {
         case networkConnectionLost
         case badURL
         case timedOut
+        case notConnectedToInternet
         case unknown(String)
     }
     
@@ -80,6 +81,7 @@ extension NetworkError.Network {
         case .networkConnectionLost: self = .networkConnectionLost
         case .badURL: self = .badURL
         case .timedOut: self = .timedOut
+        case .notConnectedToInternet: self = .notConnectedToInternet
         default: self = .unknown(urlError.localizedDescription)
         }
     }
