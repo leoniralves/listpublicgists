@@ -10,7 +10,7 @@ import UIKit
 class HomeCoordinator: Coordinator {
     
     // MARK: Private Properties
-    private let presenter: NavigationControllerProtocol
+    private var router: RouterType
     private var homeViewModel: HomeViewModelProtocol
     
     // MARK: Private Lazy Properties
@@ -18,27 +18,27 @@ class HomeCoordinator: Coordinator {
         HomeViewController(viewModel: homeViewModel)
     }()
     
-    private lazy var gistsListCoordinator: GistsListCoordinator = {
-        GistsListCoordinator(presenter: presenter)
-    }()
-    
     // MARK: Initializer
-    init(presenter: NavigationControllerProtocol,
+    
+    init(router: RouterType,
          homeViewModel: HomeViewModelProtocol = HomeViewModel()) {
-        self.presenter = presenter
+        self.router = router
         
         self.homeViewModel = homeViewModel
         self.homeViewModel.delegate = self
     }
     
     // MARK: Public Methods
-    func start() {
-        presenter.show(homeViewController, sender: nil)
+    func start(completion: (() -> Void)?) {
+        router.show(homeViewController, completion: completion)
     }
     
     // MARK: Private Methods
     private func showGistsList() {
-        gistsListCoordinator.start()
+        var gistsListCoordinator: GistsListCoordinator? = GistsListCoordinator(router: router)
+        gistsListCoordinator?.start() {
+            gistsListCoordinator = nil
+        }
     }
 }
 
