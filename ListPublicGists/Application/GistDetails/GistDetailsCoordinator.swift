@@ -10,7 +10,7 @@ import Foundation
 class GistDetailsCoordinator: Coordinator {
     
     // MARK: Private Properties
-    private let presenter: NavigationControllerProtocol
+    private var router: RouterType
     private var gistDetailsViewModel: GistDetailsViewModel
     
     // MARK: Private Lazy Properties
@@ -19,14 +19,14 @@ class GistDetailsCoordinator: Coordinator {
     }()
     
     // MARK: Initializer
-    init(presenter: NavigationControllerProtocol, gist: Gist) {
-        self.presenter = presenter
+    init(router: RouterType, gist: Gist) {
+        self.router = router
         
         gistDetailsViewModel = GistDetailsViewModel(gist: gist)
     }
     
     // MARK: Public Methods
-    func start() {
-        presenter.show(gistDetailsViewController, sender: nil)
+    func start(completion: (() -> Void)?) {
+        router.show(gistDetailsViewController, completion: completion)
     }
 }

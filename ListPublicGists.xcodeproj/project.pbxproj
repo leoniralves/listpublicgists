@@ -35,6 +35,7 @@
 		F064D281253212E6005329EA /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064D280253212E6005329EA /* UIView+Ext.swift */; };
 		F064D2862532151D005329EA /* HomeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064D2852532151D005329EA /* HomeViewDelegate.swift */; };
 		F064D28C25321716005329EA /* HomeStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064D28B25321716005329EA /* HomeStrings.swift */; };
+		F07AE238253DDE1F00407387 /* RouterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07AE237253DDE1F00407387 /* RouterType.swift */; };
 		F08DE3EC253350B1009A5915 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08DE3EB253350B1009A5915 /* ServiceProvider.swift */; };
 		F08DE3F1253350DB009A5915 /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08DE3EF253350DB009A5915 /* URLSessionDataTaskProtocol.swift */; };
 		F08DE3F2253350DB009A5915 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08DE3F0253350DB009A5915 /* URLSessionProtocol.swift */; };
@@ -146,6 +147,7 @@
 		F064D280253212E6005329EA /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		F064D2852532151D005329EA /* HomeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewDelegate.swift; sourceTree = "<group>"; };
 		F064D28B25321716005329EA /* HomeStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStrings.swift; sourceTree = "<group>"; };
+		F07AE237253DDE1F00407387 /* RouterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterType.swift; sourceTree = "<group>"; };
 		F08DE3EB253350B1009A5915 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		F08DE3EF253350DB009A5915 /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
 		F08DE3F0253350DB009A5915 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
@@ -740,6 +742,7 @@
 				F049AA232535C95B0031BC2B /* Observable.swift */,
 				F0B9A9C52537C0840013EA8E /* Cache.swift */,
 				F0E8D2FC253A6B86001E9CD5 /* ErrorView */,
+				F07AE237253DDE1F00407387 /* RouterType.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -906,6 +909,7 @@
 				F0E8D2E4253A5A2F001E9CD5 /* GistsListRepositoryProtocol.swift in Sources */,
 				F08DE3FC253351BC009A5915 /* HTTPMethod.swift in Sources */,
 				F064D28C25321716005329EA /* HomeStrings.swift in Sources */,
+				F07AE238253DDE1F00407387 /* RouterType.swift in Sources */,
 				F0B781BA2533B64A00179BF9 /* GistsListStrings.swift in Sources */,
 				F0E785DF253B82C4001A5648 /* GistDetailsViewModel.swift in Sources */,
 				F08DE3F1253350DB009A5915 /* URLSessionDataTaskProtocol.swift in Sources */,

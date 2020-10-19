@@ -8,9 +8,11 @@
 import UIKit
 @testable import ListPublicGists
 
-class NavigationControllerSpy: NavigationControllerProtocol {
+class NavigationControllerSpy: NSObject, NavigationControllerProtocol {
     
     private(set) var viewControllerCalled = UIViewController()
+    
+    var delegate: UINavigationControllerDelegate?
     
     func show(_ vc: UIViewController, sender: Any?) {
         viewControllerCalled = vc
