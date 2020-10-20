@@ -16,8 +16,11 @@ struct HomeStrings {
     
     // MARK: HomeView
     struct View {
-        static var title: String = "Title text"
-        static var description: String = "Description text"
+        static var title: String = "GitHub Gists"
+        static var description: String = """
+        Aqui você vai econtrar uma lista com os Gists públicos mais recentes.
+        Eles estarão dispostos do mais recente para o mais antigo.
+        """
         static var showPublicGistsButton: String = "Gists Públicos"
     }
 }
