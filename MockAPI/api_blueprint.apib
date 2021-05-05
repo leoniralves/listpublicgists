@@ -2,50 +2,5 @@ FORMART: 1A
 
 # API Test
 
-# Group Gists
-List Gists
-
-## Question [/questions{?page_id=1}]
-### View a Questions Detail [GET]
-
-+ Parameters
-    + page_id: `1` (required, number)
-        + Default: 1
-
-+ Response 200 (application/json)
-
-        {
-            "question": "Favourite programming language?",
-            "published_at": "2014-11-11T08:40:51.620Z",
-            "url": "/questions/1",
-            "choices": [
-                {
-                    "choice": "Swift",
-                    "url": "/questions/1/choices/1",
-                    "votes": 2048
-                }, {
-                    "choice": "Python",
-                    "url": "/questions/1/choices/2",
-                    "votes": 1024
-                }, {
-                    "choice": "Objective-C",
-                    "url": "/questions/1/choices/3",
-                    "votes": 512
-                }, {
-                    "choice": "Ruby",
-                    "url": "/questions/1/choices/4",
-                    "votes": 256
-                }
-            ]
-        }
-
-## Question [/questions{?page_id=2}]
-### View a Questions Detail [GET]
-
-+ Parameters
-    + page_id: `2` (required, number)
-        + Default: 2
-
-+ Response 200 (application/json)
-
-        {}
+<!-- include(./authentication.apib) -->
+<!-- include(./gists.apib) -->
