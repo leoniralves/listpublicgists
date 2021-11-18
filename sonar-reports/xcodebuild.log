@@ -1,0 +1,528 @@
+Command line invocation:
+    /Applications/Xcode_13.app/Contents/Developer/usr/bin/xcodebuild test -project ListPublicGists.xcodeproj -scheme ListPublicGists -configuration Debug -enableCodeCoverage YES -destination "platform=iOS Simulator,name=iPhone 11,OS=15.0" -destination-timeout 60
+
+User defaults from command line:
+    IDEPackageSupportUseBuiltinSCM = YES
+
+note: Using new build system
+note: Planning
+Analyze workspace
+
+Create build description
+Build description signature: af8d2274f57e3ee29d09273da7c9d464
+Build description path: /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/XCBuildData/af8d2274f57e3ee29d09273da7c9d464-desc.xcbuild
+
+note: Build preparation complete
+note: Building targets in parallel
+ProcessProductPackaging "" /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGists.build/ListPublicGists.app-Simulated.xcent (in target 'ListPublicGists' from project 'ListPublicGists')
+    cd /Users/leonir/Tests/listpublicgists
+    
+    Entitlements:
+    
+    {
+    "application-identifier" = "F2VH4D4A4M.com.leonirdeolindo.ListPublicGists";
+    "keychain-access-groups" =     (
+        "F2VH4D4A4M.com.leonirdeolindo.ListPublicGists"
+    );
+}
+    
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGists.build/ListPublicGists.app-Simulated.xcent
+
+ProcessProductPackaging "" /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGists.build/ListPublicGists.app.xcent (in target 'ListPublicGists' from project 'ListPublicGists')
+    cd /Users/leonir/Tests/listpublicgists
+    
+    Entitlements:
+    
+    {
+    "com.apple.security.get-task-allow" = 1;
+}
+    
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGists.build/ListPublicGists.app.xcent
+
+Ld /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app/ListPublicGists normal (in target 'ListPublicGists' from project 'ListPublicGists')
+    cd /Users/leonir/Tests/listpublicgists
+    /Applications/Xcode_13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -target x86_64-apple-ios14.0-simulator -isysroot /Applications/Xcode_13.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk -L/Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator -F/Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator -filelist /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGists.build/Objects-normal/x86_64/ListPublicGists.LinkFileList -Xlinker -rpath -Xlinker @executable_path/Frameworks -dead_strip -Xlinker -object_path_lto -Xlinker /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGists.build/Objects-normal/x86_64/ListPublicGists_lto.o -Xlinker -export_dynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -debug_variant -fobjc-link-runtime -fprofile-instr-generate -L/Applications/Xcode_13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGists.build/Objects-normal/x86_64/ListPublicGists.swiftmodule -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __entitlements -Xlinker /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGists.build/ListPublicGists.app-Simulated.xcent -Xlinker -no_adhoc_codesign -Xlinker -dependency_info -Xlinker /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGists.build/Objects-normal/x86_64/ListPublicGists_dependency_info.dat -o /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app/ListPublicGists
+
+CopySwiftLibs /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app (in target 'ListPublicGists' from project 'ListPublicGists')
+    cd /Users/leonir/Tests/listpublicgists
+    export CODESIGN_ALLOCATE\=/Applications/Xcode_13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    export DEVELOPER_DIR\=/Applications/Xcode_13.app/Contents/Developer
+    export SDKROOT\=/Applications/Xcode_13.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app/ListPublicGists --scan-folder /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app/Frameworks --scan-folder /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app/PlugIns --platform iphonesimulator --toolchain /Applications/Xcode_13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode_13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGists.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+
+ProcessProductPackaging "" /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGistsTests.build/ListPublicGistsTests.xctest-Simulated.xcent (in target 'ListPublicGistsTests' from project 'ListPublicGists')
+    cd /Users/leonir/Tests/listpublicgists
+    
+    Entitlements:
+    
+    {
+    "application-identifier" = "6Z8H5M5MG4.com.leonirdeolindo.ListPublicGistsTests";
+    "keychain-access-groups" =     (
+        "6Z8H5M5MG4.com.leonirdeolindo.ListPublicGistsTests"
+    );
+}
+    
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGistsTests.build/ListPublicGistsTests.xctest-Simulated.xcent
+
+ProcessInfoPlistFile /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app/PlugIns/ListPublicGistsTests.xctest/Info.plist /Users/leonir/Tests/listpublicgists/ListPublicGistsTests/Info.plist (in target 'ListPublicGistsTests' from project 'ListPublicGists')
+    cd /Users/leonir/Tests/listpublicgists
+    builtin-infoPlistUtility /Users/leonir/Tests/listpublicgists/ListPublicGistsTests/Info.plist -producttype com.apple.product-type.bundle.unit-test -expandbuildsettings -format binary -platform iphonesimulator -o /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app/PlugIns/ListPublicGistsTests.xctest/Info.plist
+
+Ld /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app/PlugIns/ListPublicGistsTests.xctest/ListPublicGistsTests normal (in target 'ListPublicGistsTests' from project 'ListPublicGists')
+    cd /Users/leonir/Tests/listpublicgists
+    /Applications/Xcode_13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -target x86_64-apple-ios14.0-simulator -bundle -isysroot /Applications/Xcode_13.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk -L/Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator -L/Applications/Xcode_13.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F/Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator -iframework /Applications/Xcode_13.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -iframework /Applications/Xcode_13.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/Developer/Library/Frameworks -filelist /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGistsTests.build/Objects-normal/x86_64/ListPublicGistsTests.LinkFileList -Xlinker -rpath -Xlinker @loader_path/Frameworks -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -rpath -Xlinker @loader_path/Frameworks -dead_strip -bundle_loader /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app/ListPublicGists -Xlinker -object_path_lto -Xlinker /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGistsTests.build/Objects-normal/x86_64/ListPublicGistsTests_lto.o -Xlinker -export_dynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -debug_variant -fobjc-link-runtime -fprofile-instr-generate -L/Applications/Xcode_13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGistsTests.build/Objects-normal/x86_64/ListPublicGistsTests.swiftmodule -framework XCTest -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __entitlements -Xlinker /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGistsTests.build/ListPublicGistsTests.xctest-Simulated.xcent -Xlinker -no_adhoc_codesign -Xlinker -dependency_info -Xlinker /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGistsTests.build/Objects-normal/x86_64/ListPublicGistsTests_dependency_info.dat -o /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app/PlugIns/ListPublicGistsTests.xctest/ListPublicGistsTests
+
+CopySwiftLibs /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app/PlugIns/ListPublicGistsTests.xctest (in target 'ListPublicGistsTests' from project 'ListPublicGists')
+    cd /Users/leonir/Tests/listpublicgists
+    export CODESIGN_ALLOCATE\=/Applications/Xcode_13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    export DEVELOPER_DIR\=/Applications/Xcode_13.app/Contents/Developer
+    export SDKROOT\=/Applications/Xcode_13.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app/PlugIns/ListPublicGistsTests.xctest/ListPublicGistsTests --scan-folder /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app/PlugIns/ListPublicGistsTests.xctest/Frameworks --scan-folder /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app/PlugIns/ListPublicGistsTests.xctest/PlugIns --platform iphonesimulator --toolchain /Applications/Xcode_13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app/PlugIns/ListPublicGistsTests.xctest/Frameworks --strip-bitcode --scan-executable /Applications/Xcode_13.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode_13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGistsTests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+
+CodeSign /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app/PlugIns/ListPublicGistsTests.xctest (in target 'ListPublicGistsTests' from project 'ListPublicGists')
+    cd /Users/leonir/Tests/listpublicgists
+    export CODESIGN_ALLOCATE\=/Applications/Xcode_13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    
+    Signing Identity:     "-"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app/PlugIns/ListPublicGistsTests.xctest
+
+ProcessInfoPlistFile /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app/Info.plist /Users/leonir/Tests/listpublicgists/ListPublicGists/Suport\ Files/Info.plist (in target 'ListPublicGists' from project 'ListPublicGists')
+    cd /Users/leonir/Tests/listpublicgists
+    builtin-infoPlistUtility /Users/leonir/Tests/listpublicgists/ListPublicGists/Suport\ Files/Info.plist -producttype com.apple.product-type.application -genpkginfo /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGists.build/Base.lproj/LaunchScreen-SBPartialInfo.plist -additionalcontentfile /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGists.build/HomeView-PartialInfo.plist -additionalcontentfile /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGists.build/ErrorView-PartialInfo.plist -additionalcontentfile /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGists.build/GistDetailsView-PartialInfo.plist -additionalcontentfile /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGists.build/GistsListView-PartialInfo.plist -additionalcontentfile /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGists.build/OwnerViewCell-PartialInfo.plist -additionalcontentfile /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGists.build/GistDetailsHeaderView-PartialInfo.plist -additionalcontentfile /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGists.build/GistFileViewCell-PartialInfo.plist -additionalcontentfile /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGists.build/assetcatalog_generated_info.plist -o /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app/Info.plist
+
+CodeSign /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app (in target 'ListPublicGists' from project 'ListPublicGists')
+    cd /Users/leonir/Tests/listpublicgists
+    export CODESIGN_ALLOCATE\=/Applications/Xcode_13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    
+    Signing Identity:     "-"
+    
+    /usr/bin/codesign --force --sign - --entitlements /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGists.build/ListPublicGists.app.xcent --timestamp\=none --generate-entitlement-der /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app
+
+Test Suite 'All tests' started at 2021-11-18 15:01:02.311
+Test Suite 'ListPublicGistsTests.xctest' started at 2021-11-18 15:01:02.315
+Test Suite 'GistDetailsCoordinatorTests' started at 2021-11-18 15:01:02.318
+Test Case '-[ListPublicGistsTests.GistDetailsCoordinatorTests test_start_shouldShowHomeViewController]' started.
+Test Case '-[ListPublicGistsTests.GistDetailsCoordinatorTests test_start_shouldShowHomeViewController]' passed (0.016 seconds).
+Test Suite 'GistDetailsCoordinatorTests' passed at 2021-11-18 15:01:02.336.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.016 (0.019) seconds
+Test Suite 'GistDetailsViewControllerTests' started at 2021-11-18 15:01:02.338
+Test Case '-[ListPublicGistsTests.GistDetailsViewControllerTests test_viewDidLoad_titleShouldEqualGistsListStrings]' started.
+Test Case '-[ListPublicGistsTests.GistDetailsViewControllerTests test_viewDidLoad_titleShouldEqualGistsListStrings]' passed (0.036 seconds).
+Test Suite 'GistDetailsViewControllerTests' passed at 2021-11-18 15:01:02.379.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.036 (0.041) seconds
+Test Suite 'GistListViewTests' started at 2021-11-18 15:01:02.380
+Test Case '-[ListPublicGistsTests.GistListViewTests test_configure_withErrorStatus_shouldCallGistListRetryCalledOnDelegate]' started.
+Test Case '-[ListPublicGistsTests.GistListViewTests test_configure_withErrorStatus_shouldCallGistListRetryCalledOnDelegate]' passed (0.017 seconds).
+Test Case '-[ListPublicGistsTests.GistListViewTests test_didSelectRowAt_shouldCalledDidSelectGistOnViewModelAndReturnSelectedGist]' started.
+Test Case '-[ListPublicGistsTests.GistListViewTests test_didSelectRowAt_shouldCalledDidSelectGistOnViewModelAndReturnSelectedGist]' passed (0.008 seconds).
+Test Case '-[ListPublicGistsTests.GistListViewTests test_prefechtingRows_shouldCallGistListViewPrefetchGists]' started.
+Test Case '-[ListPublicGistsTests.GistListViewTests test_prefechtingRows_shouldCallGistListViewPrefetchGists]' passed (0.008 seconds).
+Test Suite 'GistListViewTests' passed at 2021-11-18 15:01:02.416.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.033 (0.036) seconds
+Test Suite 'GistsListCoordinatorTests' started at 2021-11-18 15:01:02.417
+Test Case '-[ListPublicGistsTests.GistsListCoordinatorTests test_showGistDetails]' started.
+Test Case '-[ListPublicGistsTests.GistsListCoordinatorTests test_showGistDetails]' passed (0.003 seconds).
+Test Case '-[ListPublicGistsTests.GistsListCoordinatorTests test_start_shouldShowHomeViewController]' started.
+Test Case '-[ListPublicGistsTests.GistsListCoordinatorTests test_start_shouldShowHomeViewController]' passed (0.004 seconds).
+Test Suite 'GistsListCoordinatorTests' passed at 2021-11-18 15:01:02.426.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.007 (0.009) seconds
+Test Suite 'GistsListViewControllerTest' started at 2021-11-18 15:01:02.427
+Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_didSelectGistsOnTableView_shouldCallDidSelectGistOnViewModel]' started.
+>>> GistsListViewController deinit
+Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_didSelectGistsOnTableView_shouldCallDidSelectGistOnViewModel]' passed (0.008 seconds).
+Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_gistListRetry_shouldCallGetGistsListOnViewModel]' started.
+>>> GistsListViewController deinit
+Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_gistListRetry_shouldCallGetGistsListOnViewModel]' passed (0.013 seconds).
+Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_gistListViewPrefetchGists_shouldCallGetGistsListOnViewModel]' started.
+>>> GistsListViewController deinit
+Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_gistListViewPrefetchGists_shouldCallGetGistsListOnViewModel]' passed (0.010 seconds).
+Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_loadView_ViewShouldTypeGistListView]' started.
+>>> GistsListViewController deinit
+Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_loadView_ViewShouldTypeGistListView]' passed (0.013 seconds).
+Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_viewDidLoad_titleShouldEqualGistsListStrings]' started.
+>>> GistsListViewController deinit
+Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_viewDidLoad_titleShouldEqualGistsListStrings]' passed (0.006 seconds).
+Test Suite 'GistsListViewControllerTest' passed at 2021-11-18 15:01:02.482.
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.050 (0.055) seconds
+Test Suite 'GistsListViewModelTests' started at 2021-11-18 15:01:02.483
+Test Case '-[ListPublicGistsTests.GistsListViewModelTests test_getGistsList_afterResult_withError_statusShouldBeError]' started.
+==== REQUEST ====
+
+URL: https://api.github.com/gists/public?per_page=30&page=1
+
+HEADER: {
+  "Accept" : "application\/vnd.github.v3+json"
+}
+
+METHOD: GET
+
+==== RESPONSE ====
+
+================
+
+Test Case '-[ListPublicGistsTests.GistsListViewModelTests test_getGistsList_afterResult_withError_statusShouldBeError]' passed (0.005 seconds).
+Test Case '-[ListPublicGistsTests.GistsListViewModelTests test_getGistsList_afterResult_withStatusCode200AndEmptyList_statusShouldBeEmpty]' started.
+==== REQUEST ====
+
+URL: https://api.github.com/gists/public?per_page=30&page=1
+
+HEADER: {
+  "Accept" : "application\/vnd.github.v3+json"
+}
+
+METHOD: GET
+
+==== RESPONSE ====
+[
+
+]
+
+================
+
+Test Case '-[ListPublicGistsTests.GistsListViewModelTests test_getGistsList_afterResult_withStatusCode200AndEmptyList_statusShouldBeEmpty]' passed (0.006 seconds).
+Test Case '-[ListPublicGistsTests.GistsListViewModelTests test_getGistsList_afterResult_withStatusCode200AndValidList_statusShouldBeLoadWithData]' started.
+==== REQUEST ====
+
+URL: https://api.github.com/gists/public?page=1&per_page=30
+
+HEADER: {
+  "Accept" : "application\/vnd.github.v3+json"
+}
+
+METHOD: GET
+
+==== RESPONSE ====
+[
+  {
+    "owner" : {
+      "login" : "Dummy User",
+      "avatar_url" : "https:\/\/dummy.com"
+    },
+    "updated_at" : "2020-10-17T13:40:40Z",
+    "description" : "Dummy description",
+    "files" : {
+      "Dummy.ext" : {
+        "language" : "Dummy",
+        "raw_url" : "http:\/\/dummy.com",
+        "filename" : "Dummy File",
+        "type" : "application\/dummy"
+      }
+    },
+    "created_at" : "2020-10-17T13:40:39Z"
+  }
+]
+
+================
+
+Test Case '-[ListPublicGistsTests.GistsListViewModelTests test_getGistsList_afterResult_withStatusCode200AndValidList_statusShouldBeLoadWithData]' passed (0.028 seconds).
+Test Case '-[ListPublicGistsTests.GistsListViewModelTests test_initializationViewModel_statusShouldBeInitializer]' started.
+Test Case '-[ListPublicGistsTests.GistsListViewModelTests test_initializationViewModel_statusShouldBeInitializer]' passed (0.004 seconds).
+Test Suite 'GistsListViewModelTests' passed at 2021-11-18 15:01:02.529.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.043 (0.047) seconds
+Test Suite 'HomeCoordinatorTests' started at 2021-11-18 15:01:02.531
+Test Case '-[ListPublicGistsTests.HomeCoordinatorTests test_showGistsList]' started.
+Test Case '-[ListPublicGistsTests.HomeCoordinatorTests test_showGistsList]' passed (0.004 seconds).
+Test Case '-[ListPublicGistsTests.HomeCoordinatorTests test_start_shouldShowHomeViewController]' started.
+Test Case '-[ListPublicGistsTests.HomeCoordinatorTests test_start_shouldShowHomeViewController]' passed (0.009 seconds).
+Test Suite 'HomeCoordinatorTests' passed at 2021-11-18 15:01:02.545.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.013 (0.015) seconds
+Test Suite 'HomeViewControllerTests' started at 2021-11-18 15:01:02.548
+Test Case '-[ListPublicGistsTests.HomeViewControllerTests test_homeViewDidShowPublicGistisList_shouldCallShowPublicGistsOnViewModel]' started.
+Test Case '-[ListPublicGistsTests.HomeViewControllerTests test_homeViewDidShowPublicGistisList_shouldCallShowPublicGistsOnViewModel]' passed (0.013 seconds).
+Test Case '-[ListPublicGistsTests.HomeViewControllerTests test_loadView_ViewShouldTypeHomeView]' started.
+Test Case '-[ListPublicGistsTests.HomeViewControllerTests test_loadView_ViewShouldTypeHomeView]' passed (0.012 seconds).
+Test Case '-[ListPublicGistsTests.HomeViewControllerTests test_viewDidLoad_titleShouldEqualGistsListStrings]' started.
+Test Case '-[ListPublicGistsTests.HomeViewControllerTests test_viewDidLoad_titleShouldEqualGistsListStrings]' passed (0.029 seconds).
+Test Suite 'HomeViewControllerTests' passed at 2021-11-18 15:01:02.608.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.054 (0.060) seconds
+Test Suite 'HomeViewModelTests' started at 2021-11-18 15:01:02.610
+Test Case '-[ListPublicGistsTests.HomeViewModelTests test_showPublicGists]' started.
+Test Case '-[ListPublicGistsTests.HomeViewModelTests test_showPublicGists]' passed (0.003 seconds).
+Test Suite 'HomeViewModelTests' passed at 2021-11-18 15:01:02.614.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.003 (0.004) seconds
+Test Suite 'HomeViewTests' started at 2021-11-18 15:01:02.615
+Test Case '-[ListPublicGistsTests.HomeViewTests test_initializerHomeView_shouldSetupLayoutWithCorrectTexts]' started.
+Test Case '-[ListPublicGistsTests.HomeViewTests test_initializerHomeView_shouldSetupLayoutWithCorrectTexts]' passed (0.013 seconds).
+Test Case '-[ListPublicGistsTests.HomeViewTests test_tappingShowPublicGistListButton_shouldCallDidShowPublicGistisListDelegate]' started.
+Test Case '-[ListPublicGistsTests.HomeViewTests test_tappingShowPublicGistListButton_shouldCallDidShowPublicGistisListDelegate]' passed (0.008 seconds).
+Test Suite 'HomeViewTests' passed at 2021-11-18 15:01:02.640.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.021 (0.025) seconds
+Test Suite 'ServiceProviderTest' started at 2021-11-18 15:01:02.641
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withEmptyJsonAndRequestSuccessAndStatusCode200_shouldReturnResponseErrorNoData]' started.
+==== REQUEST ====
+
+URL: https://api.github.com/
+
+METHOD: GET
+
+==== RESPONSE ====
+
+================
+
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withEmptyJsonAndRequestSuccessAndStatusCode200_shouldReturnResponseErrorNoData]' passed (0.002 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorDataCorrupted]' started.
+==== REQUEST ====
+
+URL: https://api.github.com/
+
+METHOD: GET
+
+==== RESPONSE ====
+
+================
+
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorDataCorrupted]' passed (0.004 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorKeyNotFound]' started.
+==== REQUEST ====
+
+URL: https://api.github.com/
+
+METHOD: GET
+
+==== RESPONSE ====
+{
+  "name__" : "user"
+}
+
+================
+
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorKeyNotFound]' passed (0.003 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorTypeMismatch]' started.
+==== REQUEST ====
+
+URL: https://api.github.com/
+
+METHOD: GET
+
+==== RESPONSE ====
+{
+  "name" : 100
+}
+
+================
+
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorTypeMismatch]' passed (0.003 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorValueNotFound]' started.
+==== REQUEST ====
+
+URL: https://api.github.com/
+
+METHOD: GET
+
+==== RESPONSE ====
+{
+  "name" : null
+}
+
+================
+
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorValueNotFound]' passed (0.003 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorBadURL]' started.
+==== REQUEST ====
+
+URL: https://api.github.com/
+
+METHOD: GET
+
+==== RESPONSE ====
+
+================
+
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorBadURL]' passed (0.003 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorCancelled]' started.
+==== REQUEST ====
+
+URL: https://api.github.com/
+
+METHOD: GET
+
+==== RESPONSE ====
+
+================
+
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorCancelled]' passed (0.002 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorConnectionLost]' started.
+==== REQUEST ====
+
+URL: https://api.github.com/
+
+METHOD: GET
+
+==== RESPONSE ====
+
+================
+
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorConnectionLost]' passed (0.002 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorTimeout]' started.
+==== REQUEST ====
+
+URL: https://api.github.com/
+
+METHOD: GET
+
+==== RESPONSE ====
+
+================
+
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorTimeout]' passed (0.002 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorUnknown]' started.
+==== REQUEST ====
+
+URL: https://api.github.com/
+
+METHOD: GET
+
+==== RESPONSE ====
+
+================
+
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorUnknown]' passed (0.008 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccess_shouldParseJsonSuccess]' started.
+==== REQUEST ====
+
+URL: https://api.github.com/
+
+METHOD: GET
+
+==== RESPONSE ====
+{
+  "name" : "user"
+}
+
+================
+
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccess_shouldParseJsonSuccess]' passed (0.002 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode400_shouldReturnResponseErrorBadRequest]' started.
+==== REQUEST ====
+
+URL: https://api.github.com/
+
+METHOD: GET
+
+==== RESPONSE ====
+{
+  "name" : "user"
+}
+
+================
+
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode400_shouldReturnResponseErrorBadRequest]' passed (0.003 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode401_shouldReturnResponseErrorUnauthorized]' started.
+==== REQUEST ====
+
+URL: https://api.github.com/
+
+METHOD: GET
+
+==== RESPONSE ====
+{
+  "name" : "user"
+}
+
+================
+
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode401_shouldReturnResponseErrorUnauthorized]' passed (0.002 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode403_shouldReturnResponseErrorForbiden]' started.
+==== REQUEST ====
+
+URL: https://api.github.com/
+
+METHOD: GET
+
+==== RESPONSE ====
+{
+  "name" : "user"
+}
+
+================
+
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode403_shouldReturnResponseErrorForbiden]' passed (0.004 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode404_shouldReturnResponseErrorNotFound]' started.
+==== REQUEST ====
+
+URL: https://api.github.com/
+
+METHOD: GET
+
+==== RESPONSE ====
+{
+  "name" : "user"
+}
+
+================
+
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode404_shouldReturnResponseErrorNotFound]' passed (0.002 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode407_shouldReturnResponseErrorClientError]' started.
+==== REQUEST ====
+
+URL: https://api.github.com/
+
+METHOD: GET
+
+==== RESPONSE ====
+{
+  "name" : "user"
+}
+
+================
+
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode407_shouldReturnResponseErrorClientError]' passed (0.002 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode408_shouldReturnResponseErrorRequestTimeout]' started.
+==== REQUEST ====
+
+URL: https://api.github.com/
+
+METHOD: GET
+
+==== RESPONSE ====
+{
+  "name" : "user"
+}
+
+================
+
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode408_shouldReturnResponseErrorRequestTimeout]' passed (0.003 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode500_shouldReturnResponseErrorInternalServerError]' started.
+==== REQUEST ====
+
+URL: https://api.github.com/
+
+METHOD: GET
+
+==== RESPONSE ====
+{
+  "name" : "user"
+}
+
+================
+
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode500_shouldReturnResponseErrorInternalServerError]' passed (0.002 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode600_shouldReturnResponseErrorUnknown]' started.
+==== REQUEST ====
+
+URL: https://api.github.com/
+
+METHOD: GET
+
+==== RESPONSE ====
+{
+  "name" : "user"
+}
+
+================
+
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode600_shouldReturnResponseErrorUnknown]' passed (0.002 seconds).
+Test Suite 'ServiceProviderTest' passed at 2021-11-18 15:01:02.706.
+	 Executed 19 tests, with 0 failures (0 unexpected) in 0.055 (0.065) seconds
+Test Suite 'ListPublicGistsTests.xctest' passed at 2021-11-18 15:01:02.707.
+	 Executed 43 tests, with 0 failures (0 unexpected) in 0.331 (0.391) seconds
+Test Suite 'All tests' passed at 2021-11-18 15:01:02.708.
+	 Executed 43 tests, with 0 failures (0 unexpected) in 0.331 (0.397) seconds
+
+Test session results, code coverage, and logs:
+	/Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Logs/Test/Test-ListPublicGists-2021.11.18_15-00-55--0300.xcresult
+
+** TEST SUCCEEDED ** [7.561 sec]
+
+Testing started

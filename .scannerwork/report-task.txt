@@ -1,0 +1,6 @@
+projectKey=ListPublicGists
+serverUrl=http://localhost
+serverVersion=9.1.0.47736
+dashboardUrl=http://localhost/dashboard?id=ListPublicGists
+ceTaskId=AX00NfvZJxw6STVDSd7l
+ceTaskUrl=http://localhost/api/ce/task?id=AX00NfvZJxw6STVDSd7l
