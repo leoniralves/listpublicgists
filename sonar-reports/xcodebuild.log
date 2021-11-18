@@ -99,53 +99,53 @@ CodeSign /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaq
     
     /usr/bin/codesign --force --sign - --entitlements /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Intermediates.noindex/ListPublicGists.build/Debug-iphonesimulator/ListPublicGists.build/ListPublicGists.app.xcent --timestamp\=none --generate-entitlement-der /Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Build/Products/Debug-iphonesimulator/ListPublicGists.app
 
-Test Suite 'All tests' started at 2021-11-18 15:01:02.311
-Test Suite 'ListPublicGistsTests.xctest' started at 2021-11-18 15:01:02.315
-Test Suite 'GistDetailsCoordinatorTests' started at 2021-11-18 15:01:02.318
+Test Suite 'All tests' started at 2021-11-18 15:31:30.491
+Test Suite 'ListPublicGistsTests.xctest' started at 2021-11-18 15:31:30.494
+Test Suite 'GistDetailsCoordinatorTests' started at 2021-11-18 15:31:30.495
 Test Case '-[ListPublicGistsTests.GistDetailsCoordinatorTests test_start_shouldShowHomeViewController]' started.
-Test Case '-[ListPublicGistsTests.GistDetailsCoordinatorTests test_start_shouldShowHomeViewController]' passed (0.016 seconds).
-Test Suite 'GistDetailsCoordinatorTests' passed at 2021-11-18 15:01:02.336.
-	 Executed 1 test, with 0 failures (0 unexpected) in 0.016 (0.019) seconds
-Test Suite 'GistDetailsViewControllerTests' started at 2021-11-18 15:01:02.338
+Test Case '-[ListPublicGistsTests.GistDetailsCoordinatorTests test_start_shouldShowHomeViewController]' passed (0.010 seconds).
+Test Suite 'GistDetailsCoordinatorTests' passed at 2021-11-18 15:31:30.507.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.010 (0.012) seconds
+Test Suite 'GistDetailsViewControllerTests' started at 2021-11-18 15:31:30.508
 Test Case '-[ListPublicGistsTests.GistDetailsViewControllerTests test_viewDidLoad_titleShouldEqualGistsListStrings]' started.
-Test Case '-[ListPublicGistsTests.GistDetailsViewControllerTests test_viewDidLoad_titleShouldEqualGistsListStrings]' passed (0.036 seconds).
-Test Suite 'GistDetailsViewControllerTests' passed at 2021-11-18 15:01:02.379.
-	 Executed 1 test, with 0 failures (0 unexpected) in 0.036 (0.041) seconds
-Test Suite 'GistListViewTests' started at 2021-11-18 15:01:02.380
+Test Case '-[ListPublicGistsTests.GistDetailsViewControllerTests test_viewDidLoad_titleShouldEqualGistsListStrings]' passed (0.034 seconds).
+Test Suite 'GistDetailsViewControllerTests' passed at 2021-11-18 15:31:30.544.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.034 (0.035) seconds
+Test Suite 'GistListViewTests' started at 2021-11-18 15:31:30.545
 Test Case '-[ListPublicGistsTests.GistListViewTests test_configure_withErrorStatus_shouldCallGistListRetryCalledOnDelegate]' started.
-Test Case '-[ListPublicGistsTests.GistListViewTests test_configure_withErrorStatus_shouldCallGistListRetryCalledOnDelegate]' passed (0.017 seconds).
+Test Case '-[ListPublicGistsTests.GistListViewTests test_configure_withErrorStatus_shouldCallGistListRetryCalledOnDelegate]' passed (0.013 seconds).
 Test Case '-[ListPublicGistsTests.GistListViewTests test_didSelectRowAt_shouldCalledDidSelectGistOnViewModelAndReturnSelectedGist]' started.
 Test Case '-[ListPublicGistsTests.GistListViewTests test_didSelectRowAt_shouldCalledDidSelectGistOnViewModelAndReturnSelectedGist]' passed (0.008 seconds).
 Test Case '-[ListPublicGistsTests.GistListViewTests test_prefechtingRows_shouldCallGistListViewPrefetchGists]' started.
-Test Case '-[ListPublicGistsTests.GistListViewTests test_prefechtingRows_shouldCallGistListViewPrefetchGists]' passed (0.008 seconds).
-Test Suite 'GistListViewTests' passed at 2021-11-18 15:01:02.416.
-	 Executed 3 tests, with 0 failures (0 unexpected) in 0.033 (0.036) seconds
-Test Suite 'GistsListCoordinatorTests' started at 2021-11-18 15:01:02.417
+Test Case '-[ListPublicGistsTests.GistListViewTests test_prefechtingRows_shouldCallGistListViewPrefetchGists]' passed (0.007 seconds).
+Test Suite 'GistListViewTests' passed at 2021-11-18 15:31:30.576.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.028 (0.031) seconds
+Test Suite 'GistsListCoordinatorTests' started at 2021-11-18 15:31:30.577
 Test Case '-[ListPublicGistsTests.GistsListCoordinatorTests test_showGistDetails]' started.
-Test Case '-[ListPublicGistsTests.GistsListCoordinatorTests test_showGistDetails]' passed (0.003 seconds).
+Test Case '-[ListPublicGistsTests.GistsListCoordinatorTests test_showGistDetails]' passed (0.004 seconds).
 Test Case '-[ListPublicGistsTests.GistsListCoordinatorTests test_start_shouldShowHomeViewController]' started.
-Test Case '-[ListPublicGistsTests.GistsListCoordinatorTests test_start_shouldShowHomeViewController]' passed (0.004 seconds).
-Test Suite 'GistsListCoordinatorTests' passed at 2021-11-18 15:01:02.426.
-	 Executed 2 tests, with 0 failures (0 unexpected) in 0.007 (0.009) seconds
-Test Suite 'GistsListViewControllerTest' started at 2021-11-18 15:01:02.427
+Test Case '-[ListPublicGistsTests.GistsListCoordinatorTests test_start_shouldShowHomeViewController]' passed (0.005 seconds).
+Test Suite 'GistsListCoordinatorTests' passed at 2021-11-18 15:31:30.589.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.009 (0.011) seconds
+Test Suite 'GistsListViewControllerTest' started at 2021-11-18 15:31:30.590
 Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_didSelectGistsOnTableView_shouldCallDidSelectGistOnViewModel]' started.
 >>> GistsListViewController deinit
-Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_didSelectGistsOnTableView_shouldCallDidSelectGistOnViewModel]' passed (0.008 seconds).
+Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_didSelectGistsOnTableView_shouldCallDidSelectGistOnViewModel]' passed (0.011 seconds).
 Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_gistListRetry_shouldCallGetGistsListOnViewModel]' started.
 >>> GistsListViewController deinit
-Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_gistListRetry_shouldCallGetGistsListOnViewModel]' passed (0.013 seconds).
+Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_gistListRetry_shouldCallGetGistsListOnViewModel]' passed (0.008 seconds).
 Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_gistListViewPrefetchGists_shouldCallGetGistsListOnViewModel]' started.
 >>> GistsListViewController deinit
-Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_gistListViewPrefetchGists_shouldCallGetGistsListOnViewModel]' passed (0.010 seconds).
+Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_gistListViewPrefetchGists_shouldCallGetGistsListOnViewModel]' passed (0.007 seconds).
 Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_loadView_ViewShouldTypeGistListView]' started.
 >>> GistsListViewController deinit
-Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_loadView_ViewShouldTypeGistListView]' passed (0.013 seconds).
+Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_loadView_ViewShouldTypeGistListView]' passed (0.005 seconds).
 Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_viewDidLoad_titleShouldEqualGistsListStrings]' started.
 >>> GistsListViewController deinit
-Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_viewDidLoad_titleShouldEqualGistsListStrings]' passed (0.006 seconds).
-Test Suite 'GistsListViewControllerTest' passed at 2021-11-18 15:01:02.482.
-	 Executed 5 tests, with 0 failures (0 unexpected) in 0.050 (0.055) seconds
-Test Suite 'GistsListViewModelTests' started at 2021-11-18 15:01:02.483
+Test Case '-[ListPublicGistsTests.GistsListViewControllerTest test_viewDidLoad_titleShouldEqualGistsListStrings]' passed (0.005 seconds).
+Test Suite 'GistsListViewControllerTest' passed at 2021-11-18 15:31:30.631.
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.036 (0.041) seconds
+Test Suite 'GistsListViewModelTests' started at 2021-11-18 15:31:30.632
 Test Case '-[ListPublicGistsTests.GistsListViewModelTests test_getGistsList_afterResult_withError_statusShouldBeError]' started.
 ==== REQUEST ====
 
@@ -161,11 +161,11 @@ METHOD: GET
 
 ================
 
-Test Case '-[ListPublicGistsTests.GistsListViewModelTests test_getGistsList_afterResult_withError_statusShouldBeError]' passed (0.005 seconds).
+Test Case '-[ListPublicGistsTests.GistsListViewModelTests test_getGistsList_afterResult_withError_statusShouldBeError]' passed (0.007 seconds).
 Test Case '-[ListPublicGistsTests.GistsListViewModelTests test_getGistsList_afterResult_withStatusCode200AndEmptyList_statusShouldBeEmpty]' started.
 ==== REQUEST ====
 
-URL: https://api.github.com/gists/public?per_page=30&page=1
+URL: https://api.github.com/gists/public?page=1&per_page=30
 
 HEADER: {
   "Accept" : "application\/vnd.github.v3+json"
@@ -180,7 +180,7 @@ METHOD: GET
 
 ================
 
-Test Case '-[ListPublicGistsTests.GistsListViewModelTests test_getGistsList_afterResult_withStatusCode200AndEmptyList_statusShouldBeEmpty]' passed (0.006 seconds).
+Test Case '-[ListPublicGistsTests.GistsListViewModelTests test_getGistsList_afterResult_withStatusCode200AndEmptyList_statusShouldBeEmpty]' passed (0.007 seconds).
 Test Case '-[ListPublicGistsTests.GistsListViewModelTests test_getGistsList_afterResult_withStatusCode200AndValidList_statusShouldBeLoadWithData]' started.
 ==== REQUEST ====
 
@@ -215,40 +215,40 @@ METHOD: GET
 
 ================
 
-Test Case '-[ListPublicGistsTests.GistsListViewModelTests test_getGistsList_afterResult_withStatusCode200AndValidList_statusShouldBeLoadWithData]' passed (0.028 seconds).
+Test Case '-[ListPublicGistsTests.GistsListViewModelTests test_getGistsList_afterResult_withStatusCode200AndValidList_statusShouldBeLoadWithData]' passed (0.016 seconds).
 Test Case '-[ListPublicGistsTests.GistsListViewModelTests test_initializationViewModel_statusShouldBeInitializer]' started.
-Test Case '-[ListPublicGistsTests.GistsListViewModelTests test_initializationViewModel_statusShouldBeInitializer]' passed (0.004 seconds).
-Test Suite 'GistsListViewModelTests' passed at 2021-11-18 15:01:02.529.
-	 Executed 4 tests, with 0 failures (0 unexpected) in 0.043 (0.047) seconds
-Test Suite 'HomeCoordinatorTests' started at 2021-11-18 15:01:02.531
+Test Case '-[ListPublicGistsTests.GistsListViewModelTests test_initializationViewModel_statusShouldBeInitializer]' passed (0.003 seconds).
+Test Suite 'GistsListViewModelTests' passed at 2021-11-18 15:31:30.670.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.034 (0.038) seconds
+Test Suite 'HomeCoordinatorTests' started at 2021-11-18 15:31:30.672
 Test Case '-[ListPublicGistsTests.HomeCoordinatorTests test_showGistsList]' started.
-Test Case '-[ListPublicGistsTests.HomeCoordinatorTests test_showGistsList]' passed (0.004 seconds).
+Test Case '-[ListPublicGistsTests.HomeCoordinatorTests test_showGistsList]' passed (0.010 seconds).
 Test Case '-[ListPublicGistsTests.HomeCoordinatorTests test_start_shouldShowHomeViewController]' started.
-Test Case '-[ListPublicGistsTests.HomeCoordinatorTests test_start_shouldShowHomeViewController]' passed (0.009 seconds).
-Test Suite 'HomeCoordinatorTests' passed at 2021-11-18 15:01:02.545.
-	 Executed 2 tests, with 0 failures (0 unexpected) in 0.013 (0.015) seconds
-Test Suite 'HomeViewControllerTests' started at 2021-11-18 15:01:02.548
+Test Case '-[ListPublicGistsTests.HomeCoordinatorTests test_start_shouldShowHomeViewController]' passed (0.013 seconds).
+Test Suite 'HomeCoordinatorTests' passed at 2021-11-18 15:31:30.698.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.023 (0.026) seconds
+Test Suite 'HomeViewControllerTests' started at 2021-11-18 15:31:30.699
 Test Case '-[ListPublicGistsTests.HomeViewControllerTests test_homeViewDidShowPublicGistisList_shouldCallShowPublicGistsOnViewModel]' started.
-Test Case '-[ListPublicGistsTests.HomeViewControllerTests test_homeViewDidShowPublicGistisList_shouldCallShowPublicGistsOnViewModel]' passed (0.013 seconds).
+Test Case '-[ListPublicGistsTests.HomeViewControllerTests test_homeViewDidShowPublicGistisList_shouldCallShowPublicGistsOnViewModel]' passed (0.020 seconds).
 Test Case '-[ListPublicGistsTests.HomeViewControllerTests test_loadView_ViewShouldTypeHomeView]' started.
-Test Case '-[ListPublicGistsTests.HomeViewControllerTests test_loadView_ViewShouldTypeHomeView]' passed (0.012 seconds).
+Test Case '-[ListPublicGistsTests.HomeViewControllerTests test_loadView_ViewShouldTypeHomeView]' passed (0.017 seconds).
 Test Case '-[ListPublicGistsTests.HomeViewControllerTests test_viewDidLoad_titleShouldEqualGistsListStrings]' started.
-Test Case '-[ListPublicGistsTests.HomeViewControllerTests test_viewDidLoad_titleShouldEqualGistsListStrings]' passed (0.029 seconds).
-Test Suite 'HomeViewControllerTests' passed at 2021-11-18 15:01:02.608.
-	 Executed 3 tests, with 0 failures (0 unexpected) in 0.054 (0.060) seconds
-Test Suite 'HomeViewModelTests' started at 2021-11-18 15:01:02.610
+Test Case '-[ListPublicGistsTests.HomeViewControllerTests test_viewDidLoad_titleShouldEqualGistsListStrings]' passed (0.014 seconds).
+Test Suite 'HomeViewControllerTests' passed at 2021-11-18 15:31:30.754.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.051 (0.055) seconds
+Test Suite 'HomeViewModelTests' started at 2021-11-18 15:31:30.756
 Test Case '-[ListPublicGistsTests.HomeViewModelTests test_showPublicGists]' started.
-Test Case '-[ListPublicGistsTests.HomeViewModelTests test_showPublicGists]' passed (0.003 seconds).
-Test Suite 'HomeViewModelTests' passed at 2021-11-18 15:01:02.614.
-	 Executed 1 test, with 0 failures (0 unexpected) in 0.003 (0.004) seconds
-Test Suite 'HomeViewTests' started at 2021-11-18 15:01:02.615
+Test Case '-[ListPublicGistsTests.HomeViewModelTests test_showPublicGists]' passed (0.004 seconds).
+Test Suite 'HomeViewModelTests' passed at 2021-11-18 15:31:30.762.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.004 (0.006) seconds
+Test Suite 'HomeViewTests' started at 2021-11-18 15:31:30.763
 Test Case '-[ListPublicGistsTests.HomeViewTests test_initializerHomeView_shouldSetupLayoutWithCorrectTexts]' started.
-Test Case '-[ListPublicGistsTests.HomeViewTests test_initializerHomeView_shouldSetupLayoutWithCorrectTexts]' passed (0.013 seconds).
+Test Case '-[ListPublicGistsTests.HomeViewTests test_initializerHomeView_shouldSetupLayoutWithCorrectTexts]' passed (0.020 seconds).
 Test Case '-[ListPublicGistsTests.HomeViewTests test_tappingShowPublicGistListButton_shouldCallDidShowPublicGistisListDelegate]' started.
-Test Case '-[ListPublicGistsTests.HomeViewTests test_tappingShowPublicGistListButton_shouldCallDidShowPublicGistisListDelegate]' passed (0.008 seconds).
-Test Suite 'HomeViewTests' passed at 2021-11-18 15:01:02.640.
-	 Executed 2 tests, with 0 failures (0 unexpected) in 0.021 (0.025) seconds
-Test Suite 'ServiceProviderTest' started at 2021-11-18 15:01:02.641
+Test Case '-[ListPublicGistsTests.HomeViewTests test_tappingShowPublicGistListButton_shouldCallDidShowPublicGistisListDelegate]' passed (0.042 seconds).
+Test Suite 'HomeViewTests' passed at 2021-11-18 15:31:30.831.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.061 (0.068) seconds
+Test Suite 'ServiceProviderTest' started at 2021-11-18 15:31:30.840
 Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withEmptyJsonAndRequestSuccessAndStatusCode200_shouldReturnResponseErrorNoData]' started.
 ==== REQUEST ====
 
@@ -260,7 +260,7 @@ METHOD: GET
 
 ================
 
-Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withEmptyJsonAndRequestSuccessAndStatusCode200_shouldReturnResponseErrorNoData]' passed (0.002 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withEmptyJsonAndRequestSuccessAndStatusCode200_shouldReturnResponseErrorNoData]' passed (0.007 seconds).
 Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorDataCorrupted]' started.
 ==== REQUEST ====
 
@@ -272,7 +272,7 @@ METHOD: GET
 
 ================
 
-Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorDataCorrupted]' passed (0.004 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorDataCorrupted]' passed (0.009 seconds).
 Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorKeyNotFound]' started.
 ==== REQUEST ====
 
@@ -287,7 +287,7 @@ METHOD: GET
 
 ================
 
-Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorKeyNotFound]' passed (0.003 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorKeyNotFound]' passed (0.008 seconds).
 Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorTypeMismatch]' started.
 ==== REQUEST ====
 
@@ -302,7 +302,7 @@ METHOD: GET
 
 ================
 
-Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorTypeMismatch]' passed (0.003 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorTypeMismatch]' passed (0.007 seconds).
 Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorValueNotFound]' started.
 ==== REQUEST ====
 
@@ -317,7 +317,7 @@ METHOD: GET
 
 ================
 
-Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorValueNotFound]' passed (0.003 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorValueNotFound]' passed (0.006 seconds).
 Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorBadURL]' started.
 ==== REQUEST ====
 
@@ -329,7 +329,7 @@ METHOD: GET
 
 ================
 
-Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorBadURL]' passed (0.003 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorBadURL]' passed (0.007 seconds).
 Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorCancelled]' started.
 ==== REQUEST ====
 
@@ -341,7 +341,7 @@ METHOD: GET
 
 ================
 
-Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorCancelled]' passed (0.002 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorCancelled]' passed (0.006 seconds).
 Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorConnectionLost]' started.
 ==== REQUEST ====
 
@@ -353,7 +353,7 @@ METHOD: GET
 
 ================
 
-Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorConnectionLost]' passed (0.002 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorConnectionLost]' passed (0.005 seconds).
 Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorTimeout]' started.
 ==== REQUEST ====
 
@@ -365,7 +365,7 @@ METHOD: GET
 
 ================
 
-Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorTimeout]' passed (0.002 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorTimeout]' passed (0.003 seconds).
 Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorUnknown]' started.
 ==== REQUEST ====
 
@@ -377,7 +377,7 @@ METHOD: GET
 
 ================
 
-Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorUnknown]' passed (0.008 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorUnknown]' passed (0.015 seconds).
 Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccess_shouldParseJsonSuccess]' started.
 ==== REQUEST ====
 
@@ -392,7 +392,7 @@ METHOD: GET
 
 ================
 
-Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccess_shouldParseJsonSuccess]' passed (0.002 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccess_shouldParseJsonSuccess]' passed (0.004 seconds).
 Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode400_shouldReturnResponseErrorBadRequest]' started.
 ==== REQUEST ====
 
@@ -407,7 +407,7 @@ METHOD: GET
 
 ================
 
-Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode400_shouldReturnResponseErrorBadRequest]' passed (0.003 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode400_shouldReturnResponseErrorBadRequest]' passed (0.004 seconds).
 Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode401_shouldReturnResponseErrorUnauthorized]' started.
 ==== REQUEST ====
 
@@ -422,7 +422,7 @@ METHOD: GET
 
 ================
 
-Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode401_shouldReturnResponseErrorUnauthorized]' passed (0.002 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode401_shouldReturnResponseErrorUnauthorized]' passed (0.004 seconds).
 Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode403_shouldReturnResponseErrorForbiden]' started.
 ==== REQUEST ====
 
@@ -452,7 +452,7 @@ METHOD: GET
 
 ================
 
-Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode404_shouldReturnResponseErrorNotFound]' passed (0.002 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode404_shouldReturnResponseErrorNotFound]' passed (0.004 seconds).
 Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode407_shouldReturnResponseErrorClientError]' started.
 ==== REQUEST ====
 
@@ -467,7 +467,7 @@ METHOD: GET
 
 ================
 
-Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode407_shouldReturnResponseErrorClientError]' passed (0.002 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode407_shouldReturnResponseErrorClientError]' passed (0.004 seconds).
 Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode408_shouldReturnResponseErrorRequestTimeout]' started.
 ==== REQUEST ====
 
@@ -482,7 +482,7 @@ METHOD: GET
 
 ================
 
-Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode408_shouldReturnResponseErrorRequestTimeout]' passed (0.003 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode408_shouldReturnResponseErrorRequestTimeout]' passed (0.004 seconds).
 Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode500_shouldReturnResponseErrorInternalServerError]' started.
 ==== REQUEST ====
 
@@ -497,7 +497,7 @@ METHOD: GET
 
 ================
 
-Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode500_shouldReturnResponseErrorInternalServerError]' passed (0.002 seconds).
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode500_shouldReturnResponseErrorInternalServerError]' passed (0.004 seconds).
 Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode600_shouldReturnResponseErrorUnknown]' started.
 ==== REQUEST ====
 
@@ -512,17 +512,17 @@ METHOD: GET
 
 ================
 
-Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode600_shouldReturnResponseErrorUnknown]' passed (0.002 seconds).
-Test Suite 'ServiceProviderTest' passed at 2021-11-18 15:01:02.706.
-	 Executed 19 tests, with 0 failures (0 unexpected) in 0.055 (0.065) seconds
-Test Suite 'ListPublicGistsTests.xctest' passed at 2021-11-18 15:01:02.707.
-	 Executed 43 tests, with 0 failures (0 unexpected) in 0.331 (0.391) seconds
-Test Suite 'All tests' passed at 2021-11-18 15:01:02.708.
-	 Executed 43 tests, with 0 failures (0 unexpected) in 0.331 (0.397) seconds
+Test Case '-[ListPublicGistsTests.ServiceProviderTest test_request_withValidJsonAndRequestSuccessAndStatusCode600_shouldReturnResponseErrorUnknown]' passed (0.004 seconds).
+Test Suite 'ServiceProviderTest' passed at 2021-11-18 15:31:30.972.
+	 Executed 19 tests, with 0 failures (0 unexpected) in 0.109 (0.132) seconds
+Test Suite 'ListPublicGistsTests.xctest' passed at 2021-11-18 15:31:30.973.
+	 Executed 43 tests, with 0 failures (0 unexpected) in 0.398 (0.479) seconds
+Test Suite 'All tests' passed at 2021-11-18 15:31:30.975.
+	 Executed 43 tests, with 0 failures (0 unexpected) in 0.398 (0.484) seconds
 
 Test session results, code coverage, and logs:
-	/Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Logs/Test/Test-ListPublicGists-2021.11.18_15-00-55--0300.xcresult
+	/Users/leonir/Library/Developer/Xcode/DerivedData/ListPublicGists-bguaqgntwvqlwkcziqgbormxhwwk/Logs/Test/Test-ListPublicGists-2021.11.18_15-31-24--0300.xcresult
 
-** TEST SUCCEEDED ** [7.561 sec]
+** TEST SUCCEEDED ** [7.072 sec]
 
 Testing started
