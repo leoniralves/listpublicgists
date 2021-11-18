@@ -1,68 +1,68 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testsuites name='ListPublicGistsTests.xctest' tests='43' failures='0'>
   <testsuite name='ListPublicGistsTests.GistDetailsCoordinatorTests' tests='1' failures='0'>
-    <testcase classname='ListPublicGistsTests.GistDetailsCoordinatorTests' name='test_start_shouldShowHomeViewController' time='0.010'/>
+    <testcase classname='ListPublicGistsTests.GistDetailsCoordinatorTests' name='test_start_shouldShowHomeViewController' time='0.007'/>
   </testsuite>
   <testsuite name='ListPublicGistsTests.GistDetailsViewControllerTests' tests='1' failures='0'>
-    <testcase classname='ListPublicGistsTests.GistDetailsViewControllerTests' name='test_viewDidLoad_titleShouldEqualGistsListStrings' time='0.034'/>
+    <testcase classname='ListPublicGistsTests.GistDetailsViewControllerTests' name='test_viewDidLoad_titleShouldEqualGistsListStrings' time='0.017'/>
   </testsuite>
   <testsuite name='ListPublicGistsTests.GistListViewTests' tests='3' failures='0'>
-    <testcase classname='ListPublicGistsTests.GistListViewTests' name='test_configure_withErrorStatus_shouldCallGistListRetryCalledOnDelegate' time='0.013'/>
+    <testcase classname='ListPublicGistsTests.GistListViewTests' name='test_configure_withErrorStatus_shouldCallGistListRetryCalledOnDelegate' time='0.008'/>
     <testcase classname='ListPublicGistsTests.GistListViewTests' name='test_didSelectRowAt_shouldCalledDidSelectGistOnViewModelAndReturnSelectedGist' time='0.008'/>
-    <testcase classname='ListPublicGistsTests.GistListViewTests' name='test_prefechtingRows_shouldCallGistListViewPrefetchGists' time='0.007'/>
+    <testcase classname='ListPublicGistsTests.GistListViewTests' name='test_prefechtingRows_shouldCallGistListViewPrefetchGists' time='0.005'/>
   </testsuite>
   <testsuite name='ListPublicGistsTests.GistsListCoordinatorTests' tests='2' failures='0'>
-    <testcase classname='ListPublicGistsTests.GistsListCoordinatorTests' name='test_showGistDetails' time='0.004'/>
-    <testcase classname='ListPublicGistsTests.GistsListCoordinatorTests' name='test_start_shouldShowHomeViewController' time='0.005'/>
+    <testcase classname='ListPublicGistsTests.GistsListCoordinatorTests' name='test_showGistDetails' time='0.003'/>
+    <testcase classname='ListPublicGistsTests.GistsListCoordinatorTests' name='test_start_shouldShowHomeViewController' time='0.003'/>
   </testsuite>
   <testsuite name='ListPublicGistsTests.GistsListViewControllerTest' tests='5' failures='0'>
-    <testcase classname='ListPublicGistsTests.GistsListViewControllerTest' name='test_didSelectGistsOnTableView_shouldCallDidSelectGistOnViewModel' time='0.011'/>
-    <testcase classname='ListPublicGistsTests.GistsListViewControllerTest' name='test_gistListRetry_shouldCallGetGistsListOnViewModel' time='0.008'/>
+    <testcase classname='ListPublicGistsTests.GistsListViewControllerTest' name='test_didSelectGistsOnTableView_shouldCallDidSelectGistOnViewModel' time='0.007'/>
+    <testcase classname='ListPublicGistsTests.GistsListViewControllerTest' name='test_gistListRetry_shouldCallGetGistsListOnViewModel' time='0.006'/>
     <testcase classname='ListPublicGistsTests.GistsListViewControllerTest' name='test_gistListViewPrefetchGists_shouldCallGetGistsListOnViewModel' time='0.007'/>
-    <testcase classname='ListPublicGistsTests.GistsListViewControllerTest' name='test_loadView_ViewShouldTypeGistListView' time='0.005'/>
-    <testcase classname='ListPublicGistsTests.GistsListViewControllerTest' name='test_viewDidLoad_titleShouldEqualGistsListStrings' time='0.005'/>
+    <testcase classname='ListPublicGistsTests.GistsListViewControllerTest' name='test_loadView_ViewShouldTypeGistListView' time='0.004'/>
+    <testcase classname='ListPublicGistsTests.GistsListViewControllerTest' name='test_viewDidLoad_titleShouldEqualGistsListStrings' time='0.006'/>
   </testsuite>
   <testsuite name='ListPublicGistsTests.GistsListViewModelTests' tests='4' failures='0'>
-    <testcase classname='ListPublicGistsTests.GistsListViewModelTests' name='test_getGistsList_afterResult_withError_statusShouldBeError' time='0.007'/>
-    <testcase classname='ListPublicGistsTests.GistsListViewModelTests' name='test_getGistsList_afterResult_withStatusCode200AndEmptyList_statusShouldBeEmpty' time='0.007'/>
-    <testcase classname='ListPublicGistsTests.GistsListViewModelTests' name='test_getGistsList_afterResult_withStatusCode200AndValidList_statusShouldBeLoadWithData' time='0.016'/>
-    <testcase classname='ListPublicGistsTests.GistsListViewModelTests' name='test_initializationViewModel_statusShouldBeInitializer' time='0.003'/>
+    <testcase classname='ListPublicGistsTests.GistsListViewModelTests' name='test_getGistsList_afterResult_withError_statusShouldBeError' time='0.004'/>
+    <testcase classname='ListPublicGistsTests.GistsListViewModelTests' name='test_getGistsList_afterResult_withStatusCode200AndEmptyList_statusShouldBeEmpty' time='0.004'/>
+    <testcase classname='ListPublicGistsTests.GistsListViewModelTests' name='test_getGistsList_afterResult_withStatusCode200AndValidList_statusShouldBeLoadWithData' time='0.012'/>
+    <testcase classname='ListPublicGistsTests.GistsListViewModelTests' name='test_initializationViewModel_statusShouldBeInitializer' time='0.002'/>
   </testsuite>
   <testsuite name='ListPublicGistsTests.HomeCoordinatorTests' tests='2' failures='0'>
-    <testcase classname='ListPublicGistsTests.HomeCoordinatorTests' name='test_showGistsList' time='0.010'/>
-    <testcase classname='ListPublicGistsTests.HomeCoordinatorTests' name='test_start_shouldShowHomeViewController' time='0.013'/>
+    <testcase classname='ListPublicGistsTests.HomeCoordinatorTests' name='test_showGistsList' time='0.004'/>
+    <testcase classname='ListPublicGistsTests.HomeCoordinatorTests' name='test_start_shouldShowHomeViewController' time='0.009'/>
   </testsuite>
   <testsuite name='ListPublicGistsTests.HomeViewControllerTests' tests='3' failures='0'>
-    <testcase classname='ListPublicGistsTests.HomeViewControllerTests' name='test_homeViewDidShowPublicGistisList_shouldCallShowPublicGistsOnViewModel' time='0.020'/>
-    <testcase classname='ListPublicGistsTests.HomeViewControllerTests' name='test_loadView_ViewShouldTypeHomeView' time='0.017'/>
-    <testcase classname='ListPublicGistsTests.HomeViewControllerTests' name='test_viewDidLoad_titleShouldEqualGistsListStrings' time='0.014'/>
+    <testcase classname='ListPublicGistsTests.HomeViewControllerTests' name='test_homeViewDidShowPublicGistisList_shouldCallShowPublicGistsOnViewModel' time='0.016'/>
+    <testcase classname='ListPublicGistsTests.HomeViewControllerTests' name='test_loadView_ViewShouldTypeHomeView' time='0.016'/>
+    <testcase classname='ListPublicGistsTests.HomeViewControllerTests' name='test_viewDidLoad_titleShouldEqualGistsListStrings' time='0.017'/>
   </testsuite>
   <testsuite name='ListPublicGistsTests.HomeViewModelTests' tests='1' failures='0'>
-    <testcase classname='ListPublicGistsTests.HomeViewModelTests' name='test_showPublicGists' time='0.004'/>
+    <testcase classname='ListPublicGistsTests.HomeViewModelTests' name='test_showPublicGists' time='0.001'/>
   </testsuite>
   <testsuite name='ListPublicGistsTests.HomeViewTests' tests='2' failures='0'>
-    <testcase classname='ListPublicGistsTests.HomeViewTests' name='test_initializerHomeView_shouldSetupLayoutWithCorrectTexts' time='0.020'/>
-    <testcase classname='ListPublicGistsTests.HomeViewTests' name='test_tappingShowPublicGistListButton_shouldCallDidShowPublicGistisListDelegate' time='0.042'/>
+    <testcase classname='ListPublicGistsTests.HomeViewTests' name='test_initializerHomeView_shouldSetupLayoutWithCorrectTexts' time='0.009'/>
+    <testcase classname='ListPublicGistsTests.HomeViewTests' name='test_tappingShowPublicGistListButton_shouldCallDidShowPublicGistisListDelegate' time='0.010'/>
   </testsuite>
   <testsuite name='ListPublicGistsTests.ServiceProviderTest' tests='19' failures='0'>
-    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withEmptyJsonAndRequestSuccessAndStatusCode200_shouldReturnResponseErrorNoData' time='0.007'/>
-    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorDataCorrupted' time='0.009'/>
-    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorKeyNotFound' time='0.008'/>
-    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorTypeMismatch' time='0.007'/>
-    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorValueNotFound' time='0.006'/>
-    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorBadURL' time='0.007'/>
-    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorCancelled' time='0.006'/>
-    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorConnectionLost' time='0.005'/>
-    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorTimeout' time='0.003'/>
-    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorUnknown' time='0.015'/>
-    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndRequestSuccess_shouldParseJsonSuccess' time='0.004'/>
-    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndRequestSuccessAndStatusCode400_shouldReturnResponseErrorBadRequest' time='0.004'/>
-    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndRequestSuccessAndStatusCode401_shouldReturnResponseErrorUnauthorized' time='0.004'/>
-    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndRequestSuccessAndStatusCode403_shouldReturnResponseErrorForbiden' time='0.004'/>
-    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndRequestSuccessAndStatusCode404_shouldReturnResponseErrorNotFound' time='0.004'/>
-    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndRequestSuccessAndStatusCode407_shouldReturnResponseErrorClientError' time='0.004'/>
-    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndRequestSuccessAndStatusCode408_shouldReturnResponseErrorRequestTimeout' time='0.004'/>
-    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndRequestSuccessAndStatusCode500_shouldReturnResponseErrorInternalServerError' time='0.004'/>
-    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndRequestSuccessAndStatusCode600_shouldReturnResponseErrorUnknown' time='0.004'/>
+    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withEmptyJsonAndRequestSuccessAndStatusCode200_shouldReturnResponseErrorNoData' time='0.014'/>
+    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorDataCorrupted' time='0.006'/>
+    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorKeyNotFound' time='0.016'/>
+    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorTypeMismatch' time='0.008'/>
+    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withRequestSuccessAndNetworkOkAndJsonError_shouldReturnAPIRequestErrorValueNotFound' time='0.003'/>
+    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorBadURL' time='0.003'/>
+    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorCancelled' time='0.002'/>
+    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorConnectionLost' time='0.002'/>
+    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorTimeout' time='0.002'/>
+    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndNetworkError_shouldReturnAPIRequestErrorUnknown' time='0.005'/>
+    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndRequestSuccess_shouldParseJsonSuccess' time='0.002'/>
+    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndRequestSuccessAndStatusCode400_shouldReturnResponseErrorBadRequest' time='0.002'/>
+    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndRequestSuccessAndStatusCode401_shouldReturnResponseErrorUnauthorized' time='0.002'/>
+    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndRequestSuccessAndStatusCode403_shouldReturnResponseErrorForbiden' time='0.002'/>
+    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndRequestSuccessAndStatusCode404_shouldReturnResponseErrorNotFound' time='0.002'/>
+    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndRequestSuccessAndStatusCode407_shouldReturnResponseErrorClientError' time='0.002'/>
+    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndRequestSuccessAndStatusCode408_shouldReturnResponseErrorRequestTimeout' time='0.002'/>
+    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndRequestSuccessAndStatusCode500_shouldReturnResponseErrorInternalServerError' time='0.002'/>
+    <testcase classname='ListPublicGistsTests.ServiceProviderTest' name='test_request_withValidJsonAndRequestSuccessAndStatusCode600_shouldReturnResponseErrorUnknown' time='0.002'/>
   </testsuite>
 </testsuites>
