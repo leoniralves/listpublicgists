@@ -42,7 +42,6 @@ jobs:
             -project ListPublicGists.xcodeproj \
             -configuration Debug \
             -scheme ListPublicGists \
-            -destination id=27C0F39A-3B3F-4276-A219-1B91F7D1FA21 \
           | xcbeautify
 
       - name: Statis ccache
