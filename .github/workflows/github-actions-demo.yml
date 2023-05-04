@@ -27,9 +27,22 @@ jobs:
         run: |
           brew install ccache
 
+      - name: Install xcbeautify
+        run: |
+          brew install xcbeautify
+
       - name: Config ccache
         run: |
           ccache -p
+
+      - name: Build Project
+        run: |
+          xcodebuild clean build \
+            -project ListPublicGists.xcodeproj \
+            -configuration Debug \
+            -scheme ListPublicGists \
+            -destination id=2495219D-B608-467A-926E-DA8868E8E126 \
+          | xcbeautify
 
       - name: Statis ccache
         run: |
