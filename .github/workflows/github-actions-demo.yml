@@ -5,7 +5,8 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: macos-latest
     env:
-      CCACHE_MAXSIZE: '100G'
+      # CCACHE_MAXSIZE: '100G'
+      CCACHE_CONFIGPATH: "ccache.conf"
     steps:
       - name: Install ccache
         run: |
