@@ -42,6 +42,7 @@ jobs:
             -project ListPublicGists.xcodeproj \
             -configuration Debug \
             -scheme ListPublicGists \
+            -allowProvisioningUpdates \
           | xcbeautify
 
       - name: Statis ccache
