@@ -5,16 +5,15 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: macos-latest
     env:
-      # CCACHE_MAXSIZE: '100G'
-      CCACHE_CONFIGPATH: "ccache.conf"
+      CCACHE_MAXSIZE: '100G'
+      CCACHE_SLOPPINESS: 'clang_index_store,file_stat_matches,include_file_ctime,include_file_mtime,ivfsoverlay,pch_defines,modules,system_headers,time_macros'
+      CCACHE_FILECLONE: true
+      CCACHE_DEPEND: true
+      CCACHE_INODECACHE: true
     steps:
       - name: Install ccache
         run: |
           brew install ccache
-      # - name: Config ccache
-      #   run: |
-      #     set -e -v
-      #     export CCACHE_CONFIGPATH="ccache.conf"
       - name: Config ccache
         run: |
           ccache -p
