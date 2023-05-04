@@ -43,6 +43,7 @@ jobs:
             -configuration Debug \
             -scheme ListPublicGists \
             -allowProvisioningUpdates \
+            -authenticationKeyID leonir.ad@gmail.com \
           | xcbeautify
 
       - name: Statis ccache
