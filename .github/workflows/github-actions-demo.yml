@@ -8,3 +8,10 @@ jobs:
       - name: Install ccache
         run: |
           brew install ccache
+      - name: Config ccache
+        run: |
+          set -e -v
+          export CCACHE_CONFIGPATH="$(Pipeline.Workspace)/ccache.conf"
+      - name: Config ccache
+        run: |
+          ccache -p
