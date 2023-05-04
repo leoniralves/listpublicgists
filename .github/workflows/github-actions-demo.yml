@@ -11,7 +11,7 @@ jobs:
       - name: Config ccache
         run: |
           set -e -v
-          export CCACHE_CONFIGPATH="$(Pipeline.Workspace)/ccache.conf"
+          export CCACHE_CONFIGPATH="ccache.conf"
       - name: Config ccache
         run: |
           ccache -p
