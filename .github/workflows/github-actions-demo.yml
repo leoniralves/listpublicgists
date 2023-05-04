@@ -4,14 +4,16 @@ on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: macos-latest
+    env:
+      CCACHE_MAXSIZE: '100G'
     steps:
       - name: Install ccache
         run: |
           brew install ccache
-      - name: Config ccache
-        run: |
-          set -e -v
-          export CCACHE_CONFIGPATH="ccache.conf"
+      # - name: Config ccache
+      #   run: |
+      #     set -e -v
+      #     export CCACHE_CONFIGPATH="ccache.conf"
       - name: Config ccache
         run: |
           ccache -p
