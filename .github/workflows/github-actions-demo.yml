@@ -11,40 +11,40 @@ jobs:
       CCACHE_DEPEND: true
       CCACHE_INODECACHE: true
     steps:
-      - run: ls -la
-      # - name: Cache ccache
-      #   id: cache-ccache
-      #   uses: actions/cache@v3
-      #   with:
-      #     path: /Users/$USER/Library/Caches/ccache
-      #     key: ccache-${{ runner.os }}
-      #     restore-keys: |
-      #       ccache-${{ runner.os }}
-      #       ccache-
+      - uses: actions/checkout@v3
+      - name: Cache ccache
+        id: cache-ccache
+        uses: actions/cache@v3
+        with:
+          path: /Users/$USER/Library/Caches/ccache
+          key: ccache-${{ runner.os }}
+          restore-keys: |
+            ccache-${{ runner.os }}
+            ccache-
 
-      # - if: ${{ steps.cache-ccache.outputs.cache-hit != 'true' }}
-      #   name: Install ccache
-      #   continue-on-error: true
-      #   run: |
-      #     brew install ccache
+      - if: ${{ steps.cache-ccache.outputs.cache-hit != 'true' }}
+        name: Install ccache
+        continue-on-error: true
+        run: |
+          brew install ccache
 
-      # - name: Install xcbeautify
-      #   run: |
-      #     brew install xcbeautify
+      - name: Install xcbeautify
+        run: |
+          brew install xcbeautify
 
-      # - name: Config ccache
-      #   run: |
-      #     ccache -p
+      - name: Config ccache
+        run: |
+          ccache -p
 
-      # - name: Build Project
-      #   run: |
-      #     xcodebuild clean build \
-      #       -project ListPublicGists.xcodeproj \
-      #       -configuration Debug \
-      #       -scheme ListPublicGists \
-      #       -destination id=2495219D-B608-467A-926E-DA8868E8E126 \
-      #     | xcbeautify
+      - name: Build Project
+        run: |
+          xcodebuild clean build \
+            -project ListPublicGists.xcodeproj \
+            -configuration Debug \
+            -scheme ListPublicGists \
+            -destination id=2495219D-B608-467A-926E-DA8868E8E126 \
+          | xcbeautify
 
-      # - name: Statis ccache
-      #   run: |
-      #     ccache -s
+      - name: Statis ccache
+        run: |
+          ccache -s
